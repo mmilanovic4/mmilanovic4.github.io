@@ -61,6 +61,7 @@ nav ul li {
 	cursor: pointer;
 	padding: 10px;
 	user-select: none;
+	-moz-user-select: none;
 	width: 200px;
 }
 
@@ -120,7 +121,7 @@ section h3 {
 	margin: 10px;
 	font-size: 1.4rem;
 	cursor: pointer;
-	background-color: var(--dark);
+	background-color: var(--blue);
 	color: var(--light);
 	padding: 2px 0;
 	width: 34px;
@@ -153,10 +154,29 @@ section h3 {
 	font-size: 2.5rem;
 	font-weight: bold;
 	display: block;
+	letter-spacing: .3rem;
 }
 
 section a {
 	display: inline;
+}
+
+/* Fade in animation */
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.welcome-name,
+.welcome-title {
+	animation-name: fade-in;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
 }
 
 @media only screen and (max-width: 800px) {
@@ -165,6 +185,9 @@ section a {
 	}
 	main {
 		margin-left: 0;
+	}
+	section {
+		padding: 10px;
 	}
 	aside {
 		left: -100vw;
@@ -175,6 +198,12 @@ section a {
 	}
 	aside.shown {
 		left: 0;
+		background-color: var(--dark);
+		color: var(--light);
+	}
+	aside.shown nav ul,
+	aside.shown nav ul li {
+		border-color: var(--light);
 	}
 	#menu-toggle {
 		display: flex;
