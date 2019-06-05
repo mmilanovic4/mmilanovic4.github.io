@@ -1,3 +1,9 @@
+:root {
+	--blue: #069;
+	--dark: #222;
+	--light: #fff;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -13,7 +19,7 @@ body {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 1rem;
 	overflow: hidden;
-	color: #222;
+	color: var(--dark);
 }
 
 aside {
@@ -31,8 +37,8 @@ header {
 }
 
 header img {
-	border: 1px solid #222;
-	padding: 5px;
+	border: 1px solid var(--dark);
+	padding: 10px;
 	width: 200px;
 }
 
@@ -47,11 +53,11 @@ header p {
 
 nav ul {
 	list-style-type: none;
-	border: 1px solid #222;
+	border: 1px solid var(--dark);
 }
 
 nav ul li {
-	border-bottom: 1px solid #222;
+	border-bottom: 1px solid var(--dark);
 	cursor: pointer;
 	padding: 10px;
 	user-select: none;
@@ -62,9 +68,13 @@ nav ul li:last-of-type {
 	border-bottom: 0;
 }
 
-nav ul li.active,
-nav ul li:hover {
-	color: #069;
+nav ul li.active {
+	background-color: var(--blue);
+	color: var(--light);
+}
+
+nav ul li:not(.active):hover {
+	color: var(--blue);
 }
 
 main {
@@ -76,8 +86,6 @@ main {
 section {
 	height: 100vh;
 	padding: 20px;
-	display: flex;
-	flex-direction: column;
 }
 
 section h3 {
@@ -112,8 +120,8 @@ section h3 {
 	margin: 10px;
 	font-size: 1.4rem;
 	cursor: pointer;
-	background-color: #222;
-	color: #fff;
+	background-color: var(--dark);
+	color: var(--light);
 	padding: 2px 0;
 	width: 34px;
 	border-radius: 5px;
@@ -123,6 +131,8 @@ section h3 {
 }
 
 #home {
+	display: flex;
+	flex-direction: column;
 	padding-top: 40px;
 }
 
@@ -140,10 +150,14 @@ section h3 {
 
 .welcome-name,
 .welcome-title {
-	color: #069;
+	color: var(--blue);
 	font-size: 2.5rem;
 	font-weight: bold;
 	display: block;
+}
+
+section a {
+	display: inline;
 }
 
 @media only screen and (max-width: 800px) {
@@ -156,7 +170,7 @@ section h3 {
 	aside {
 		left: -100vw;
 		width: 100vw;
-		background-color: #fff;
+		background-color: var(--light);
 		z-index: 10;
 		transition: .5s;
 	}

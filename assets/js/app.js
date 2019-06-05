@@ -24,6 +24,11 @@ function init() {
 			}
 		};
 	});
+
+	// Scroll first section to view (Google Chrome reload bug)
+	setTimeout(() => {
+		setActiveMenuItem(sidebarMenuItems, sidebarMenuItems[0]);
+	}, 100);
 }
 
 function setActiveMenuItem(menuItems, activeItem) {
