@@ -9,11 +9,88 @@
 </head>
 
 <body>
-	<div id="container">
-		<p>Веб-сајт у изградњи</p>
-		<p>Website under construction</p>
-		<img src="assets/img/under_construction.png" alt="Under construction">
-	</div>
+	<aside>
+		<header>
+			<img src="assets/img/profile.jpeg" alt="Miloš Milanović">
+			<h1>Miloš Milanović</h1>
+			<p>🎓 Master of Informatics</p>
+			<p>📍 Belgrade, Serbia</p>
+		</header>
+		<nav>
+			<ul>
+				<li data-target="home" class="active">
+					Home
+				</li>
+				<li data-target="resume">
+					Résumé
+				</li>
+				<li data-target="contact">
+					Contact
+				</li>
+			</ul>
+		</nav>
+	</aside>
+	<main>
+		<span id="menu-toggle">☰</span>
+		<section id="home">
+			<h2>Welcome!</h2>
+			<div class="welcome">
+				My name is
+				<span class="welcome-name">Miloš Milanović</span>
+				and I am a
+				<span class="welcome-title">Master of Informatics.</span>
+			</div>
+		</section>
+		<section id="resume">
+			<h2>Résumé</h2>
+			<h3>Education</h3>
+			<ul class="section-list">
+				<li>
+					<span class="section-list-period">2016 - 2018</span>
+					<em>Master of Informatics</em>
+					<strong>Singidunum University</strong>
+				</li>
+				<li>
+					<span class="section-list-period">2012 - 2016</span>
+					<em>Bachelor of Science in Informatics</em>
+					<strong>Singidunum University</strong>
+				</li>
+				<li>
+					<span class="section-list-period">2008 - 2012</span>
+					<em>Computer Technician</em>
+					<strong>ETHS "Nikola Tesla" in Belgrade</strong>
+				</li>
+			</ul>
+			<h3>Work experience</h3>
+			<ul class="section-list">
+				<li>
+					<span class="section-list-period">2018 - </span>
+					<em>Full Stack Web Developer</em>
+					<strong>Salestrekker</strong>
+				</li>
+				<li>
+					<span class="section-list-period">2016 - 2018</span>
+					<em>Junior Security Engineer</em>
+					<strong>High-Tech Bridge</strong>
+				</li>
+				<li>
+					<span class="section-list-period">2012 - </span>
+					<em>Freelance Web Developer</em>
+					<span>
+						<strong>Ringier Axel Springer Media AG</strong> etc.
+					</span>
+				</li>
+			</ul>
+		</section>
+		<section id="contact">
+			<h2>Contact</h2>
+			<h3>Email</h3>
+			<a href="mailto:mmilanovic016@gmail.com">mmilanovic016@gmail.com</a>
+			<h3>Instagram</h3>
+			<a href="https://www.instagram.com/mmilanovic4/" target="_blank">@mmilanovic4</a>
+		</section>
+	</main>
+	<script src="assets/js/app.js"></script>
 </body>
 
 </html>
