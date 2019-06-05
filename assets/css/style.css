@@ -85,7 +85,7 @@ main {
 
 section {
 	height: 100vh;
-	padding: 20px;
+	padding: 40px 20px;
 }
 
 section h3 {
@@ -133,7 +133,6 @@ section h3 {
 #home {
 	display: flex;
 	flex-direction: column;
-	padding-top: 40px;
 }
 
 #home h2 {
