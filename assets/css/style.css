@@ -180,7 +180,7 @@ section a {
 
 @media only screen and (max-width: 800px) {
 	body {
-		font-size: .9rem;
+		font-size: .85rem;
 	}
 
 	main {
@@ -217,7 +217,7 @@ section a {
 	}
 
 	header {
-		padding-bottom: 20px;
+		padding: 20px;
 	}
 
 	header img {
