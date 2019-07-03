@@ -74,10 +74,6 @@ nav ul li.active {
 	color: var(--light);
 }
 
-nav ul li:not(.active):hover {
-	color: var(--blue);
-}
-
 main {
 	display: grid;
 	grid-auto-flow: row;
@@ -168,10 +164,7 @@ section a {
 	top: 0;
 	margin: 10px;
 	cursor: pointer;
-	background-color: var(--blue);
-	color: var(--light);
-	width: 30px;
-	height: 30px;
+	font-size: xx-large;
 	border-radius: 50%;
 	z-index: 11;
 	align-items: center;
@@ -201,13 +194,6 @@ section a {
 
 	aside.shown {
 		left: 0;
-		background-color: var(--dark);
-		color: var(--light);
-	}
-
-	aside.shown nav ul,
-	aside.shown nav ul li {
-		border-color: var(--light);
 	}
 
 	#home {
