@@ -29,6 +29,7 @@ aside {
 	position: fixed;
 	height: 100vh;
 	width: 400px;
+	background-color: var(--light);
 }
 
 header {
@@ -164,11 +165,12 @@ section a {
 	top: 0;
 	margin: 10px;
 	cursor: pointer;
-	font-size: xx-large;
-	border-radius: 50%;
 	z-index: 11;
 	align-items: center;
 	justify-content: center;
+	background-color: var(--blue);
+	color: var(--light);
+	padding: 10px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -185,15 +187,21 @@ section a {
 	}
 
 	aside {
+		background-color: var(--dark);
+		color: var(--light);
 		left: -100vw;
 		width: 100vw;
-		background-color: var(--light);
 		z-index: 10;
 		transition: .5s;
 	}
 
 	aside.shown {
 		left: 0;
+		box-shadow: 1px 1px 10px var(--dark);
+	}
+
+	nav ul, nav ul li {
+		border-color: var(--light);
 	}
 
 	#home {
