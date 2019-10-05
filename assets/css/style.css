@@ -18,6 +18,7 @@ html {
 body {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 1rem;
+	line-height: 1.6rem;
 	overflow: hidden;
 	color: var(--dark);
 }
@@ -87,7 +88,7 @@ section {
 }
 
 section h3 {
-	margin: 20px 0;
+	margin: 20px 0 10px;
 }
 
 .section-list {
@@ -117,14 +118,14 @@ section h3 {
 
 #home h2 {
 	font-size: 3rem;
-	margin-bottom: 20px;
 	line-height: 3rem;
+	margin-bottom: 20px;
 }
 
 .welcome {
 	justify-self: center;
 	font-size: 2rem;
-	line-height: 3rem;
+	line-height: 3.2rem;
 }
 
 .welcome-name,
@@ -177,6 +178,7 @@ section a {
 @media only screen and (max-width: 800px) {
 	body {
 		font-size: .85rem;
+		line-height: calc(.85rem * 1.6);
 	}
 
 	main {
