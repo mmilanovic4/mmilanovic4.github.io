@@ -154,7 +154,7 @@ section a {
 .welcome-name,
 .welcome-title {
 	animation-name: fade-in;
-	animation-duration: 2s;
+	animation-duration: 1s;
 	animation-timing-function: linear;
 	animation-iteration-count: 1;
 }
