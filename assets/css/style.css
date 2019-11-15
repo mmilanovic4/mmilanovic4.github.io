@@ -29,42 +29,43 @@ aside {
 	align-items: center;
 	position: fixed;
 	height: 100vh;
-	width: 400px;
-	background-color: var(--light);
+	width: 300px;
+	background-color: var(--dark);
+	color: var(--light);
 }
 
 header {
 	text-align: center;
-	padding: 50px;
+	padding: 40px;
 }
 
 header img {
-	border: 1px solid var(--dark);
-	padding: 10px;
-	width: 200px;
+	border-radius: 50%;
+	width: 180px;
 }
 
 header h1 {
-	margin: 5px;
+	margin: 20px 0 5px;
 }
 
 header p {
 	font-style: italic;
-	padding: 5px;
+	padding: 5px 0;
 }
 
 nav ul {
 	list-style-type: none;
-	border: 1px solid var(--dark);
+	border: 1px solid var(--light);
 }
 
 nav ul li {
-	border-bottom: 1px solid var(--dark);
+	border-bottom: 1px solid var(--light);
 	cursor: pointer;
+	font-size: small;
 	padding: 10px;
 	user-select: none;
 	-moz-user-select: none;
-	width: 200px;
+	width: 180px;
 }
 
 nav ul li:last-of-type {
@@ -73,18 +74,17 @@ nav ul li:last-of-type {
 
 nav ul li.active {
 	background-color: var(--blue);
-	color: var(--light);
 }
 
 main {
 	display: grid;
 	grid-auto-flow: row;
-	margin-left: 400px;
+	margin-left: 300px;
 }
 
 section {
 	height: 100vh;
-	padding: 40px 20px;
+	padding: 40px;
 }
 
 section h3 {
@@ -190,8 +190,6 @@ section a {
 	}
 
 	aside {
-		background-color: var(--dark);
-		color: var(--light);
 		left: -100vw;
 		width: 100vw;
 		z-index: 10;
@@ -203,24 +201,10 @@ section a {
 		box-shadow: 1px 1px 10px var(--dark);
 	}
 
-	nav ul, nav ul li {
-		border-color: var(--light);
-	}
-
 	#home {
 		padding-top: 50px;
 		align-items: center;
 		text-align: center;
-	}
-
-	header {
-		padding: 20px;
-	}
-
-	header img {
-		border: 0;
-		padding: 10px 0;
-		border-radius: 50%;
 	}
 
 	#menu-toggle {
