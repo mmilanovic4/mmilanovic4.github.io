@@ -10,6 +10,11 @@
 	padding: 0;
 }
 
+*:focus {
+	outline: 1px dashed var(--blue);
+	outline-offset: 5px;
+}
+
 html {
 	scroll-behavior: smooth;
 	overflow: hidden;
@@ -45,12 +50,12 @@ header img {
 }
 
 header h1 {
-	margin: 20px 0 5px;
+	color: var(--blue);
+	margin: 20px 0 10px;
 }
 
 header p {
 	font-style: italic;
-	padding: 5px 0;
 }
 
 nav ul {
@@ -68,12 +73,19 @@ nav ul li {
 	width: 180px;
 }
 
+nav ul li:focus {
+	outline: none;
+	font-weight: bold;
+}
+
 nav ul li:last-of-type {
 	border-bottom: 0;
 }
 
 nav ul li.active {
 	background-color: var(--blue);
+	font-weight: bold;
+	outline: none;
 }
 
 main {
