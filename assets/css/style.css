@@ -147,6 +147,7 @@ section h3 {
 	font-weight: bold;
 	display: block;
 	letter-spacing: .3rem;
+	text-shadow: 2px 2px 3px #bbb;
 }
 
 section a {
@@ -166,7 +167,7 @@ section a {
 .welcome-name,
 .welcome-title {
 	animation-name: fade-in;
-	animation-duration: 1s;
+	animation-duration: 1.5s;
 	animation-timing-function: linear;
 	animation-iteration-count: 1;
 }
