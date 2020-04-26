@@ -223,3 +223,26 @@ section a {
 		display: flex;
 	}
 }
+
+@media print {
+	#menu-toggle, #home {
+		display: none;
+	}
+	aside {
+		background-color: var(--light);
+		color: var(--dark);
+		width: 100vw;
+		height: auto;
+		position: absolute;
+		align-items: flex-start;
+		z-index: -1;
+	}
+	nav ul {
+		display: none;
+	}
+	section {
+		height: auto;
+		break-inside: avoid;
+		page-break-inside: avoid;
+	}
+}
