@@ -251,6 +251,9 @@ section a {
 }
 
 @media (prefers-color-scheme: dark) {
+	:root {
+		--blue: #099;
+	}
 	section {
 		background-color: var(--dark);
 		color: var(--light);
