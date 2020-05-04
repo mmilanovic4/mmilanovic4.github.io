@@ -50,7 +50,6 @@ header img {
 }
 
 header h1 {
-	color: var(--blue);
 	margin: 20px 0 10px;
 }
 
@@ -97,6 +96,9 @@ main {
 section {
 	height: 100vh;
 	padding: 40px;
+	transition-property: background-color;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
 }
 
 section h3 {
@@ -150,6 +152,7 @@ section h3 {
 }
 
 section a {
+	color: var(--blue);
 	display: inline;
 }
 
@@ -244,5 +247,12 @@ section a {
 		height: auto;
 		break-inside: avoid;
 		page-break-inside: avoid;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	section {
+		background-color: var(--dark);
+		color: var(--light);
 	}
 }
