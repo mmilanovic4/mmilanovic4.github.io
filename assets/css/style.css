@@ -83,13 +83,13 @@ nav ul li {
 	width: 180px;
 }
 
+nav ul li:last-of-type {
+	border-bottom: 0;
+}
+
 nav ul li:focus {
 	outline: none;
 	font-weight: bold;
-}
-
-nav ul li:last-of-type {
-	border-bottom: 0;
 }
 
 nav ul li.active {
@@ -165,6 +165,8 @@ section h3 {
 section a {
 	color: var(--tertiary);
 	display: inline;
+	border-bottom: 1px solid var(--tertiary);
+	text-decoration: none;
 }
 
 /* Fade in animation */
