@@ -49,9 +49,22 @@ function init() {
 		activeItem.classList.add('active');
 	}
 
-	// Scroll first section to view (Google Chrome reload bug)
+	// Scroll first section to view
+	// If valid URL fragment is provided, scroll to appropriate section
 	setTimeout(() => {
-		setActiveMenuItem(sidebarMenuItems, sidebarMenuItems[0]);
+		const { hash } = window.location;
+		const hashNormalized = hash.toLowerCase().replace(/\#/g, '');
+
+		switch (hashNormalized) {
+			case 'resume':
+				setActiveMenuItem(sidebarMenuItems, sidebarMenuItems[1]);
+				break;
+			case 'contact':
+				setActiveMenuItem(sidebarMenuItems, sidebarMenuItems[2]);
+				break;
+			default:
+				setActiveMenuItem(sidebarMenuItems, sidebarMenuItems[0]);
+		}
 	}, 100);
 }
 
