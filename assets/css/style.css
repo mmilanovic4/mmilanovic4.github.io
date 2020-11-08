@@ -3,7 +3,7 @@
 :root {
   --dark: #202020;
   --light: #fefefe;
-  --blue: #06e;
+  --blue: #069;
   --gray: #999;
 }
 
@@ -45,6 +45,7 @@ aside {
   width: 300px;
   background-color: var(--dark);
   color: var(--light);
+  box-shadow: 2px 2px 10px var(--gray);
 }
 
 header {
