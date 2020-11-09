@@ -220,6 +220,7 @@ section a {
     width: 100vw;
     z-index: 10;
     transition: 0.5s;
+    box-shadow: none;
   }
 
   aside.shown {
