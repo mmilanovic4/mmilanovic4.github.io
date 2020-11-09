@@ -60,20 +60,8 @@ header img {
   border: 4px solid var(--blue);
 }
 
-@keyframes animation-avatar {
-  0% {
-    transform: scale(0.8);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 header img {
-  animation-name: animation-avatar;
+  animation-name: scale;
   animation-iteration-count: 1;
   animation-duration: 1s;
 }
@@ -186,16 +174,6 @@ section a {
   text-decoration: none;
 }
 
-/* Fade in animation */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .welcome-name,
 .welcome-title {
   animation-name: fade-in;
@@ -297,5 +275,23 @@ section a {
     height: auto;
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
   }
 }
