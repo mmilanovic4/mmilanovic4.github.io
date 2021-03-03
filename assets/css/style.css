@@ -207,6 +207,9 @@ section a {
 }
 
 @media only screen and (max-width: 800px) {
+  h2 {
+    line-height: 48px;
+  }
   main {
     margin-left: 0;
   }
