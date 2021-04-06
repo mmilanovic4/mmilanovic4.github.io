@@ -208,15 +208,27 @@ section a {
 }
 
 @media only screen and (max-width: 800px) {
+  body {
+    font-size: 0.9rem;
+    line-height: calc(0.9rem * 1.6);
+  }
+
   h2 {
     line-height: 48px;
   }
+
   main {
     margin-left: 0;
   }
 
   section {
     padding: 10px;
+  }
+
+  .section-list li em {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   aside {
