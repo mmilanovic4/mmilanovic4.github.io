@@ -68,11 +68,29 @@ header img {
 }
 
 header h1 {
-  margin: 20px 0 10px;
+  margin: 20px 0;
 }
 
 header p {
   font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+header p svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+header p svg > * {
+  stroke: var(--light);
+}
+
+header p svg > rect {
+  stroke: none;
 }
 
 nav ul {
