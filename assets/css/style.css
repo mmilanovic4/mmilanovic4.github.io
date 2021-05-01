@@ -290,6 +290,10 @@ section a {
 }
 
 @media print {
+  .flag-icon,
+  svg {
+    display: none !important;
+  }
   #menu-toggle,
   #home {
     display: none;
