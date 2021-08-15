@@ -1,12 +1,12 @@
 .header {
-	background-color: hsl(240deg, 50%, 10%);
+	background-color: $colorMain;
 	color: #fefefe;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
 
 	img {
-		box-shadow: 0 0 0 2px hsla(180deg, 100%, 50%, 0.5);
+		box-shadow: 0 0 0 2px $colorAccent;
 	}
 
 	& > div {

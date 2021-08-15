@@ -2,7 +2,8 @@
 	padding: 20px;
 
 	h2 {
-		border-bottom: 2px solid hsl(240deg, 50%, 10%);
+		color: $colorMain;
+		border-bottom: 2px solid $colorMain;
 		padding-bottom: 5px;
 	}
 
@@ -26,7 +27,7 @@
 
 	&-years {
 		display: inline-block;
-		width: 120px;
+		min-width: 120px;
 		font-size: small;
 	}
 
