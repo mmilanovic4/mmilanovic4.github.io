@@ -1,0 +1,64 @@
+{
+	"longName": "Miloš Milanović",
+	"shortName": "Miloš",
+	"summary": "Full-stack web developer based in Belgrade, Serbia.",
+	"networks": {
+		"email": {
+			"text": "Email",
+			"href": "mailto:mmilanovic016@gmail.com"
+		},
+		"github": {
+			"text": "GitHub",
+			"href": "https://github.com/mmilanovic4"
+		},
+		"instagram": {
+			"text": "Instagram",
+			"href": "https://www.instagram.com/mmilanovic4"
+		},
+		"youtube": {
+			"text": "YouTube",
+			"href": "https://www.youtube.com/channel/UC9dkYUFyMnaEQKqM7UeOz-w"
+		}
+	},
+	"work": [
+		{
+			"company": null,
+			"position": "Freelance web developer",
+			"from": 2012,
+			"to": null,
+			"clients": ["Ringier Axel Springer Serbia"]
+		},
+		{
+			"company": "High-Tech Bridge",
+			"position": "Junior security engineer",
+			"from": 2016,
+			"to": 2018
+		},
+		{
+			"company": "Salestrekker",
+			"position": "Full stack web developer",
+			"from": 2018,
+			"to": null
+		}
+	],
+	"education": [
+		{
+			"institution": "ETHS \"Nikola Tesla\" in Belgrade",
+			"degree": "Computer Technician",
+			"from": 2008,
+			"to": 2012
+		},
+		{
+			"institution": "Singidunum University",
+			"degree": "Bachelor of Science in Informatics",
+			"from": 2012,
+			"to": 2016
+		},
+		{
+			"institution": "Singidunum University",
+			"degree": "Master of Informatics",
+			"from": 2016,
+			"to": 2018
+		}
+	]
+}

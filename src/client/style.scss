@@ -1,0 +1,44 @@
+$breakpointMedium: 650px;
+$breakpointLarge: 900px;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 0.9rem;
+}
+
+a {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+#root {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+@media screen and (min-width: $breakpointMedium) {
+	body {
+		font-size: 1rem;
+	}
+}
+
+@import './components/Header/style';
+@import './components/Main/style';
+@import './components/Footer/style';
