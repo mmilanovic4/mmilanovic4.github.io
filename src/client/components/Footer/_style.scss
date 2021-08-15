@@ -5,3 +5,9 @@
 	font-size: smaller;
 	text-align: center;
 }
+
+@media print {
+	.footer {
+		color: #222;
+	}
+}
