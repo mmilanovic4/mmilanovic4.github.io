@@ -61,13 +61,15 @@
 			"institution": "Singidunum University",
 			"degree": "Bachelor of Science in Informatics",
 			"from": 2012,
-			"to": 2016
+			"to": 2016,
+			"thesis": "https://singipedia.singidunum.ac.rs/izdanje/42310-falsifikovanje-unakrsnih-zahteva"
 		},
 		{
 			"institution": "Singidunum University",
 			"degree": "Master of Informatics",
 			"from": 2016,
-			"to": 2018
+			"to": 2018,
+			"thesis": "https://singipedia.singidunum.ac.rs/izdanje/42848-bezbednosni-izazovi-i-mehanizmi-zastite-kod-ssl-tls-protokola"
 		}
 	]
 }
