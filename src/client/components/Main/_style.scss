@@ -22,7 +22,8 @@
 	li {
 		margin-top: 20px;
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 
 	&-years {
@@ -67,11 +68,27 @@
 		}
 	}
 
+	.resume-list {
+		li {
+			flex-direction: row;
+			align-items: center;
+		}
+	}
+
 	.about-row {
 		strong {
 			margin: 0;
 			width: 200px;
 			display: inline-block;
+		}
+	}
+}
+
+@media print {
+	.resume-list {
+		li {
+			flex-direction: row;
+			align-items: center;
 		}
 	}
 }

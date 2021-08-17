@@ -1,5 +1,6 @@
 .footer {
 	background-color: $colorMain;
+	box-shadow: $colorBoxShadow;
 	color: #fefefe;
 	padding: 20px;
 	font-size: smaller;
@@ -8,6 +9,7 @@
 
 @media print {
 	.footer {
+		box-shadow: none;
 		color: #222;
 	}
 }

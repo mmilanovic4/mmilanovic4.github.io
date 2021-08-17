@@ -3,6 +3,7 @@ $breakpointLarge: 900px;
 
 $colorMain: hsl(240deg, 50%, 10%);
 $colorAccent: hsla(180deg, 100%, 50%, 0.5);
+$colorBoxShadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
 
 * {
 	box-sizing: border-box;
@@ -17,7 +18,7 @@ html {
 
 body {
 	color: #222;
-	font-size: 0.9rem;
+	font-size: 0.85rem;
 }
 
 a {
