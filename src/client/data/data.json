@@ -2,6 +2,9 @@
 	"longName": "Miloš Milanović",
 	"shortName": "Miloš",
 	"summary": "Full-stack web developer based in Belgrade, Serbia.",
+	"yearOfBirth": 1993,
+	"nativeLanguage": "Serbian",
+	"otherLanguages": ["English", "Russian"],
 	"networks": {
 		"email": {
 			"text": "Email",
@@ -22,8 +25,8 @@
 	},
 	"work": [
 		{
-			"company": null,
-			"position": "Freelance web developer",
+			"company": "Freelance",
+			"position": null,
 			"from": 2012,
 			"to": null,
 			"clients": ["Ringier Axel Springer Serbia"]
@@ -38,6 +41,12 @@
 			"company": "Salestrekker",
 			"position": "Full stack web developer",
 			"from": 2018,
+			"to": null
+		},
+		{
+			"company": "LoanQ",
+			"position": "Full stack web developer",
+			"from": 2020,
 			"to": null
 		}
 	],

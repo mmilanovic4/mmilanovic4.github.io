@@ -17,6 +17,12 @@ const Main = () => {
 								<span className="resume-list-details">
 									{row?.company && <strong>{row?.company}</strong>}
 									{row?.position && <small>{row?.position}</small>}
+									{row?.clients && (
+										<small>
+											<strong>Notable clients: </strong>
+											{row?.clients?.join(', ') || '-'}
+										</small>
+									)}
 								</span>
 							</li>
 						);
@@ -40,6 +46,21 @@ const Main = () => {
 						);
 					})}
 				</ul>
+			</section>
+			<section>
+				<h2>About</h2>
+				<div className="about-row">
+					<strong>Age: </strong>
+					{new Date()?.getFullYear() - context?.yearOfBirth}
+				</div>
+				<div className="about-row">
+					<strong>Native language: </strong>
+					{context?.nativeLanguage}
+				</div>
+				<div className="about-row">
+					<strong>Other languages: </strong>
+					{context?.otherLanguages?.join(', ') || '-'}
+				</div>
 			</section>
 		</main>
 	);
