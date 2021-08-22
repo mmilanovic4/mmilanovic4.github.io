@@ -9,6 +9,11 @@ const Header = () => {
 			<div>
 				<h1>{context?.longName}</h1>
 				<p>{context?.summary}</p>
+				<div className="visible-on-print">
+					<a href={context?.networks?.email?.href}>
+						{context?.networks?.email?.href?.replace('mailto:', '')}
+					</a>
+				</div>
 				<span className="header-networks">
 					{Object?.keys(context?.networks)?.map((key) => {
 						return (
