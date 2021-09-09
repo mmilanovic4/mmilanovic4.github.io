@@ -1,5 +1,5 @@
 .main {
-	padding: 20px;
+	padding: 10px;
 
 	h2 {
 		color: $colorMain;
@@ -85,10 +85,19 @@
 }
 
 @media print {
-	.resume-list {
-		li {
-			flex-direction: row;
-			align-items: center;
+	.main {
+		padding: 0 10px 10px;
+
+		section {
+			margin-bottom: 20px;
+		}
+
+		.resume-list {
+			li {
+				flex-direction: row;
+				align-items: center;
+				margin-top: 10px;
+			}
 		}
 	}
 }

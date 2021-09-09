@@ -6,7 +6,7 @@
 	background-color: $colorMain;
 	box-shadow: $boxShadow;
 	color: #fefefe;
-	padding: 20px;
+	padding: 0 10px;
 	display: flex;
 	flex-direction: column;
 
@@ -32,9 +32,13 @@
 	& > img {
 		height: auto;
 		width: 150px;
+		min-height: 150px;
 		border-radius: 50%;
 		margin: 20px auto;
 		object-fit: cover;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	&-networks {
@@ -60,6 +64,7 @@
 
 		& > img {
 			width: 200px;
+			min-height: 200px;
 		}
 
 		&-networks {
@@ -105,7 +110,7 @@
 
 		& > div {
 			text-align: left;
-			margin: 20px 0;
+			margin: 10px 0 0;
 
 			p {
 				margin-bottom: 20px;
@@ -114,8 +119,8 @@
 
 		& > img {
 			width: 150px;
-			margin-left: 0;
-			margin-right: 0;
+			min-height: 150px;
+			margin: 10px 0 0;
 			border-radius: 5px;
 		}
 
