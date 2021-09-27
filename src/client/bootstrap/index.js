@@ -1,2 +1,1 @@
-import './analytics';
 import './registerWorker';
