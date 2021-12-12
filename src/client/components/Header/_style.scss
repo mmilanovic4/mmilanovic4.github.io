@@ -3,15 +3,11 @@
 }
 
 .header {
-	background-color: $colorMain;
-	box-shadow: $boxShadow;
-	color: #fefefe;
-	padding: 0 10px;
+	padding: 20px;
 	display: flex;
 	flex-direction: column;
 
 	img {
-		box-shadow: 0 0 0 2px $colorAccent;
 		transition: all 0.25s ease-in-out;
 	}
 
@@ -25,7 +21,7 @@
 		margin: 20px 0;
 
 		& > p {
-			margin: 20px 0 30px;
+			margin: 20px 0;
 		}
 	}
 
@@ -34,8 +30,8 @@
 		width: 150px;
 		min-height: 150px;
 		border-radius: 50%;
-		margin: 20px auto;
-		object-fit: cover;
+		margin: 0 auto;
+		object-fit: contain;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -47,6 +43,7 @@
 		grid-gap: 20px;
 
 		img {
+			outline: 1px solid $colorAccent;
 			height: auto;
 			width: 32px;
 			border-radius: 50%;
@@ -81,8 +78,6 @@
 		flex-direction: row;
 		justify-content: flex-start;
 		align-items: center;
-		position: sticky;
-		top: 0;
 
 		& > div {
 			text-align: left;
