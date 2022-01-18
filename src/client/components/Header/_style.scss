@@ -11,6 +11,10 @@
 		transition: all 0.25s ease-in-out;
 	}
 
+	& > img {
+		border: 5px solid rgba(128, 128, 128, 0.25);
+	}
+
 	h1 {
 		font-size: 1.4rem;
 		line-height: 100%;
@@ -43,7 +47,7 @@
 		grid-gap: 20px;
 
 		img {
-			border: 1px solid $colorAccent;
+			border: 2px solid rgba(128, 128, 128, 0.25);
 			height: auto;
 			width: 32px;
 			border-radius: 50%;
