@@ -1,10 +1,6 @@
 $breakpointMedium: 650px;
 $breakpointLarge: 900px;
 
-$colorMain: #222;
-$colorAccent: #bbb;
-$colorAnti: #fefefe;
-
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -17,9 +13,9 @@ html {
 }
 
 body {
-	color: $colorMain;
+	color: #222;
 	font-size: 0.9rem;
-	background-color: $colorAnti;
+	background-color: #fefefe;
 }
 
 a {
@@ -48,3 +44,10 @@ img {
 @import './components/Header/style';
 @import './components/Main/style';
 @import './components/Footer/style';
+
+@media (prefers-color-scheme: dark) {
+	body {
+	}
+	.main h2 {
+	}
+}
