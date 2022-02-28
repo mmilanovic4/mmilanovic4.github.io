@@ -49,6 +49,10 @@
 		margin-top: 20px;
 	}
 
+	&:last-of-type {
+		margin-bottom: 10px;
+	}
+
 	strong {
 		display: block;
 		margin-bottom: 2px;
@@ -98,6 +102,12 @@
 				align-items: center;
 				margin-top: 10px;
 			}
+		}
+	}
+
+	.about-row {
+		&:last-of-type {
+			margin-bottom: 0;
 		}
 	}
 }
