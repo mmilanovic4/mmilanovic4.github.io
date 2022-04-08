@@ -1,14 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
 import { DataContext } from '../../data/DataContext';
 
 const Main = () => {
 	const context = useContext(DataContext);
+
+	const reversedWorkArray = useMemo(() => {
+		const output = [...context?.work];
+		output?.reverse();
+		return output;
+	}, [context]);
+
 	return (
 		<main className="main">
 			<section>
 				<h2>Work</h2>
 				<ul className="resume-list">
-					{context?.work?.reverse()?.map((row, index) => {
+					{reversedWorkArray?.map((row, index) => {
 						return (
 							<li key={index}>
 								<span className="resume-list-years">
