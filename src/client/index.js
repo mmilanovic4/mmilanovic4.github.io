@@ -1,11 +1,11 @@
-import React from 'react';
+import { createElement } from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 
 import { App } from './App';
 import './bootstrap';
 
 const container = document?.getElementById('root');
-const component = <App />;
+const component = createElement(App);
 
 if (container?.hasChildNodes()) {
 	hydrateRoot(container, component);
