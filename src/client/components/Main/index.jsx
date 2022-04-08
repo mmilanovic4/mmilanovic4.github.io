@@ -4,10 +4,12 @@ import { DataContext } from '../../data/DataContext';
 const Main = () => {
 	const context = useContext(DataContext);
 
-	const reversedWorkArray = useMemo(() => {
-		const output = [...context?.work];
-		output?.reverse();
-		return output;
+	const [reversedWorkArray, reversedEducationArray] = useMemo(() => {
+		const outputWork = [...context?.work];
+		outputWork?.reverse();
+		const outputEducation = [...context?.education];
+		outputEducation?.reverse();
+		return [outputWork, outputEducation];
 	}, [context]);
 
 	return (
@@ -39,7 +41,7 @@ const Main = () => {
 			<section>
 				<h2>Education</h2>
 				<ul className="resume-list">
-					{context?.education?.reverse()?.map((row, index) => {
+					{reversedEducationArray?.map((row, index) => {
 						return (
 							<li key={index}>
 								<span className="resume-list-years">
