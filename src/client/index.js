@@ -8,8 +8,10 @@
 // const component = createElement(App);
 
 // if (container?.hasChildNodes()) {
+// 	// CLIENT
 // 	hydrateRoot(container, component);
 // } else {
+// 	// SERVER
 // 	const root = createRoot(container);
 // 	root?.render(component);
 // }
