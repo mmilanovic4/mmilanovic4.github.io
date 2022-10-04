@@ -4,7 +4,7 @@ const init = () => {
 
 // Register service worker
 const registerWorker = () => {
-	if ('serviceWorker' in navigator) {
+	if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
 		navigator?.serviceWorker?.register('/worker.js', { scope: '/' })?.then(
 			() => {
 				console?.log('Service worker - registered.');
@@ -20,4 +20,6 @@ const registerWorker = () => {
 	});
 };
 
-window.onload = init;
+if (typeof window !== 'undefined') {
+	window.onload = init;
+}
