@@ -8,7 +8,7 @@ const staticAssets = [
 	'./assets/js/app.js'
 ];
 
-self?.addEventListener('install', async (event) => {
+self?.addEventListener('install', async () => {
 	console?.log('Service worker - install event.');
 	const cache = await caches?.open(cacheName);
 	await cache?.addAll(staticAssets);
