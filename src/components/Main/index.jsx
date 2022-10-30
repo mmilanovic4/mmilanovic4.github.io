@@ -3,10 +3,10 @@ import data from '../../data.json';
 
 const Main = () => {
 	const reversedWorkArray = [...data?.work];
-	// reversedWorkArray?.reverse();
+	reversedWorkArray?.reverse();
 
 	const reversedEducationArray = [...data?.education];
-	// reversedEducationArray?.reverse();
+	reversedEducationArray?.reverse();
 
 	return (
 		<main className="main">
