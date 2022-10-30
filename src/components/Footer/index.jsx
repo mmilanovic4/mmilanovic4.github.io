@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
-import { DataContext } from '../../data/DataContext';
+import React from 'react';
+import data from '../../data.json';
 
 const Footer = () => {
-	const context = useContext(DataContext);
 	return (
 		<footer className="footer">
 			<p>
-				&copy; {context?.longName}, {new Date()?.getFullYear()}.
+				&copy; {data?.longName}, {new Date()?.getFullYear()}.
 			</p>
 		</footer>
 	);

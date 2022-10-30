@@ -1,31 +1,30 @@
-import React, { useContext } from 'react';
-import { DataContext } from '../../data/DataContext';
+import React from 'react';
+import data from '../../data.json';
 
 const Header = () => {
-	const context = useContext(DataContext);
 	return (
 		<header className="header">
 			<img src="/static/profile.jpg" alt="Profile pic" />
 			<div>
-				<h1>{context?.longName}</h1>
-				<p>{context?.summary}</p>
+				<h1>{data?.longName}</h1>
+				<p>{data?.summary}</p>
 				<div className="visible-on-print">
-					<a href={context?.networks?.email?.href}>
-						{context?.networks?.email?.href?.replace('mailto:', '')}
+					<a href={data?.networks?.email?.href}>
+						{data?.networks?.email?.href?.replace('mailto:', '')}
 					</a>
 				</div>
 				<span className="header-networks">
-					{Object?.keys(context?.networks)?.map((key) => {
+					{Object?.keys(data?.networks)?.map((key) => {
 						return (
 							<a
 								key={key}
-								href={context?.networks[key]?.href}
+								href={data?.networks[key]?.href}
 								target="_blank"
-								title={context?.networks[key]?.text}
+								title={data?.networks[key]?.text}
 							>
 								<img
 									src={`/static/icons/networks/${key}.svg`}
-									alt={context?.networks[key]?.text}
+									alt={data?.networks[key]?.text}
 								/>
 							</a>
 						);

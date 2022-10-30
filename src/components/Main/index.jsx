@@ -1,16 +1,12 @@
-import React, { useContext, useMemo } from 'react';
-import { DataContext } from '../../data/DataContext';
+import React from 'react';
+import data from '../../data.json';
 
 const Main = () => {
-	const context = useContext(DataContext);
+	const reversedWorkArray = [...data?.work];
+	// reversedWorkArray?.reverse();
 
-	const [reversedWorkArray, reversedEducationArray] = useMemo(() => {
-		const outputWork = [...context?.work];
-		outputWork?.reverse();
-		const outputEducation = [...context?.education];
-		outputEducation?.reverse();
-		return [outputWork, outputEducation];
-	}, [context]);
+	const reversedEducationArray = [...data?.education];
+	// reversedEducationArray?.reverse();
 
 	return (
 		<main className="main">
@@ -60,15 +56,15 @@ const Main = () => {
 				<h2>About</h2>
 				<div className="about-row">
 					<strong>Age: </strong>
-					{new Date()?.getFullYear() - context?.yearOfBirth}
+					{new Date()?.getFullYear() - data?.yearOfBirth}
 				</div>
 				<div className="about-row">
 					<strong>Native language: </strong>
-					{context?.nativeLanguage}
+					{data?.nativeLanguage}
 				</div>
 				<div className="about-row">
 					<strong>Other languages: </strong>
-					{context?.otherLanguages?.join(', ') || '-'}
+					{data?.otherLanguages?.join(', ') || '-'}
 				</div>
 			</section>
 		</main>
