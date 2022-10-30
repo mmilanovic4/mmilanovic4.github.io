@@ -16,8 +16,8 @@ module.exports = (env) => {
 				'core-js/es/set',
 				'raf/polyfill',
 				'regenerator-runtime/runtime',
-				'./src/client/index.js',
-				'./src/client/style.scss'
+				'./src/index.js',
+				'./src/style.scss'
 			]
 		},
 		resolve: {
