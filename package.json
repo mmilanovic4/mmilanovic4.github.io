@@ -10,9 +10,9 @@
 	"scripts": {
 		"clean": "rm -rf dist/*",
 		"format": "prettier --write src/**/*.{js,jsx,css,json} *.{js,json}",
-		"build:dev": "webpack --env dev --progress",
-		"build:prod": "webpack --progress && react-snap",
-		"build:stats": "webpack --progress --profile --json > stats.json"
+		"dev": "webpack --env dev --progress",
+		"prod": "webpack --progress && react-snap",
+		"stats": "webpack --progress --profile --json > stats.json"
 	},
 	"reactSnap": {
 		"source": "dist"
@@ -22,18 +22,18 @@
 		"url": "https://github.com/mmilanovic4/mmilanovic4.github.io.git"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.19.3",
+		"@babel/core": "7.20.2",
 		"@babel/plugin-proposal-class-properties": "^7.18.6",
-		"@babel/preset-env": "^7.19.3",
+		"@babel/preset-env": "7.20.2",
 		"@babel/preset-react": "^7.18.6",
-		"babel-loader": "9.0.0",
+		"babel-loader": "9.1.0",
 		"copy-webpack-plugin": "^11.0.0",
 		"css-loader": "^6.7.1",
 		"css-minimizer-webpack-plugin": "^4.2.0",
 		"mini-css-extract-plugin": "^2.6.1",
 		"prettier": "^2.7.1",
 		"react-snap": "^1.23.0",
-		"sass": "^1.55.0",
+		"sass": "1.56.0",
 		"sass-loader": "^13.0.2",
 		"style-loader": "^3.3.1",
 		"terser-webpack-plugin": "^5.3.6",
