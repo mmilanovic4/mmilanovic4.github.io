@@ -27,9 +27,7 @@ const Block = ({ item, type = 'work' }) => {
 					<div className={css?.blockContentRightSide}>
 						<span className={css?.blockContentItem}>
 							<IconCalendar />
-							<span>
-								{item?.from} - {item?.to || 'Present'}
-							</span>
+							<span>{`${item?.from} - ${item?.to || 'Present'}`}</span>
 						</span>
 					</div>
 				</div>
