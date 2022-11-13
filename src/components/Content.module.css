@@ -1,0 +1,27 @@
+.block {
+	@apply mb-5 flex space-x-4;
+}
+
+.blockLogo {
+	@apply rounded-xl h-12;
+}
+
+.blockContent {
+	@apply w-full;
+}
+
+.blockContentTitle {
+	@apply text-lg text-gray-600 leading-none;
+}
+
+.blockContentDescription {
+	@apply text-gray-400 lg:flex justify-between mt-1;
+}
+
+.blockContentDescription svg {
+	@apply h-4 w-4 fill-none stroke-current;
+}
+
+.blockContentItem {
+	@apply flex items-center space-x-1;
+}

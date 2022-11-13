@@ -1,0 +1,11 @@
+.card {
+	@apply shadow rounded-xl bg-white overflow-hidden;
+}
+
+.card > h2 {
+	@apply font-semibold text-xl pt-7 px-7;
+}
+
+.content {
+	@apply p-7;
+}

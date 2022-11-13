@@ -16,8 +16,8 @@ module.exports = (env) => {
 				'core-js/es/set',
 				'raf/polyfill',
 				'regenerator-runtime/runtime',
-				'./src/index.js',
-				'./src/style.scss'
+				'./src/main.css',
+				'./src/index.js'
 			]
 		},
 		resolve: {
@@ -44,18 +44,18 @@ module.exports = (env) => {
 				},
 				// CSS
 				{
-					test: /\.s?css$/,
+					test: /\.css$/,
 					use: [
 						isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
 						'css-loader',
-						'sass-loader'
+						'postcss-loader'
 					]
 				}
 			]
 		},
 		plugins: [
 			new MiniCssExtractPlugin({
-				filename: 'style.css',
+				filename: 'main.css',
 				chunkFilename: '[id].css'
 			}),
 			new CopyPlugin({

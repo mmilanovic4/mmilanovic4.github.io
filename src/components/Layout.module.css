@@ -1,0 +1,55 @@
+.container {
+	@apply max-w-5xl mx-auto p-5 grid gap-5 lg:grid-cols-3;
+}
+
+.leftSide {
+	@apply space-y-5;
+}
+
+.rightSide {
+	@apply space-y-5 lg:col-span-2;
+}
+
+.profileAvatar {
+	@apply rounded-xl max-w-full;
+}
+
+.profileTitle {
+	@apply text-2xl font-semibold mt-6 mb-2;
+}
+
+.profileSubtitle {
+	@apply text-sm text-gray-400;
+}
+
+.information ul {
+	@apply space-y-4;
+}
+
+.information ul li {
+	@apply flex justify-between;
+}
+
+.information ul li strong {
+	@apply text-gray-400 font-normal;
+}
+
+.information ul li span {
+	@apply text-right text-gray-600;
+}
+
+.pillWrapper {
+	@apply flex flex-wrap mx-[-0.5rem];
+}
+
+.socialNetworks {
+	@apply flex items-center space-x-5;
+}
+
+.socialNetworks a {
+	@apply hover:text-violet-600;
+}
+
+.socialNetworks a svg {
+	@apply fill-current;
+}
