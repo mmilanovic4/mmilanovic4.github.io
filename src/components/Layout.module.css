@@ -47,7 +47,7 @@
 }
 
 .socialNetworks a {
-	@apply hover:text-violet-600;
+	@apply hover:text-sky-600;
 }
 
 .socialNetworks a svg {
