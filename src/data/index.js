@@ -53,7 +53,7 @@ export const education = [
 	{
 		from: 2008,
 		to: 2012,
-		name: 'ETHS "Nikola Tesla" in Belgrade',
+		name: 'ETHS "Nikola Tesla"',
 		title: 'Computer Technician',
 		location: 'Belgrade, Serbia',
 		img: 'tesla'
