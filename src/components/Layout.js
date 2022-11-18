@@ -59,7 +59,7 @@ const Layout = () => {
 							<IconInstagram />
 						</a>
 						<a
-							href="https://www.youtube.com/channel/UC9dkYUFyMnaEQKqM7UeOz-w"
+							href="https://www.youtube.com/@mmilanovic4"
 							target="_blank"
 						>
 							<IconYouTube />
