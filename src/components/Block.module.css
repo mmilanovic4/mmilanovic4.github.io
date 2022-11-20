@@ -15,7 +15,7 @@
 }
 
 .blockContentDescription {
-	@apply text-gray-400 lg:flex justify-between mt-1;
+	@apply text-gray-400 lg:flex justify-between;
 }
 
 .blockContentDescription svg {
