@@ -10,7 +10,7 @@ export const skills = ['JavaScript', 'React', 'HTML', 'CSS', 'SQL', 'Git'];
 
 export const work = [
 	{
-		from: 'January 2021',
+		from: 'June 2020',
 		to: null,
 		name: 'LoanQ',
 		title: 'Full-Stack Web Developer',
