@@ -3,7 +3,7 @@ export const yearOfBirth = 1993;
 export const information = [
 	{ key: 'Age', value: new Date()?.getFullYear() - yearOfBirth },
 	{ key: 'Location', value: 'Belgrade, Serbia' },
-	{ key: 'Time zone', value: 'GMT+1' }
+	{ key: 'Time zone', value: 'GMT+2' }
 ];
 
 export const skills = ['JavaScript', 'React', 'HTML', 'CSS', 'SQL', 'Git'];
