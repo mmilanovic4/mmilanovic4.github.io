@@ -17,11 +17,14 @@ jobs:
 
       - name: Install dependencies 📦
         run: |
-          yarn install --frozen-lockfile
+          npm install
 
       - name: Build static site 🔧
         run: |
-          yarn build   # ovo u tvom package.json treba da radi `next build && next export`
+          npm build
+
+      - name: Add .nojekyll
+        run: echo "" > out/.nojekyll
 
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
