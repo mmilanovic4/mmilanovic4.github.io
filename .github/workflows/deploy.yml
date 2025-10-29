@@ -21,7 +21,7 @@ jobs:
 
       - name: Build static site 🔧
         run: |
-          npm build
+          npm run build
 
       - name: Add .nojekyll
         run: echo "" > out/.nojekyll
