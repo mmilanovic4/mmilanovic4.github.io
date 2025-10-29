@@ -9,8 +9,8 @@ import {
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="flex flex-col items-center justify-center px-2">
-        <div className="mt-2 mb-4">
+      <header className="flex flex-col items-center justify-center px-4">
+        <div className="my-4">
           <Image
             alt="Profile"
             className="rounded"
