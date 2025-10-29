@@ -1,0 +1,30 @@
+name: 🚀 Build and Deploy (Next.js)
+
+on:
+  push:
+    branches:
+      - dev
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Install dependencies 📦
+        run: |
+          yarn install --frozen-lockfile
+
+      - name: Build static site 🔧
+        run: |
+          yarn build   # ovo u tvom package.json treba da radi `next build && next export`
+
+      - name: Deploy to GitHub Pages 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: out
