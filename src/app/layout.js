@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} antialiased`}>
         <div className="min-h-screen flex flex-col">
           <Header />
-          <main className="max-w-full w-[500px] mx-auto">{children}</main>
+          <main className="max-w-full w-[500px] mx-auto mb-8">{children}</main>
           <Footer />
         </div>
       </body>

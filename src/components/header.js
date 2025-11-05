@@ -5,6 +5,7 @@ import {
   SiInstagram,
   SiYoutube,
 } from "@icons-pack/react-simple-icons";
+import Link from "next/link";
 
 export function Header() {
   return (
@@ -37,6 +38,16 @@ export function Header() {
           <SiYoutube className="text-[#FF0000]" />
         </a>
       </div>
+      <nav className="mt-2">
+        <ul className="flex flex-row gap-4">
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/cv">Résumé</Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }
