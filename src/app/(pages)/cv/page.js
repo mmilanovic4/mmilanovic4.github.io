@@ -64,7 +64,7 @@ export default function CV() {
         <ul className="flex flex-col gap-2">
           {data.work.map((row) => {
             return (
-              <li key={row.id}>
+              <li className="flex" key={row.id}>
                 <span className="w-32 inline-block text-gray-500">
                   {row.from} - {row.to}
                 </span>
