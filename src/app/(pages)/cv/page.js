@@ -1,53 +1,91 @@
+const data = {
+  work: [
+    {
+      id: "3",
+      name: "LoanQ",
+      location: "Sydney, Australia",
+      from: 2020,
+      to: "now",
+    },
+    {
+      id: "2",
+      name: "Salestrekker",
+      location: "Sydney, Australia",
+      from: 2018,
+      to: "now",
+    },
+    {
+      id: "1",
+      name: "High-Tech Bridge",
+      location: "Geneva, Switzerland",
+      from: 2016,
+      to: 2018,
+    },
+  ],
+  education: [
+    {
+      id: "3",
+      name: "Singidunum University",
+      title: "Master of Informatics",
+      location: "Belgrade, Serbia",
+      from: 2016,
+      to: 2018,
+    },
+    {
+      id: "2",
+      name: "Singidunum University",
+      title: "Bachelor of Science in Informatics",
+      location: "Belgrade, Serbia",
+      from: 2012,
+      to: 2016,
+    },
+    {
+      id: "1",
+      name: 'ETHS "Nikola Tesla"',
+      title: "Computer Technician",
+      location: "Belgrade, Serbia",
+      from: 2008,
+      to: 2012,
+    },
+  ],
+};
+
 export default function Resume() {
   return (
     <>
       <section>
-        <h2 className="font-bold mb-4">Work</h2>
+        <h2 className="font-bold mt-8 mb-4">Work</h2>
         <ul className="flex flex-col gap-2">
-          <li>
-            <span className="w-32 inline-block">2020 - now</span>
-            <span>
-              <strong>LoanQ</strong>, Sydney, Australia
-            </span>
-          </li>
-          <li>
-            <span className="w-32 inline-block">2018 - now</span>
-            <span>
-              <strong>Salestrekker</strong>, Sydney, Australia
-            </span>
-          </li>
-          <li>
-            <span className="w-32 inline-block">2016 - 2018</span>
-            <span>
-              <strong>High-Tech Bridge</strong>, Geneva, Switzerland
-            </span>
-          </li>
+          {data.work.map((row) => {
+            return (
+              <li key={row.id}>
+                <span className="w-32 inline-block">
+                  {row.from} - {row.to}
+                </span>
+                <span>
+                  <strong>{row.name}</strong>, {row.location}
+                </span>
+              </li>
+            );
+          })}
         </ul>
       </section>
       <section>
-        <h2 className="font-bold my-4">Education</h2>
+        <h2 className="font-bold mt-8 mb-4">Education</h2>
         <ul className="flex flex-col gap-2">
-          <li>
-            <span className="w-32 inline-block">2016 - 2018</span>
-            <span>Master of Informatics</span>
-            <span className="ml-32 block">
-              <strong>Singidunum University</strong>, Belgrade, Serbia
-            </span>
-          </li>
-          <li>
-            <span className="w-32 inline-block">2012 - 2016</span>
-            <span>Bachelor of Science in Informatics</span>
-            <span className="ml-32 block">
-              <strong>Singidunum University</strong>, Belgrade, Serbia
-            </span>
-          </li>
-          <li>
-            <span className="w-32 inline-block">2008 - 2012</span>
-            <span>Computer Technician</span>
-            <span className="ml-32 block">
-              <strong>ETHS "Nikola Tesla</strong>, Belgrade, Serbia
-            </span>
-          </li>
+          {data.education.map((row) => {
+            return (
+              <li key={row.id}>
+                <span className="w-32 inline-block">
+                  {row.from} - {row.to}
+                </span>
+                <span>{row.title}</span>
+                <span className="ml-32 block">
+                  <strong>{row.name}</strong>, {row.location}
+                </span>
+              </li>
+            );
+          })}
         </ul>
       </section>
     </>
