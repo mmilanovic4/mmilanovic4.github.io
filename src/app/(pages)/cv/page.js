@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const data = {
   work: [
     {
@@ -56,6 +58,10 @@ const data = {
   ],
 };
 
+export const metadata = {
+  title: "Miloš Milanović | Résumé",
+};
+
 export default function CV() {
   return (
     <>
@@ -69,10 +75,12 @@ export default function CV() {
                   {row.from} - {row.to}
                 </span>
                 <span className="inline-flex items-center">
-                  <img
+                  <Image
                     className="inline-block mr-2 w-4"
                     alt={row.name}
                     src={row.img}
+                    width={16}
+                    height={16}
                   />
                   <strong>{row.name}</strong>, {row.location}
                 </span>
@@ -92,10 +100,12 @@ export default function CV() {
                 </span>
                 <span>{row.title}</span>
                 <span className="ml-32 inline-flex items-center">
-                  <img
+                  <Image
                     className="inline-block mr-2 w-4"
                     alt={row.name}
                     src={row.img}
+                    width={16}
+                    height={16}
                   />
                   <strong>{row.name}</strong>, {row.location}
                 </span>

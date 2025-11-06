@@ -10,6 +10,22 @@ const inter = Inter({
 export const metadata = {
   title: "Miloš Milanović",
   description: "Full-stack web developer based in Belgrade, Serbia.",
+  openGraph: {
+    title: "Miloš Milanović",
+    description: "Full-stack web developer based in Belgrade, Serbia.",
+    url: "https://mmilanovic4.github.io/",
+    siteName: "Miloš Milanović",
+    images: [
+      {
+        url: "https://mmilanovic4.github.io/profile.jpg",
+        width: 1000,
+        height: 750,
+        alt: "Miloš Milanović",
+      },
+    ],
+    locale: "sr_RS",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
