@@ -65,12 +65,12 @@ export const metadata = {
 export default function CV() {
   return (
     <>
-      <section>
+      <section className="mx-2 md:mx-0">
         <h2 className="font-bold mt-8 mb-4">Work</h2>
         <ul className="flex flex-col gap-2">
           {data.work.map((row) => {
             return (
-              <li className="flex" key={row.id}>
+              <li className="flex flex-col md:flex-row" key={row.id}>
                 <span className="w-32 inline-block text-gray-500">
                   {row.from} - {row.to}
                 </span>
@@ -89,17 +89,17 @@ export default function CV() {
           })}
         </ul>
       </section>
-      <section>
+      <section className="mx-2 md:mx-0">
         <h2 className="font-bold mt-8 mb-4">Education</h2>
         <ul className="flex flex-col gap-2">
           {data.education.map((row) => {
             return (
-              <li key={row.id}>
+              <li className="flex flex-col md:list-item" key={row.id}>
                 <span className="w-32 inline-block text-gray-500">
                   {row.from} - {row.to}
                 </span>
                 <span>{row.title}</span>
-                <span className="ml-32 inline-flex items-center">
+                <span className="ml-0 md:ml-32 inline-block md:inline-flex items-center text-ellipsis overflow-hidden whitespace-nowrap">
                   <Image
                     className="inline-block mr-2 w-4"
                     alt={row.name}

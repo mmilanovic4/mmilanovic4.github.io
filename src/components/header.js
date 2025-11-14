@@ -44,7 +44,7 @@ export function Header() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/cv">Résumé</Link>
+            <Link href="/resume">Résumé</Link>
           </li>
         </ul>
       </nav>
