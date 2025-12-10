@@ -21,10 +21,10 @@ export function Header() {
         />
       </div>
       <h1 className="mb-2 text-center">Miloš Milanović</h1>
-      <p className="font-light text-center">
+      <p className="text-center font-light">
         Full-stack web developer based in Belgrade, Serbia.
       </p>
-      <div className="flex gap-4 my-4">
+      <div className="my-4 flex gap-4">
         <a href="mailto:mmilanovic016@gmail.com">
           <SiGmail className="text-[#EA4335]" />
         </a>

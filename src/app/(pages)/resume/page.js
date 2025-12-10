@@ -66,17 +66,17 @@ export default function CV() {
   return (
     <>
       <section className="mx-2 md:mx-0">
-        <h2 className="font-bold mt-8 mb-4">Work</h2>
+        <h2 className="mt-8 mb-4 font-bold">Work</h2>
         <ul className="flex flex-col gap-2">
           {data.work.map((row) => {
             return (
               <li className="flex flex-col md:flex-row" key={row.id}>
-                <span className="w-32 inline-block text-gray-500">
+                <span className="inline-block w-32 text-gray-500">
                   {row.from} - {row.to}
                 </span>
                 <span className="inline-flex items-center">
                   <Image
-                    className="inline-block mr-2 w-4"
+                    className="mr-2 inline-block w-4"
                     alt={row.name}
                     src={row.img}
                     width={16}
@@ -90,18 +90,18 @@ export default function CV() {
         </ul>
       </section>
       <section className="mx-2 md:mx-0">
-        <h2 className="font-bold mt-8 mb-4">Education</h2>
+        <h2 className="mt-8 mb-4 font-bold">Education</h2>
         <ul className="flex flex-col gap-2">
           {data.education.map((row) => {
             return (
               <li className="flex flex-col md:list-item" key={row.id}>
-                <span className="w-32 inline-block text-gray-500">
+                <span className="inline-block w-32 text-gray-500">
                   {row.from} - {row.to}
                 </span>
                 <span>{row.title}</span>
-                <span className="ml-0 md:ml-32 inline-block md:inline-flex items-center text-ellipsis overflow-hidden whitespace-nowrap">
+                <span className="ml-0 inline-block items-center overflow-hidden text-ellipsis whitespace-nowrap md:ml-32 md:inline-flex">
                   <Image
-                    className="inline-block mr-2 w-4"
+                    className="mr-2 inline-block w-4"
                     alt={row.name}
                     src={row.img}
                     width={16}
