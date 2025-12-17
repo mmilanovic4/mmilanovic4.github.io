@@ -1,11 +1,14 @@
 import { Inter } from "next/font/google";
 import { Footer, Header } from "@/components";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
 });
+
+const NEXT_PUBLIC_GA_ID = "G-QMSQLXMNWC";
 
 export const metadata = {
   title: "Miloš Milanović",
@@ -34,10 +37,11 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} antialiased`}>
         <div className="flex min-h-screen flex-col bg-white">
           <Header />
-          <main className="mx-auto mb-8 w-[500px] max-w-full">{children}</main>
+          <main className="mx-auto mb-8 w-125 max-w-full">{children}</main>
           <Footer />
         </div>
       </body>
+      <GoogleAnalytics gaId={NEXT_PUBLIC_GA_ID} />
     </html>
   );
 }
