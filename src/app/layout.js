@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import { Footer, Header } from "@/components";
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "./globals.css";
 
@@ -13,6 +13,19 @@ const NEXT_PUBLIC_GA_ID = "G-QMSQLXMNWC";
 export const metadata = {
   title: "Miloš Milanović",
   description: "Full-stack web developer based in Belgrade, Serbia.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/profile.jpg",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://mmilanovic4.github.io/",
+  },
+  authors: [{ name: "Miloš Milanović", url: "https://mmilanovic4.github.io/" }],
+  verification: {},
   openGraph: {
     title: "Miloš Milanović",
     description: "Full-stack web developer based in Belgrade, Serbia.",
@@ -26,8 +39,14 @@ export const metadata = {
         alt: "Miloš Milanović",
       },
     ],
-    locale: "sr_RS",
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Miloš Milanović",
+    description: "Full-stack web developer based in Belgrade, Serbia.",
+    images: ["https://mmilanovic4.github.io/profile.jpg"],
   },
 };
 
@@ -40,8 +59,8 @@ export default function RootLayout({ children }) {
           <main className="mx-auto mb-8 w-125 max-w-full">{children}</main>
           <Footer />
         </div>
+        <GoogleAnalytics gaId={NEXT_PUBLIC_GA_ID} />
       </body>
-      <GoogleAnalytics gaId={NEXT_PUBLIC_GA_ID} />
     </html>
   );
 }

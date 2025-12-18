@@ -1,0 +1,67 @@
+{
+  "work": [
+    {
+      "id": "3",
+      "name": "LoanQ",
+      "location": "Sydney, Australia",
+      "from": 2020,
+      "to": "now",
+      "img": "/cv/loanq.ico"
+    },
+    {
+      "id": "2",
+      "name": "Salestrekker",
+      "location": "Sydney, Australia",
+      "from": 2018,
+      "to": "now",
+      "img": "/cv/salestrekker.ico"
+    },
+    {
+      "id": "1",
+      "name": "High-Tech Bridge",
+      "location": "Geneva, Switzerland",
+      "from": 2016,
+      "to": 2018,
+      "img": "/cv/htbridge.ico"
+    }
+  ],
+  "education": [
+    {
+      "id": "3",
+      "name": "Singidunum University",
+      "title": "Master of Informatics",
+      "location": "Belgrade, Serbia",
+      "from": 2016,
+      "to": 2018,
+      "img": "/cv/singidunum.ico"
+    },
+    {
+      "id": "2",
+      "name": "Singidunum University",
+      "title": "Bachelor of Science in Informatics",
+      "location": "Belgrade, Serbia",
+      "from": 2012,
+      "to": 2016,
+      "img": "/cv/singidunum.ico"
+    },
+    {
+      "id": "1",
+      "name": "ETHS \"Nikola Tesla\"",
+      "title": "Computer Technician",
+      "location": "Belgrade, Serbia",
+      "from": 2008,
+      "to": 2012,
+      "img": "/cv/tesla.ico"
+    }
+  ],
+  "skills": [
+    "JavaScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "SQL",
+    "MongoDB",
+    "Git",
+    "Tailwind CSS"
+  ]
+}

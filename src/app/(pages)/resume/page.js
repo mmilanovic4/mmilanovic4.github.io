@@ -1,68 +1,11 @@
 import Image from "next/image";
-
-const data = {
-  work: [
-    {
-      id: "3",
-      name: "LoanQ",
-      location: "Sydney, Australia",
-      from: 2020,
-      to: "now",
-      img: "/cv/loanq.ico",
-    },
-    {
-      id: "2",
-      name: "Salestrekker",
-      location: "Sydney, Australia",
-      from: 2018,
-      to: "now",
-      img: "/cv/salestrekker.ico",
-    },
-    {
-      id: "1",
-      name: "High-Tech Bridge",
-      location: "Geneva, Switzerland",
-      from: 2016,
-      to: 2018,
-      img: "/cv/htbridge.ico",
-    },
-  ],
-  education: [
-    {
-      id: "3",
-      name: "Singidunum University",
-      title: "Master of Informatics",
-      location: "Belgrade, Serbia",
-      from: 2016,
-      to: 2018,
-      img: "/cv/singidunum.ico",
-    },
-    {
-      id: "2",
-      name: "Singidunum University",
-      title: "Bachelor of Science in Informatics",
-      location: "Belgrade, Serbia",
-      from: 2012,
-      to: 2016,
-      img: "/cv/singidunum.ico",
-    },
-    {
-      id: "1",
-      name: 'ETHS "Nikola Tesla"',
-      title: "Computer Technician",
-      location: "Belgrade, Serbia",
-      from: 2008,
-      to: 2012,
-      img: "/cv/tesla.ico",
-    },
-  ],
-};
+import data from "@/data/resume.json";
 
 export const metadata = {
   title: "Miloš Milanović | Résumé",
 };
 
-export default function CV() {
+export default function Resume() {
   return (
     <>
       <section className="mx-2 md:mx-0">
@@ -71,9 +14,12 @@ export default function CV() {
           {data.work.map((row) => {
             return (
               <li className="flex flex-col md:flex-row" key={row.id}>
-                <span className="inline-block w-32 text-gray-500">
+                <time
+                  className="inline-block w-32 text-gray-500"
+                  dateTime={`${row.from}-01-01`}
+                >
                   {row.from} - {row.to}
-                </span>
+                </time>
                 <span className="inline-flex items-center">
                   <Image
                     className="mr-2 inline-block w-4"
@@ -95,9 +41,12 @@ export default function CV() {
           {data.education.map((row) => {
             return (
               <li className="flex flex-col md:list-item" key={row.id}>
-                <span className="inline-block w-32 text-gray-500">
+                <time
+                  className="inline-block w-32 text-gray-500"
+                  dateTime={`${row.from}-01-01`}
+                >
                   {row.from} - {row.to}
-                </span>
+                </time>
                 <span>{row.title}</span>
                 <span className="ml-0 inline-block items-center overflow-hidden text-ellipsis whitespace-nowrap md:ml-32 md:inline-flex">
                   <Image
