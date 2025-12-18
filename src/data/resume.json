@@ -53,15 +53,5 @@
       "to": 2012,
       "img": "/cv/tesla.ico"
     }
-  ],
-  "skills": [
-    "JavaScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "SQL",
-    "MongoDB",
-    "Git",
-    "Tailwind CSS"
   ]
 }
