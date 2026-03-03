@@ -56,7 +56,9 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} antialiased`}>
         <div className="flex min-h-screen flex-col bg-white">
           <Header />
-          <main className="mx-auto mb-8 w-125 max-w-full">{children}</main>
+          <main className="mx-auto mb-8 w-full max-w-full px-2 md:w-125 md:px-0">
+            {children}
+          </main>
           <Footer />
         </div>
         <GoogleAnalytics gaId={NEXT_PUBLIC_GA_ID} />

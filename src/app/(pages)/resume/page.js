@@ -5,61 +5,70 @@ export const metadata = {
   title: "Miloš Milanović | Résumé",
 };
 
+function ResumeItem({ item }) {
+  return (
+    <li className="flex flex-col gap-2 border-b border-gray-200 pb-3 last:border-b-0 md:gap-4">
+      <time className="w-28 shrink-0 text-sm text-gray-500 md:w-32 md:text-base">
+        {item.from} - {item.to || "Present"}
+      </time>
+
+      <div className="flex flex-col flex-wrap gap-2 md:gap-3">
+        {item.title && (
+          <span className="font-semibold text-gray-800 md:mr-2">
+            {item.title}
+          </span>
+        )}
+
+        <span className="inline-flex items-center gap-1 text-sm text-gray-700 md:text-base">
+          {item.img && (
+            <Image
+              src={item.img}
+              alt={item.name}
+              width={20}
+              height={20}
+              className="rounded-sm"
+            />
+          )}
+          <strong>{item.name}</strong>
+        </span>
+
+        <span className="inline-flex items-center gap-1 text-sm text-gray-700 md:text-base">
+          {item.cc && (
+            <Image
+              className="rounded border border-gray-300"
+              src={`/flags/${item.cc}.svg`}
+              alt={item.location}
+              width={20}
+              height={20}
+            />
+          )}
+          <span>{item.location}</span>
+        </span>
+      </div>
+
+      {item.description && (
+        <p className="mt-1 text-sm text-gray-600">{item.description}</p>
+      )}
+    </li>
+  );
+}
+
 export default function Resume() {
   return (
     <>
-      <section className="mx-2 md:mx-0">
+      <section>
         <h2 className="mt-8 mb-4 font-bold">Work</h2>
         <ul className="flex flex-col gap-2">
           {data.work.map((row) => {
-            return (
-              <li className="flex flex-col md:flex-row" key={row.id}>
-                <time
-                  className="inline-block w-32 text-gray-500"
-                  dateTime={`${row.from}-01-01`}
-                >
-                  {row.from} - {row.to}
-                </time>
-                <span className="inline-flex items-center">
-                  <Image
-                    className="mr-2 inline-block w-4"
-                    alt={row.name}
-                    src={row.img}
-                    width={16}
-                    height={16}
-                  />
-                  <strong>{row.name}</strong>, {row.location}
-                </span>
-              </li>
-            );
+            return <ResumeItem key={row.id} item={row} />;
           })}
         </ul>
       </section>
-      <section className="mx-2 md:mx-0">
+      <section>
         <h2 className="mt-8 mb-4 font-bold">Education</h2>
         <ul className="flex flex-col gap-2">
           {data.education.map((row) => {
-            return (
-              <li className="flex flex-col md:list-item" key={row.id}>
-                <time
-                  className="inline-block w-32 text-gray-500"
-                  dateTime={`${row.from}-01-01`}
-                >
-                  {row.from} - {row.to}
-                </time>
-                <span>{row.title}</span>
-                <span className="ml-0 inline-block items-center overflow-hidden text-ellipsis whitespace-nowrap md:ml-32 md:inline-flex">
-                  <Image
-                    className="mr-2 inline-block w-4"
-                    alt={row.name}
-                    src={row.img}
-                    width={16}
-                    height={16}
-                  />
-                  <strong>{row.name}</strong>, {row.location}
-                </span>
-              </li>
-            );
+            return <ResumeItem key={row.id} item={row} />;
           })}
         </ul>
       </section>

@@ -3,26 +3,32 @@
     {
       "id": "3",
       "name": "LoanQ",
+      "title": "Full-stack web developer",
       "location": "Sydney, Australia",
       "from": 2020,
-      "to": "now",
-      "img": "/cv/loanq.ico"
+      "to": null,
+      "img": "/cv/loanq.ico",
+      "cc": "au"
     },
     {
       "id": "2",
       "name": "Salestrekker",
+      "title": "Full-stack web developer",
       "location": "Sydney, Australia",
       "from": 2018,
-      "to": "now",
-      "img": "/cv/salestrekker.ico"
+      "to": null,
+      "img": "/cv/salestrekker.ico",
+      "cc": "au"
     },
     {
       "id": "1",
       "name": "High-Tech Bridge",
+      "title": "Junior security engineer",
       "location": "Geneva, Switzerland",
       "from": 2016,
       "to": 2018,
-      "img": "/cv/htbridge.ico"
+      "img": "/cv/htbridge.ico",
+      "cc": "ch"
     }
   ],
   "education": [
@@ -33,7 +39,8 @@
       "location": "Belgrade, Serbia",
       "from": 2016,
       "to": 2018,
-      "img": "/cv/singidunum.ico"
+      "img": "/cv/singidunum.ico",
+      "cc": "rs"
     },
     {
       "id": "2",
@@ -42,7 +49,8 @@
       "location": "Belgrade, Serbia",
       "from": 2012,
       "to": 2016,
-      "img": "/cv/singidunum.ico"
+      "img": "/cv/singidunum.ico",
+      "cc": "rs"
     },
     {
       "id": "1",
@@ -51,7 +59,8 @@
       "location": "Belgrade, Serbia",
       "from": 2008,
       "to": 2012,
-      "img": "/cv/tesla.ico"
+      "img": "/cv/tesla.ico",
+      "cc": "rs"
     }
   ]
 }
