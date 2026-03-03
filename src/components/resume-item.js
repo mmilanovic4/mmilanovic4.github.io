@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function ResumeItem({ item }) {
   return (
-    <li className="flex flex-col gap-2 border-b border-gray-200 pb-3 last:border-b-0 md:gap-4">
+    <li className="flex flex-col gap-2 border-b border-gray-200 pb-3 last:border-b-0 md:gap-3">
       <time className="w-28 shrink-0 text-sm text-gray-500 md:w-32 md:text-base">
         {item.from} - {item.to || "Present"}
       </time>
