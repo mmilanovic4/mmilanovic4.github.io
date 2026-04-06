@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Resume() {
   return (
-    <>
+    <div className="mx-auto max-w-full md:w-125">
       <section>
         <h2 className="mt-8 mb-4 font-bold">Work</h2>
         <ul className="flex flex-col gap-2">
@@ -24,6 +24,6 @@ export default function Resume() {
           })}
         </ul>
       </section>
-    </>
+    </div>
   );
 }

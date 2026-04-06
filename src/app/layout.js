@@ -6,6 +6,7 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-sans",
 });
 
 const NEXT_PUBLIC_GA_ID = "G-QMSQLXMNWC";
@@ -53,10 +54,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} subpixel-antialiased`}>
         <div className="flex min-h-screen flex-col bg-white">
           <Header />
-          <main className="mx-auto mb-8 w-full max-w-full px-2 md:w-125 md:px-0">
+          <main className="mb-8 w-full max-w-full px-2 md:px-0">
             {children}
           </main>
           <Footer />

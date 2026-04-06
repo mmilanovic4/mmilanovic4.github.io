@@ -31,7 +31,7 @@ export function Header() {
         <a href="https://github.com/mmilanovic4" target="_blank">
           <SiGithub className="text-[#181717]" />
         </a>
-        <a href="https://www.instagram.com/mmilanovic4/" target="_blank">
+        <a href="https://www.instagram.com/mmilanovic4" target="_blank">
           <SiInstagram className="text-[#FF0069]" />
         </a>
         <a href="https://www.youtube.com/@mmilanovic4" target="_blank">
