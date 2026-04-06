@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import {
   SiGithub,
@@ -6,8 +7,15 @@ import {
   SiYoutube,
 } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navItems = [
+  { name: "Home", href: "/" },
+  { name: "Résumé", href: "/resume" },
+];
 
 export function Header() {
+  const pathname = usePathname();
   return (
     <header className="flex flex-col items-center justify-center px-4">
       <div className="my-4">
@@ -40,12 +48,18 @@ export function Header() {
       </div>
       <nav className="mt-2">
         <ul className="flex flex-row gap-4">
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/resume">Résumé</Link>
-          </li>
+          {navItems.map((navItem, index) => {
+            return (
+              <li key={navItem.name + index}>
+                <Link
+                  className={`${navItem.href === pathname ? "font-bold" : ""}`}
+                  href={navItem.href}
+                >
+                  {navItem.name}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </header>
