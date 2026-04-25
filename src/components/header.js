@@ -20,83 +20,87 @@ const navItems = [
 export function Header() {
   const pathname = usePathname();
   return (
-    <header className="mx-auto w-full max-w-full px-4 md:w-125 md:px-0">
-      <div className="mt-8 mb-6 flex items-center gap-4">
+    <header className="mx-auto w-full max-w-full md:w-125">
+      <div className="my-6">
         <Image
           alt="Profile"
-          className="rounded-md"
+          className="w-full rounded object-cover"
           loading="eager"
           src="/profile.jpg"
-          width={64}
-          height={64}
-          style={{ objectFit: "cover", width: 64, height: 64 }}
+          width={1000}
+          height={375}
         />
-        <div>
-          <h1 className="text-lg font-bold">Miloš Milanović</h1>
-          <p className="text-muted text-sm">full-stack web developer</p>
+      </div>
+
+      <div className="px-4 md:px-0">
+        <h1 className="text-lg font-bold">Miloš Milanović</h1>
+        <p className="text-muted text-sm">full-stack web developer</p>
+
+        <div className="my-4 flex gap-4">
+          <a href="mailto:mmilanovic016@gmail.com" title="Gmail">
+            <SiGmail
+              style={{ color: "var(--icon-gmail)" }}
+              className="size-6 md:size-4"
+            />
+          </a>
+          <a
+            href="https://github.com/mmilanovic4"
+            target="_blank"
+            title="GitHub"
+          >
+            <SiGithub
+              style={{ color: "var(--icon-github)" }}
+              className="size-6 md:size-4"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/mmilanovic4"
+            target="_blank"
+            title="Instagram"
+          >
+            <SiInstagram
+              style={{ color: "var(--icon-instagram)" }}
+              className="size-6 md:size-4"
+            />
+          </a>
+          <a
+            href="https://www.youtube.com/@mmilanovic4"
+            target="_blank"
+            title="YouTube"
+          >
+            <SiYoutube
+              style={{ color: "var(--icon-youtube)" }}
+              className="size-6 md:size-4"
+            />
+          </a>
         </div>
-      </div>
 
-      <div className="mb-4 flex gap-4">
-        <a href="mailto:mmilanovic016@gmail.com" title="Gmail">
-          <SiGmail
-            style={{ color: "var(--icon-gmail)" }}
-            className="size-6 md:size-4"
-          />
-        </a>
-        <a href="https://github.com/mmilanovic4" target="_blank" title="GitHub">
-          <SiGithub
-            style={{ color: "var(--icon-github)" }}
-            className="size-6 md:size-4"
-          />
-        </a>
-        <a
-          href="https://www.instagram.com/mmilanovic4"
-          target="_blank"
-          title="Instagram"
-        >
-          <SiInstagram
-            style={{ color: "var(--icon-instagram)" }}
-            className="size-6 md:size-4"
-          />
-        </a>
-        <a
-          href="https://www.youtube.com/@mmilanovic4"
-          target="_blank"
-          title="YouTube"
-        >
-          <SiYoutube
-            style={{ color: "var(--icon-youtube)" }}
-            className="size-6 md:size-4"
-          />
-        </a>
-      </div>
+        <hr className="border-gray-200 dark:border-gray-800" />
 
-      <hr className="border-gray-200 dark:border-gray-800" />
-
-      <nav className="my-4">
-        <ul className="flex gap-6">
-          {navItems.map((item) => (
-            <li key={item.href}>
-              <Link
-                href={item.href}
-                className={`border-b-2 pb-1 text-sm transition-colors ${
-                  item.href === pathname
-                    ? "border-accent text-accent"
-                    : "hover:text-accent text-muted border-transparent"
-                }`}
-              >
-                {item.name}
-              </Link>
+        <nav className="my-4">
+          <ul className="flex gap-6">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={`border-b-2 pb-1 text-sm transition-colors ${
+                    item.href === pathname
+                      ? "border-accent text-accent"
+                      : "hover:text-accent text-muted border-transparent"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+            <li className="ml-auto">
+              <ThemeToggle />
             </li>
-          ))}
-          <li className="ml-auto">
-            <ThemeToggle />
-          </li>
-        </ul>
-      </nav>
+          </ul>
+        </nav>
 
-      <hr className="border-gray-200 dark:border-gray-800" />
+        <hr className="border-gray-200 dark:border-gray-800" />
+      </div>
     </header>
   );
 }
