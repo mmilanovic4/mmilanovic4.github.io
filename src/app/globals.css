@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+:root {
+  --blue: #378add;
+  --blue-light: #e6f1fb;
+  --blue-dark: #0c447c;
+}
+
+@theme {
+  --color-accent: var(--blue);
+  --color-accent-light: var(--blue-light);
+  --color-accent-dark: var(--blue-dark);
+}
+
 body {
   @apply scroll-smooth;
 }

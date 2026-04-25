@@ -1,12 +1,12 @@
-import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import { Footer, Header } from "@/components";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "./globals.css";
 
-const inter = Inter({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-mono",
 });
 
 const NEXT_PUBLIC_GA_ID = "G-QMSQLXMNWC";
@@ -54,10 +54,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} subpixel-antialiased`}>
+      <body className={`${jetbrainsMono.className} subpixel-antialiased`}>
         <div className="flex min-h-screen flex-col bg-white">
           <Header />
-          <main className="mb-8 w-full max-w-full px-2 md:px-0">
+          <main className="mb-8 w-full max-w-full px-4 md:px-0">
             {children}
           </main>
           <Footer />

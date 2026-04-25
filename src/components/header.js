@@ -10,58 +10,77 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "Résumé", href: "/resume" },
+  { name: "home", href: "/" },
+  { name: "résumé", href: "/resume" },
+  { name: "projects", href: "/projects" },
+  { name: "blog", href: "/blog" },
 ];
 
 export function Header() {
   const pathname = usePathname();
   return (
-    <header className="flex flex-col items-center justify-center px-4">
-      <div className="my-4">
+    <header className="mx-auto w-full max-w-full px-4 md:w-125 md:px-0">
+      <div className="mt-8 mb-6 flex items-center gap-4">
         <Image
           alt="Profile"
-          className="rounded"
+          className="rounded-md"
           loading="eager"
           src="/profile.jpg"
-          width={500}
-          height={375}
+          width={64}
+          height={64}
+          style={{ objectFit: "cover", width: 64, height: 64 }}
         />
+        <div>
+          <h1 className="text-lg font-bold">Miloš Milanović</h1>
+          <p className="text-sm text-gray-500">full-stack web developer</p>
+        </div>
       </div>
-      <h1 className="mb-2 text-center">Miloš Milanović</h1>
-      <p className="text-center font-light">
-        Full-stack web developer based in Belgrade, Serbia.
-      </p>
-      <div className="my-4 flex gap-4">
-        <a href="mailto:mmilanovic016@gmail.com">
-          <SiGmail className="text-[#EA4335]" />
+
+      <div className="mb-4 flex gap-4">
+        <a href="mailto:mmilanovic016@gmail.com" title="Gmail">
+          <SiGmail className="text-[#EA4335]" size={16} />
         </a>
-        <a href="https://github.com/mmilanovic4" target="_blank">
-          <SiGithub className="text-[#181717]" />
+        <a href="https://github.com/mmilanovic4" target="_blank" title="GitHub">
+          <SiGithub className="text-[#181717]" size={16} />
         </a>
-        <a href="https://www.instagram.com/mmilanovic4" target="_blank">
-          <SiInstagram className="text-[#FF0069]" />
+        <a
+          href="https://www.instagram.com/mmilanovic4"
+          target="_blank"
+          title="Instagram"
+        >
+          <SiInstagram className="text-[#FF0069]" size={16} />
         </a>
-        <a href="https://www.youtube.com/@mmilanovic4" target="_blank">
-          <SiYoutube className="text-[#FF0000]" />
+        <a
+          href="https://www.youtube.com/@mmilanovic4"
+          target="_blank"
+          title="YouTube"
+        >
+          <SiYoutube className="text-[#FF0000]" size={16} />
         </a>
       </div>
-      <nav className="mt-2">
-        <ul className="flex flex-row gap-4">
-          {navItems.map((navItem, index) => {
-            return (
-              <li key={navItem.name + index}>
-                <Link
-                  className={`${navItem.href === pathname ? "font-bold" : ""}`}
-                  href={navItem.href}
-                >
-                  {navItem.name}
-                </Link>
-              </li>
-            );
-          })}
+
+      <hr className="border-gray-200" />
+
+      <nav className="my-4">
+        <ul className="flex gap-6">
+          {navItems.map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                className={`border-b-2 pb-1 text-sm transition-colors ${
+                  item.href === pathname
+                    ? "border-accent text-accent"
+                    : "hover:text-accent border-transparent text-gray-500"
+                }`}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
+
+      <hr className="border-gray-200" />
     </header>
   );
 }
