@@ -8,6 +8,7 @@ import {
 } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ThemeToggle } from "./theme-toggle";
 
 const navItems = [
   { name: "home", href: "/" },
@@ -32,34 +33,36 @@ export function Header() {
         />
         <div>
           <h1 className="text-lg font-bold">Miloš Milanović</h1>
-          <p className="text-sm text-gray-500">full-stack web developer</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            full-stack web developer
+          </p>
         </div>
       </div>
 
       <div className="mb-4 flex gap-4">
         <a href="mailto:mmilanovic016@gmail.com" title="Gmail">
-          <SiGmail className="text-[#EA4335]" size={16} />
+          <SiGmail style={{ color: "var(--icon-gmail)" }} size={16} />
         </a>
         <a href="https://github.com/mmilanovic4" target="_blank" title="GitHub">
-          <SiGithub className="text-[#181717]" size={16} />
+          <SiGithub style={{ color: "var(--icon-github)" }} size={16} />
         </a>
         <a
           href="https://www.instagram.com/mmilanovic4"
           target="_blank"
           title="Instagram"
         >
-          <SiInstagram className="text-[#FF0069]" size={16} />
+          <SiInstagram style={{ color: "var(--icon-instagram)" }} size={16} />
         </a>
         <a
           href="https://www.youtube.com/@mmilanovic4"
           target="_blank"
           title="YouTube"
         >
-          <SiYoutube className="text-[#FF0000]" size={16} />
+          <SiYoutube style={{ color: "var(--icon-youtube)" }} size={16} />
         </a>
       </div>
 
-      <hr className="border-gray-200" />
+      <hr className="border-gray-200 dark:border-gray-800" />
 
       <nav className="my-4">
         <ul className="flex gap-6">
@@ -70,17 +73,20 @@ export function Header() {
                 className={`border-b-2 pb-1 text-sm transition-colors ${
                   item.href === pathname
                     ? "border-accent text-accent"
-                    : "hover:text-accent border-transparent text-gray-500"
+                    : "hover:text-accent border-transparent text-gray-500 dark:text-gray-400"
                 }`}
               >
                 {item.name}
               </Link>
             </li>
           ))}
+          <li className="ml-auto">
+            <ThemeToggle />
+          </li>
         </ul>
       </nav>
 
-      <hr className="border-gray-200" />
+      <hr className="border-gray-200 dark:border-gray-800" />
     </header>
   );
 }

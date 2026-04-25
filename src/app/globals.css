@@ -4,6 +4,17 @@
   --blue: #378add;
   --blue-light: #e6f1fb;
   --blue-dark: #0c447c;
+  --icon-gmail: #ea4335;
+  --icon-github: #181717;
+  --icon-instagram: #ff0069;
+  --icon-youtube: #ff0000;
+}
+
+.dark {
+  --blue: #5ba3e8;
+  --blue-light: #0c447c;
+  --blue-dark: #e6f1fb;
+  --icon-github: #e5e7eb;
 }
 
 @theme {
@@ -13,5 +24,9 @@
 }
 
 body {
-  @apply scroll-smooth;
+  @apply scroll-smooth bg-white text-gray-900;
+}
+
+html.dark body {
+  @apply bg-gray-950 text-gray-100;
 }

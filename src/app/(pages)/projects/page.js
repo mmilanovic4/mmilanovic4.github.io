@@ -20,7 +20,7 @@ export default function Projects() {
           return (
             <li
               key={project.id}
-              className="flex flex-col gap-2 border-b border-gray-200 pb-4 last:border-b-0"
+              className="flex flex-col gap-2 border-b border-gray-200 pb-4 last:border-b-0 dark:border-gray-800"
             >
               <a
                 href={project.href}
@@ -29,7 +29,9 @@ export default function Projects() {
               >
                 {project.name}
               </a>
-              <p className="text-xs text-gray-500">{project.description}</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                {project.description}
+              </p>
               <div className="flex flex-wrap gap-2">
                 {project.stack.map((tech) => (
                   <span

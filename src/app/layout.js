@@ -3,6 +3,7 @@ import { Footer, Header } from "@/components";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -53,16 +54,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${jetbrainsMono.className} subpixel-antialiased`}>
-        <div className="flex min-h-screen flex-col bg-white">
-          <Header />
-          <main className="mb-8 w-full max-w-full px-4 md:px-0">
-            {children}
-          </main>
-          <Footer />
-        </div>
-        <GoogleAnalytics gaId={NEXT_PUBLIC_GA_ID} />
+        <ThemeProvider>
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="mb-8 w-full max-w-full px-4 md:px-0">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
