@@ -33,9 +33,7 @@ export function Header() {
         />
         <div>
           <h1 className="text-lg font-bold">Miloš Milanović</h1>
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            full-stack web developer
-          </p>
+          <p className="text-muted text-sm">full-stack web developer</p>
         </div>
       </div>
 
@@ -73,7 +71,7 @@ export function Header() {
                 className={`border-b-2 pb-1 text-sm transition-colors ${
                   item.href === pathname
                     ? "border-accent text-accent"
-                    : "hover:text-accent border-transparent text-gray-500 dark:text-gray-400"
+                    : "hover:text-accent text-muted border-transparent"
                 }`}
               >
                 {item.name}

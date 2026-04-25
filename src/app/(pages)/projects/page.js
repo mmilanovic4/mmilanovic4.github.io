@@ -29,9 +29,7 @@ export default function Projects() {
               >
                 {project.name}
               </a>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                {project.description}
-              </p>
+              <p className="text-xs">{project.description}</p>
               <div className="flex flex-wrap gap-2">
                 {project.stack.map((tech) => (
                   <span

@@ -28,7 +28,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setDark((d) => !d)}
-      className="hover:text-accent cursor-pointer text-xs text-gray-500 transition-colors"
+      className="hover:text-accent text-muted cursor-pointer text-xs transition-colors"
       aria-label="Toggle theme"
     >
       {dark ? "[ light ]" : "[ dark ]"}

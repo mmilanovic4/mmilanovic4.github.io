@@ -5,7 +5,7 @@ export default function Home() {
     <div className="mx-auto mt-8 w-full max-w-full px-4 md:w-125 md:px-0">
       <section className="mb-8">
         <p className="text-accent mb-3 text-xs"># about</p>
-        <p className="text-sm leading-loose text-gray-700 dark:text-gray-300">
+        <p className="text-sm leading-loose">
           Hey, I{"'"}m Miloš - a full-stack web developer based in{" "}
           <span className="text-accent">Belgrade, Serbia</span>. I build web
           apps with a focus on clean code and good UX.
