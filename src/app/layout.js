@@ -50,7 +50,7 @@ export const metadata = {
   },
 };
 
-const theme = process.env.NEXT_PUBLIC_THEME ?? "blue";
+const theme = process.env.NEXT_PUBLIC_THEME || "blue";
 
 export default function RootLayout({ children }) {
   return (
