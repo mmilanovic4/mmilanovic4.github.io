@@ -1,4 +1,4 @@
-import { ResumeItem } from "@/components/resume-item";
+import { ResumeItem } from "@/components";
 import data from "@/data/resume.json";
 
 export const metadata = {

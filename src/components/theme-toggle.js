@@ -1,6 +1,6 @@
 "use client";
 import { useSyncExternalStore } from "react";
-import { useTheme } from "./theme-provider";
+import { useTheme } from "@/components";
 
 function subscribe(cb) {
   window.addEventListener("storage", cb);

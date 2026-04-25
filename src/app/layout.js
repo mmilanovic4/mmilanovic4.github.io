@@ -1,6 +1,5 @@
 import { JetBrains_Mono } from "next/font/google";
-import { Footer, Header } from "@/components";
-import { ThemeProvider } from "@/components/theme-provider";
+import { Footer, Header, ThemeProvider } from "@/components";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "./globals.css";

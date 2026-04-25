@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function ResumeItem({ item }) {
   return (
-    <li className="flex flex-col gap-2 border-b border-gray-200 pb-3 last:border-b-0 md:gap-3 dark:border-gray-800">
+    <li className="flex flex-col gap-2 border-b border-gray-200 pb-3 last:border-b-0 dark:border-gray-800">
       <time className="text-muted text-xs">
         {item.from} - {item.to || "Present"}
       </time>
@@ -14,7 +14,7 @@ export function ResumeItem({ item }) {
           </span>
         )}
 
-        <span className="text-accent inline-flex items-center gap-1 text-sm">
+        <span className="text-muted inline-flex items-center gap-1 text-xs">
           {item.img && (
             <Image
               src={item.img}
@@ -24,7 +24,7 @@ export function ResumeItem({ item }) {
               className="rounded-sm"
             />
           )}
-          <strong>{item.name}</strong>
+          <span>{item.name}</span>
         </span>
 
         <span className="text-muted inline-flex items-center gap-1 text-xs">

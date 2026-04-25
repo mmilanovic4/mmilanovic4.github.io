@@ -8,7 +8,7 @@ import {
 } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ThemeToggle } from "./theme-toggle";
+import { ThemeToggle } from "@/components";
 
 const navItems = [
   { name: "home", href: "/" },
@@ -22,13 +22,10 @@ export function Header() {
   return (
     <header className="mx-auto w-full max-w-full md:w-125">
       <div className="my-6">
-        <Image
+        <img
           alt="Profile"
-          className="w-full rounded object-cover"
-          loading="eager"
+          className="h-auto w-full rounded object-cover"
           src="/profile.jpg"
-          width={1000}
-          height={375}
         />
       </div>
 
