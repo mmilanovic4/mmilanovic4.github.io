@@ -39,24 +39,36 @@ export function Header() {
 
       <div className="mb-4 flex gap-4">
         <a href="mailto:mmilanovic016@gmail.com" title="Gmail">
-          <SiGmail style={{ color: "var(--icon-gmail)" }} size={16} />
+          <SiGmail
+            style={{ color: "var(--icon-gmail)" }}
+            className="size-5 md:size-4"
+          />
         </a>
         <a href="https://github.com/mmilanovic4" target="_blank" title="GitHub">
-          <SiGithub style={{ color: "var(--icon-github)" }} size={16} />
+          <SiGithub
+            style={{ color: "var(--icon-github)" }}
+            className="size-5 md:size-4"
+          />
         </a>
         <a
           href="https://www.instagram.com/mmilanovic4"
           target="_blank"
           title="Instagram"
         >
-          <SiInstagram style={{ color: "var(--icon-instagram)" }} size={16} />
+          <SiInstagram
+            style={{ color: "var(--icon-instagram)" }}
+            className="size-5 md:size-4"
+          />
         </a>
         <a
           href="https://www.youtube.com/@mmilanovic4"
           target="_blank"
           title="YouTube"
         >
-          <SiYoutube style={{ color: "var(--icon-youtube)" }} size={16} />
+          <SiYoutube
+            style={{ color: "var(--icon-youtube)" }}
+            className="size-5 md:size-4"
+          />
         </a>
       </div>
 
