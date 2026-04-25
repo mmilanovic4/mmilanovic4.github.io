@@ -21,7 +21,7 @@ export function Header() {
   const pathname = usePathname();
   return (
     <header className="mx-auto w-full max-w-full md:w-125">
-      <div className="my-6">
+      <div className="my-6 px-6">
         <img
           alt="Profile"
           className="h-auto w-full rounded object-cover"
@@ -29,7 +29,7 @@ export function Header() {
         />
       </div>
 
-      <div className="px-4 md:px-0">
+      <div className="px-6 md:px-0">
         <h1 className="text-lg font-bold">Miloš Milanović</h1>
         <p className="text-muted text-sm">full-stack web developer</p>
 

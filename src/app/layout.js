@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider>
           <div className="flex min-h-screen flex-col">
             <Header />
-            <main className="mb-8 w-full max-w-full px-4 md:px-0">
+            <main className="mb-8 w-full max-w-full px-6 md:px-0">
               {children}
             </main>
             <Footer />

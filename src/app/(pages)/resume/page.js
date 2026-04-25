@@ -1,5 +1,5 @@
 import { ResumeItem } from "@/components";
-import data from "@/data/resume.json";
+import data from "@/content/resume.json";
 
 export const metadata = {
   title: "Miloš Milanović | Résumé",
