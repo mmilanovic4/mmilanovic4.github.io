@@ -41,13 +41,13 @@ export function Header() {
         <a href="mailto:mmilanovic016@gmail.com" title="Gmail">
           <SiGmail
             style={{ color: "var(--icon-gmail)" }}
-            className="size-5 md:size-4"
+            className="size-6 md:size-4"
           />
         </a>
         <a href="https://github.com/mmilanovic4" target="_blank" title="GitHub">
           <SiGithub
             style={{ color: "var(--icon-github)" }}
-            className="size-5 md:size-4"
+            className="size-6 md:size-4"
           />
         </a>
         <a
@@ -57,7 +57,7 @@ export function Header() {
         >
           <SiInstagram
             style={{ color: "var(--icon-instagram)" }}
-            className="size-5 md:size-4"
+            className="size-6 md:size-4"
           />
         </a>
         <a
@@ -67,7 +67,7 @@ export function Header() {
         >
           <SiYoutube
             style={{ color: "var(--icon-youtube)" }}
-            className="size-5 md:size-4"
+            className="size-6 md:size-4"
           />
         </a>
       </div>
