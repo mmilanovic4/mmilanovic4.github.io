@@ -16,16 +16,6 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Create .env file
-        run: |
-          echo "NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID }}" >> .env
-          echo "NEXT_PUBLIC_THEME=${{ vars.NEXT_PUBLIC_THEME }}" >> .env
-
-      - name: Debug env
-        run: |
-          echo "Theme: ${{ vars.NEXT_PUBLIC_THEME }}"
-          echo "GA: ${{ vars.NEXT_PUBLIC_GA_ID }}"
-
       - name: Install dependencies 📦
         run: |
           npm install
