@@ -1,16 +1,14 @@
 import { JetBrains_Mono } from "next/font/google";
 import { Footer, Header } from "@/components";
+import { ThemeProvider } from "@/components/theme-provider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 });
-
-const NEXT_PUBLIC_GA_ID = "G-QMSQLXMNWC";
 
 export const metadata = {
   title: "Miloš Milanović",
@@ -52,9 +50,11 @@ export const metadata = {
   },
 };
 
+const theme = process.env.NEXT_PUBLIC_THEME ?? "blue";
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={`theme-${theme}`} suppressHydrationWarning>
       <body className={`${jetbrainsMono.className} subpixel-antialiased`}>
         <ThemeProvider>
           <div className="flex min-h-screen flex-col">
@@ -65,6 +65,7 @@ export default function RootLayout({ children }) {
             <Footer />
           </div>
         </ThemeProvider>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
       </body>
     </html>
   );

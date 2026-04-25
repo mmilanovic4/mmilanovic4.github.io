@@ -1,4 +1,4 @@
-const stack = ["JavaScript", "React", "Next.js", "Node.js", "MongoDB", "Go"];
+const stack = ["JavaScript", "Next.js", "Node.js", "MongoDB", "Go"];
 
 export default function Home() {
   return (

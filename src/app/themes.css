@@ -1,0 +1,59 @@
+/* Blue */
+.theme-blue {
+  --accent: #378add;
+  --accent-light: #e6f1fb;
+  --accent-dark: #0c447c;
+}
+.theme-blue.dark {
+  --accent: #5ba3e8;
+  --accent-light: #0c447c;
+  --accent-dark: #e6f1fb;
+}
+
+/* Green */
+.theme-green {
+  --accent: #2d6a4f;
+  --accent-light: #d8f3dc;
+  --accent-dark: #1b4332;
+}
+.theme-green.dark {
+  --accent: #52b788;
+  --accent-light: #1b4332;
+  --accent-dark: #d8f3dc;
+}
+
+/* Mint */
+.theme-mint {
+  --accent: #0d9488;
+  --accent-light: #ccfbf1;
+  --accent-dark: #134e4a;
+}
+.theme-mint.dark {
+  --accent: #2dd4bf;
+  --accent-light: #134e4a;
+  --accent-dark: #ccfbf1;
+}
+
+/* Violet */
+.theme-violet {
+  --accent: #7c3aed;
+  --accent-light: #ede9fe;
+  --accent-dark: #4c1d95;
+}
+.theme-violet.dark {
+  --accent: #a78bfa;
+  --accent-light: #4c1d95;
+  --accent-dark: #ede9fe;
+}
+
+/* Amber */
+.theme-amber {
+  --accent: #b45309;
+  --accent-light: #fef3c7;
+  --accent-dark: #78350f;
+}
+.theme-amber.dark {
+  --accent: #fbbf24;
+  --accent-light: #78350f;
+  --accent-dark: #fef3c7;
+}

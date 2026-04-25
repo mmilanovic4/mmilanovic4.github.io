@@ -1,9 +1,7 @@
 @import "tailwindcss";
+@import "./themes.css";
 
 :root {
-  --blue: #378add;
-  --blue-light: #e6f1fb;
-  --blue-dark: #0c447c;
   --icon-gmail: #ea4335;
   --icon-github: #181717;
   --icon-instagram: #ff0069;
@@ -11,16 +9,13 @@
 }
 
 .dark {
-  --blue: #5ba3e8;
-  --blue-light: #0c447c;
-  --blue-dark: #e6f1fb;
   --icon-github: #e5e7eb;
 }
 
 @theme {
-  --color-accent: var(--blue);
-  --color-accent-light: var(--blue-light);
-  --color-accent-dark: var(--blue-dark);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-dark: var(--accent-dark);
 }
 
 body {
