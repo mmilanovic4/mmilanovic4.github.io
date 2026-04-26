@@ -14,7 +14,7 @@ export const metadata = {
   description: "Full-stack web developer based in Belgrade, Serbia.",
   icons: {
     icon: "/favicon.ico",
-    apple: "/profile.jpg",
+    apple: "/apple-icon.png",
   },
   robots: {
     index: true,
