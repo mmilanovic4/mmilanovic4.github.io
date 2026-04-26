@@ -1,0 +1,13 @@
+code[data-line-numbers] {
+  counter-reset: line;
+}
+
+code[data-line-numbers] [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  @apply mr-4 inline-block w-4 text-right text-xs text-gray-400;
+}
+
+figure[data-rehype-pretty-code-figure] pre {
+  @apply my-4 overflow-x-auto rounded p-4 text-xs leading-relaxed;
+}

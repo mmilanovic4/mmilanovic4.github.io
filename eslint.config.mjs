@@ -5,8 +5,37 @@ import prettier from "eslint-config-prettier";
 export default defineConfig([
   ...nextVitals,
   {
-    plugins: {},
+    settings: {
+      "import/resolver": {
+        typescript: true,
+        alias: {
+          map: [["@", "./src"]],
+          extensions: [".js", ".jsx"],
+        },
+      },
+    },
     rules: {
+      "import/order": [
+        "error",
+        {
+          groups: [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index",
+          ],
+          pathGroups: [
+            {
+              pattern: "@/**",
+              group: "internal",
+            },
+          ],
+          "newlines-between": "always",
+          alphabetize: { order: "asc", caseInsensitive: true },
+        },
+      ],
       "@next/next/no-img-element": "off",
     },
   },

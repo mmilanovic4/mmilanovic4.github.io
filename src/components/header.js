@@ -1,13 +1,14 @@
 "use client";
-import Image from "next/image";
 import {
   SiGithub,
   SiGmail,
   SiInstagram,
   SiYoutube,
 } from "@icons-pack/react-simple-icons";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 import { ThemeToggle } from "@/components";
 
 const navItems = [
@@ -80,8 +81,9 @@ export function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`border-b-2 pb-1 text-sm transition-colors ${
-                    item.href === pathname
+                  className={`border-b-2 py-1 text-sm transition-colors ${
+                    pathname === item.href ||
+                    pathname.startsWith(item.href + "/")
                       ? "border-accent text-accent"
                       : "hover:text-accent text-muted border-transparent"
                   }`}
