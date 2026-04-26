@@ -6,7 +6,9 @@ export default defineConfig([
   ...nextVitals,
   {
     plugins: {},
-    rules: {},
+    rules: {
+      "@next/next/no-img-element": "off",
+    },
   },
   prettier,
   globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
