@@ -4,10 +4,8 @@ import path from "path";
 import matter from "gray-matter";
 
 const BLOG_DIR = path.join(process.cwd(), "src/content/blog");
-const isDev = process.env.NODE_ENV === "development";
 
 export function getAllPosts() {
-  if (!isDev) return [];
   const files = fs.readdirSync(BLOG_DIR);
   return files
     .filter((f) => f.endsWith(".md"))

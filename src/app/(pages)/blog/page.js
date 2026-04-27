@@ -2,10 +2,12 @@ import Link from "next/link";
 
 import { getAllPosts } from "@/lib/blog";
 
+const isDev = process.env.NODE_ENV === "development";
+
 export const metadata = { title: "Miloš Milanović | Blog" };
 
 export default function Blog() {
-  const posts = getAllPosts();
+  const posts = isDev ? getAllPosts() : [];
   return (
     <div className="mx-auto mt-8 w-full max-w-full px-4 md:w-125 md:px-0">
       <p className="text-accent mb-6 text-xs"># blog</p>
