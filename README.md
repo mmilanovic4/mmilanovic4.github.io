@@ -2,11 +2,29 @@
 
 [mmilanovic4.github.io](https://mmilanovic4.github.io)
 
-- [Action for checking out a repo](https://github.com/actions/checkout)
+## Stack
+
+- [Next.js](https://nextjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
 - [Simple Icons](https://github.com/icons-pack/react-simple-icons)
 - [Flag Icons](https://github.com/lipis/flag-icons)
 
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Deployment
+
+Automatically deployed to GitHub Pages via GitHub Actions on push to `master`.
+
+- [Action for checking out a repo](https://github.com/actions/checkout)
+
 ## Env
 
-- `NEXT_PUBLIC_GA_ID`
-- `NEXT_PUBLIC_THEME`
+| Variable            | Description                                              |
+| ------------------- | -------------------------------------------------------- |
+| `NEXT_PUBLIC_GA_ID` | Google Analytics ID                                      |
+| `NEXT_PUBLIC_THEME` | Color theme (`blue`, `mint`, `green`, `violet`, `amber`) |

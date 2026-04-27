@@ -14,7 +14,13 @@ jobs:
     environment: github-pages
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js 🟢
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: "npm"
 
       - name: Install dependencies 📦
         run: |
@@ -27,7 +33,7 @@ jobs:
         run: |
           npm run build
 
-      - name: Add .nojekyll
+      - name: Add .nojekyll 🩹
         run: echo "" > out/.nojekyll
 
       - name: Deploy to GitHub Pages 🚀
