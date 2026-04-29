@@ -8,10 +8,6 @@ export default defineConfig([
     settings: {
       "import/resolver": {
         typescript: true,
-        alias: {
-          map: [["@", "./src"]],
-          extensions: [".js", ".jsx"],
-        },
       },
     },
     rules: {
