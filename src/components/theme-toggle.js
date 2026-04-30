@@ -29,7 +29,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setDark((d) => !d)}
-      className="hover:text-accent text-muted cursor-pointer text-xs transition-colors"
+      className="hover:text-accent text-muted cursor-pointer text-xs transition-colors select-none"
       aria-label="Toggle theme"
     >
       {dark ? "[ light ]" : "[ dark ]"}
