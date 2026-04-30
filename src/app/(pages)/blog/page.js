@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { Container } from "@/components";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata = { title: "Miloš Milanović | Blog" };
@@ -7,7 +8,7 @@ export const metadata = { title: "Miloš Milanović | Blog" };
 export default function Blog() {
   const posts = getAllPosts();
   return (
-    <div className="mx-auto mt-8 w-full max-w-full px-4 md:w-125 md:px-0">
+    <Container>
       <p className="text-accent mb-6 text-xs"># blog</p>
       {posts.length === 0 ? (
         <p className="text-muted text-sm">Coming soon.</p>
@@ -32,6 +33,6 @@ export default function Blog() {
           ))}
         </ul>
       )}
-    </div>
+    </Container>
   );
 }

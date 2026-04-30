@@ -1,8 +1,10 @@
+import { Container } from "@/components";
+
 const stack = ["JavaScript", "Next.js", "Node.js", "MongoDB", "Go"];
 
 export default function Home() {
   return (
-    <div className="mx-auto mt-8 w-full max-w-full px-4 md:w-125 md:px-0">
+    <Container>
       <section className="mb-8">
         <p className="text-accent mb-3 text-xs"># about</p>
         <p className="text-sm leading-loose">
@@ -11,7 +13,6 @@ export default function Home() {
           apps with a focus on clean code and good UX.
         </p>
       </section>
-
       <section>
         <p className="text-accent mb-3 text-xs"># stack</p>
         <div className="flex flex-wrap gap-2">
@@ -25,6 +26,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-    </div>
+    </Container>
   );
 }

@@ -6,14 +6,12 @@ export function ResumeItem({ item }) {
       <time className="text-muted text-xs">
         {item.from} - {item.to || "present"}
       </time>
-
-      <div className="flex flex-col flex-wrap gap-1">
+      <div className="flex flex-col flex-wrap gap-2">
         {item.title && (
           <span className="text-strong text-sm font-semibold">
             {item.title.toLowerCase()}
           </span>
         )}
-
         <span className="text-muted inline-flex items-center gap-1 text-xs">
           {item.img && (
             <Image
@@ -26,7 +24,6 @@ export function ResumeItem({ item }) {
           )}
           <span>{item.name}</span>
         </span>
-
         <span className="text-muted inline-flex items-center gap-1 text-xs">
           {item.cc && (
             <Image
@@ -40,7 +37,6 @@ export function ResumeItem({ item }) {
           <span>{item.location}</span>
         </span>
       </div>
-
       {item.description && (
         <p className="text-muted mt-1 text-xs">{item.description}</p>
       )}

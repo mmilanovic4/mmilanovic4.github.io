@@ -1,3 +1,5 @@
+import { Container } from "@/components";
+
 export const metadata = { title: "Miloš Milanović | Projects" };
 
 const projects = [
@@ -13,7 +15,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="mx-auto mt-8 w-full max-w-full px-4 md:w-125 md:px-0">
+    <Container>
       <p className="text-accent mb-6 text-xs"># projects</p>
       <ul className="flex flex-col gap-3">
         {projects.map((project) => {
@@ -44,6 +46,6 @@ export default function Projects() {
           );
         })}
       </ul>
-    </div>
+    </Container>
   );
 }

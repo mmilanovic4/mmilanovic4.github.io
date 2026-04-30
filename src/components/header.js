@@ -29,11 +29,9 @@ export function Header() {
           src="/profile.jpg"
         />
       </div>
-
       <div className="px-6 md:px-0">
         <h1 className="text-lg font-bold">Miloš Milanović</h1>
         <p className="text-muted text-sm">full-stack web developer</p>
-
         <div className="my-4 flex gap-4">
           <a
             className="rounded-full bg-gray-200 p-2.5 dark:bg-gray-800"
@@ -79,9 +77,7 @@ export function Header() {
             />
           </a>
         </div>
-
         <hr className="border-gray-200 dark:border-gray-800" />
-
         <nav className="my-4">
           <ul className="flex gap-6">
             {navItems.map((item) => (
@@ -104,7 +100,6 @@ export function Header() {
             </li>
           </ul>
         </nav>
-
         <hr className="border-gray-200 dark:border-gray-800" />
       </div>
     </header>

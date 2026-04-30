@@ -2,6 +2,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypePrettyCode from "rehype-pretty-code";
 
+import { Container } from "@/components";
 import { mdxComponents } from "@/components/mdx-components";
 import { getAllPosts, getPost } from "@/lib/blog";
 
@@ -20,7 +21,7 @@ export default async function BlogPost({ params }) {
   const { slug } = await params;
   const { meta, content } = getPost(slug);
   return (
-    <div className="mx-auto mt-8 w-full max-w-full px-4 md:w-125 md:px-0">
+    <Container>
       <time className="text-muted text-xs">{meta.date}</time>
       <h2 className="text-strong my-3 text-lg font-bold">{meta.title}</h2>
       <hr className="mb-6 border-gray-200 dark:border-gray-800" />
@@ -44,6 +45,6 @@ export default async function BlogPost({ params }) {
           }}
         />
       </article>
-    </div>
+    </Container>
   );
 }
