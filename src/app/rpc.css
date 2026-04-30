@@ -1,3 +1,5 @@
+/* rehype-pretty-code */
+
 code[data-line-numbers] {
   counter-reset: line;
 }

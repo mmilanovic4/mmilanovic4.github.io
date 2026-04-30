@@ -35,13 +35,18 @@ export function Header() {
         <p className="text-muted text-sm">full-stack web developer</p>
 
         <div className="my-4 flex gap-4">
-          <a href="mailto:mmilanovic016@gmail.com" title="Gmail">
+          <a
+            className="rounded-full bg-gray-200 p-2.5 dark:bg-gray-800"
+            href="mailto:mmilanovic016@gmail.com"
+            title="Gmail"
+          >
             <SiGmail
               style={{ color: "var(--icon-gmail)" }}
               className="size-6 md:size-4"
             />
           </a>
           <a
+            className="rounded-full bg-gray-200 p-2.5 dark:bg-gray-800"
             href="https://github.com/mmilanovic4"
             target="_blank"
             title="GitHub"
@@ -52,6 +57,7 @@ export function Header() {
             />
           </a>
           <a
+            className="rounded-full bg-gray-200 p-2.5 dark:bg-gray-800"
             href="https://www.instagram.com/mmilanovic4"
             target="_blank"
             title="Instagram"
@@ -62,6 +68,7 @@ export function Header() {
             />
           </a>
           <a
+            className="rounded-full bg-gray-200 p-2.5 dark:bg-gray-800"
             href="https://www.youtube.com/@mmilanovic4"
             target="_blank"
             title="YouTube"

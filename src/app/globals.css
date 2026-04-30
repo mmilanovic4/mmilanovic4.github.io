@@ -2,6 +2,8 @@
 @import "./rpc.css";
 @import "./theme.css";
 
+@variant dark (&:where(html.dark, html.dark *));
+
 :root {
   --icon-gmail: #ea4335;
   --icon-github: #181717;
@@ -9,7 +11,7 @@
   --icon-youtube: #ff0000;
 }
 
-.dark {
+html.dark {
   --icon-github: #e5e7eb;
 }
 
