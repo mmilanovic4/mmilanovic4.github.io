@@ -44,3 +44,11 @@ html.dark .text-muted {
 html.dark .text-strong {
   @apply text-gray-200;
 }
+
+.blog a {
+  @apply text-accent underline underline-offset-[3px] hover:opacity-80;
+}
+
+.blog code {
+  @apply rounded px-1 py-0.5;
+}
