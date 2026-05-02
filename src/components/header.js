@@ -21,7 +21,7 @@ export function Header() {
           <Image
             alt="Profile"
             className="h-auto w-full rounded object-cover"
-            src="/profile.jpg"
+            src="/profile.webp"
             fill
             priority
           />

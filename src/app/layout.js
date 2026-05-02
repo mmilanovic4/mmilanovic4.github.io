@@ -33,7 +33,7 @@ export const metadata = {
     siteName: "Miloš Milanović",
     images: [
       {
-        url: "https://mmilanovic4.github.io/profile.jpg",
+        url: "https://mmilanovic4.github.io/profile.webp",
         width: 1000,
         height: 750,
         alt: "Miloš Milanović",
@@ -46,7 +46,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Miloš Milanović",
     description: "Full-stack web developer based in Belgrade, Serbia.",
-    images: ["https://mmilanovic4.github.io/profile.jpg"],
+    images: ["https://mmilanovic4.github.io/profile.webp"],
   },
 };
 
