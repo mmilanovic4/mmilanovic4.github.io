@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -16,12 +17,15 @@ export function Header() {
   return (
     <header className="mx-auto w-full max-w-full md:w-125">
       <div className="my-6 px-6 md:px-0">
-        <img
-          alt="Profile"
-          className="h-auto w-full rounded object-cover"
-          src="/profile.jpg"
-          fetchpriority="high"
-        />
+        <div className="relative" style={{ aspectRatio: "4/3" }}>
+          <Image
+            alt="Profile"
+            fill
+            className="h-auto w-full rounded object-cover"
+            src="/profile.jpg"
+            priority
+          />
+        </div>
       </div>
       <div className="px-6 md:px-0">
         <h1 className="text-lg font-bold">Miloš Milanović</h1>
