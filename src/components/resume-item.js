@@ -15,12 +15,11 @@ export function ResumeItem({ item }) {
         <span className="text-muted inline-flex items-center gap-1 text-xs">
           {item.img && (
             <Image
+              className="rounded-sm"
               src={item.img}
               alt={item.name}
               width={16}
               height={16}
-              className="rounded-sm"
-              style={{ aspectRatio: "4/3" }}
             />
           )}
           <span>{item.name}</span>
