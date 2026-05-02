@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -17,15 +16,16 @@ export function Header() {
   return (
     <header className="mx-auto w-full max-w-full md:w-125">
       <div className="my-6 px-6 md:px-0">
-        <div className="relative" style={{ aspectRatio: "4/3" }}>
-          <Image
+        <picture>
+          <source media="(max-width: 768px)" srcSet="/profile-mobile.webp" />
+          <img
             alt="Profile"
             className="h-auto w-full rounded object-cover"
-            src="/profile.jpg"
-            fill
-            priority
+            src="/profile.webp"
+            fetchPriority="high"
+            style={{ aspectRatio: "4/3" }}
           />
-        </div>
+        </picture>
       </div>
       <div className="px-6 md:px-0">
         <h1 className="text-lg font-bold">Miloš Milanović</h1>
