@@ -1,14 +1,8 @@
 "use client";
-import {
-  SiGithub,
-  SiGmail,
-  SiInstagram,
-  SiYoutube,
-} from "@icons-pack/react-simple-icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { ThemeToggle } from "@/components";
+import { SocialLinks, ThemeToggle } from "@/components";
 
 const navItems = [
   { name: "home", href: "/" },
@@ -31,51 +25,7 @@ export function Header() {
       <div className="px-6 md:px-0">
         <h1 className="text-lg font-bold">Miloš Milanović</h1>
         <p className="text-muted text-sm">full-stack web developer</p>
-        <div className="my-4 flex flex-wrap gap-4">
-          <a
-            className="rounded-full bg-gray-200 p-2.5 dark:bg-gray-800"
-            href="mailto:mmilanovic016@gmail.com"
-            title="Gmail"
-          >
-            <SiGmail
-              style={{ color: "var(--icon-gmail)" }}
-              className="size-6 md:size-4"
-            />
-          </a>
-          <a
-            className="rounded-full bg-gray-200 p-2.5 dark:bg-gray-800"
-            href="https://github.com/mmilanovic4"
-            target="_blank"
-            title="GitHub"
-          >
-            <SiGithub
-              style={{ color: "var(--icon-github)" }}
-              className="size-6 md:size-4"
-            />
-          </a>
-          <a
-            className="rounded-full bg-gray-200 p-2.5 dark:bg-gray-800"
-            href="https://www.instagram.com/mmilanovic4"
-            target="_blank"
-            title="Instagram"
-          >
-            <SiInstagram
-              style={{ color: "var(--icon-instagram)" }}
-              className="size-6 md:size-4"
-            />
-          </a>
-          <a
-            className="rounded-full bg-gray-200 p-2.5 dark:bg-gray-800"
-            href="https://www.youtube.com/@mmilanovic4"
-            target="_blank"
-            title="YouTube"
-          >
-            <SiYoutube
-              style={{ color: "var(--icon-youtube)" }}
-              className="size-6 md:size-4"
-            />
-          </a>
-        </div>
+        <SocialLinks />
         <hr className="border-gray-200 dark:border-gray-800" />
         <nav className="my-4">
           <ul className="flex flex-wrap gap-6">
