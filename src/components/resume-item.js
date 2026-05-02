@@ -20,6 +20,7 @@ export function ResumeItem({ item }) {
               width={16}
               height={16}
               className="rounded-sm"
+              style={{ aspectRatio: "4/3" }}
             />
           )}
           <span>{item.name}</span>
