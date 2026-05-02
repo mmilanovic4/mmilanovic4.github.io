@@ -20,6 +20,7 @@ export function Header() {
           alt="Profile"
           className="h-auto w-full rounded object-cover"
           src="/profile.jpg"
+          fetchpriority="high"
         />
       </div>
       <div className="px-6 md:px-0">

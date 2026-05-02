@@ -9,7 +9,8 @@
     "lint": "eslint",
     "fix": "eslint --fix",
     "format": "npx prettier src --write",
-    "clean": "rm -rf .next"
+    "clean": "rm -rf .next",
+    "analyze": "next experimental-analyze"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^13.13.0",
