@@ -54,7 +54,7 @@ const theme = process.env.NEXT_PUBLIC_THEME || "blue";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`theme-${theme}`} suppressHydrationWarning>
+    <html suppressHydrationWarning lang="en" className={`theme-${theme}`}>
       <body className={`${jetbrainsMono.className} subpixel-antialiased`}>
         <ThemeProvider>
           <div className="flex min-h-screen flex-col">
