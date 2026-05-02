@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "fix": "eslint --fix",
-    "format": "npx prettier src --write"
+    "format": "npx prettier src --write",
+    "clean": "rm -rf .next"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^13.13.0",
