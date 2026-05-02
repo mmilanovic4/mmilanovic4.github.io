@@ -38,7 +38,17 @@ export default async function BlogPost({ params }) {
                 ],
                 [
                   rehypePrettyCode,
-                  { theme: "github-dark-dimmed", defaultLang: "plaintext" },
+                  {
+                    theme: "github-dark-dimmed",
+                    defaultLang: "plaintext",
+                    langs: [
+                      "plaintext",
+                      "javascript",
+                      "typescript",
+                      "go",
+                      "bash",
+                    ],
+                  },
                 ],
               ],
             },
