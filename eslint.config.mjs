@@ -11,6 +11,7 @@ export default defineConfig([
       },
     },
     rules: {
+      "no-unused-vars": "error",
       "import/order": [
         "error",
         {
