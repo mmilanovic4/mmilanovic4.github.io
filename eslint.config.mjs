@@ -30,7 +30,7 @@ export default defineConfig([
               group: "internal",
             },
           ],
-          "newlines-between": "always",
+          "newlines-between": "never",
           alphabetize: { order: "asc", caseInsensitive: true },
         },
       ],

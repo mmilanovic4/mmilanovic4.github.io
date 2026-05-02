@@ -1,7 +1,6 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypePrettyCode from "rehype-pretty-code";
-
 import { Container } from "@/components";
 import { mdxComponents } from "@/components/mdx-components";
 import { getAllPosts, getPost } from "@/lib/blog";
