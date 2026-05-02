@@ -20,10 +20,11 @@ export function Header() {
         <div className="relative" style={{ aspectRatio: "4/3" }}>
           <Image
             alt="Profile"
-            fill
             className="h-auto w-full rounded object-cover"
             src="/profile.jpg"
+            fill
             priority
+            sizes="(max-width: 768px) 100vw, 500px"
           />
         </div>
       </div>
