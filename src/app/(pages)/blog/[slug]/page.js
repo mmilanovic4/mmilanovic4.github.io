@@ -4,6 +4,7 @@ import rehypePrettyCode from "rehype-pretty-code";
 import { Container } from "@/components";
 import { mdxComponents } from "@/components/mdx-components";
 import { getAllPosts, getPost } from "@/lib/blog";
+import { createMetadata } from "@/lib/metadata";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -13,14 +14,14 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const { meta } = getPost(slug);
-  return {
+  return createMetadata({
     title: `Miloš Milanović | ${meta.title}`,
     description: meta.description,
     openGraph: {
-      title: meta.title,
-      description: meta.description,
+      url: `https://mmilanovic4.github.io/blog/${slug}`,
+      type: "article",
     },
-  };
+  });
 }
 
 export default async function BlogPost({ params }) {

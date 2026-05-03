@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { Container } from "@/components";
 import { getAllPosts } from "@/lib/blog";
+import { createMetadata } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Miloš Milanović | Blog",
-  openGraph: {
-    title: "Miloš Milanović | Blog",
-  },
-};
+  description: "Thoughts.",
+});
 
 export default function Blog() {
   const posts = getAllPosts();
