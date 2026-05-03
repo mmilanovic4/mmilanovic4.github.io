@@ -6,6 +6,9 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata = createMetadata({
   title: "Miloš Milanović | Blog",
   description: "Thoughts.",
+  openGraph: {
+    url: "https://mmilanovic4.github.io/blog",
+  },
 });
 
 export default function Blog() {
