@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components";
-import { getAllPosts } from "@/lib/blog";
+import { formatDate, getAllPosts } from "@/lib/blog";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
@@ -25,7 +25,9 @@ export default function Blog() {
               key={post.slug}
               className="flex flex-col gap-1 border-b border-gray-200 pb-3 last:border-b-0 dark:border-gray-800"
             >
-              <time className="text-muted text-xs">{post.date}</time>
+              <time className="text-muted text-xs">
+                {formatDate(post.date)}
+              </time>
               <Link
                 href={`/blog/${post.slug}`}
                 className="text-accent text-sm hover:underline"

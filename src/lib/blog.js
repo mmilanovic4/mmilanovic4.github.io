@@ -4,6 +4,16 @@ import matter from "gray-matter";
 
 const BLOG_DIR = path.join(process.cwd(), "src/content/blog");
 
+export function formatDate(date) {
+  return new Date(date)
+    .toLocaleDateString("sr-RS", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    })
+    .replace(/\.$/, "");
+}
+
 export function getAllPosts() {
   const files = fs.readdirSync(BLOG_DIR);
   return files
