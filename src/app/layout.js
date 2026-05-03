@@ -20,6 +20,18 @@ const theme = process.env.NEXT_PUBLIC_THEME || "blue";
 export default function RootLayout({ children }) {
   return (
     <html suppressHydrationWarning lang="en" className={`theme-${theme}`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        try {
+          var theme = localStorage.getItem('theme');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+        } catch(e) {}
+      `,
+          }}
+        />
+      </head>
       <body className={`${jetbrainsMono.className} subpixel-antialiased`}>
         <ThemeProvider>
           <div className="flex min-h-screen flex-col">
