@@ -58,4 +58,4 @@ But a CRUD app backed by Prisma? A GraphQL API with generated types?
 A solo project or a small team that moves fast? The complexity budget
 is better spent elsewhere.
 
-Every language has its flaw. One of the issues I see with JavaScript is that many people try to fix the wrong thing.
+Every language has its flaws. One of the issues I see with JavaScript is that many people try to fix the wrong thing.

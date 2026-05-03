@@ -1,6 +1,11 @@
 import { Container } from "@/components";
 
-export const metadata = { title: "Miloš Milanović | Projects" };
+export const metadata = {
+  title: "Miloš Milanović | Projects",
+  openGraph: {
+    title: "Miloš Milanović | Projects",
+  },
+};
 
 const projects = [
   {

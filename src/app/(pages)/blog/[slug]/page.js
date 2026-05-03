@@ -13,7 +13,14 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const { meta } = getPost(slug);
-  return { title: `Miloš Milanović | ${meta.title}` };
+  return {
+    title: `Miloš Milanović | ${meta.title}`,
+    description: meta.description,
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+    },
+  };
 }
 
 export default async function BlogPost({ params }) {

@@ -3,6 +3,9 @@ import data from "@/content/resume.json";
 
 export const metadata = {
   title: "Miloš Milanović | Résumé",
+  openGraph: {
+    title: "Miloš Milanović | Résumé",
+  },
 };
 
 export default function Resume() {
