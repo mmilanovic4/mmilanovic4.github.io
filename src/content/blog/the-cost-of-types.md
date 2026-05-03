@@ -1,5 +1,5 @@
 ---
-title: "The Cost of Types"
+title: "The cost of types"
 date: "2026-05-03"
 description: "TypeScript solves problems that modern tooling has already solved — at a price."
 ---
