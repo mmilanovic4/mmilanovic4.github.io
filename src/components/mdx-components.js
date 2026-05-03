@@ -26,4 +26,8 @@ export const mdxComponents = {
     </div>
   ),
   figure: (props) => <figure className="my-4" {...props} />,
+  ul: (props) => (
+    <ul className="mb-4 list-disc pl-5 text-sm leading-loose" {...props} />
+  ),
+  li: (props) => <li className="mb-1" {...props} />,
 };
