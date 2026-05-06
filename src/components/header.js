@@ -12,7 +12,6 @@ const navItems = [
 ];
 
 const isNavItemActive = (pathname, item) => {
-  console?.log({ pathname, item });
   if (item.href === "/") {
     return !navItems
       .filter((i) => i.href !== "/")
@@ -23,6 +22,9 @@ const isNavItemActive = (pathname, item) => {
 
 export function Header() {
   const pathname = usePathname();
+  const activeHref =
+    navItems.find((item) => isNavItemActive(pathname, item))?.href ?? "/";
+  console.log({ activeHref });
   return (
     <header className="mx-auto w-full max-w-full md:w-125">
       <div className="my-6 px-6 md:px-0">
@@ -48,7 +50,7 @@ export function Header() {
                 <Link
                   href={item.href}
                   className={`border-b-2 py-1 text-sm transition-colors ${
-                    isNavItemActive(pathname, item)
+                    activeHref === item.href
                       ? "border-accent text-accent"
                       : "hover:text-accent text-muted border-transparent"
                   }`}
