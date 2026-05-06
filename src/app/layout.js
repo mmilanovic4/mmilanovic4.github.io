@@ -15,6 +15,12 @@ export const metadata = createMetadata({
   description: "Full-stack web developer based in Belgrade, Serbia.",
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 const theme = process.env.NEXT_PUBLIC_THEME || "blue";
 
 export default function RootLayout({ children }) {
