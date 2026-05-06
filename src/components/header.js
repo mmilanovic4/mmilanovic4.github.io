@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { SocialLinks, ThemeToggle } from "@/components";
 
 const navItems = [
@@ -23,6 +24,8 @@ const isNavItemActive = (pathname, item) => {
 
 export function Header() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="mx-auto w-full max-w-full md:w-125">
       <div className="my-6 px-6 md:px-0">
@@ -41,8 +44,10 @@ export function Header() {
         <p className="text-muted text-sm">full-stack web developer</p>
         <SocialLinks />
         <hr className="border-gray-200 dark:border-gray-800" />
-        <nav className="my-4">
-          <ul key={pathname} className="flex flex-wrap gap-6">
+
+        {/* Desktop nav */}
+        <nav className="my-4 hidden md:block">
+          <ul className="flex gap-6">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
@@ -62,7 +67,62 @@ export function Header() {
             </li>
           </ul>
         </nav>
+
+        {/* Mobile nav */}
+        <div className="my-4 flex items-center justify-between md:hidden">
+          <button
+            onClick={() => setOpen(true)}
+            className="text-muted hover:text-accent cursor-pointer text-xs transition-colors select-none"
+            aria-label="Open menu"
+          >
+            [ menu ]
+          </button>
+          <ThemeToggle />
+        </div>
+
         <hr className="border-gray-200 dark:border-gray-800" />
+      </div>
+
+      {/* Drawer overlay */}
+      {open && (
+        <div
+          className="fixed inset-0 z-40 bg-black/30"
+          onClick={() => setOpen(false)}
+        />
+      )}
+
+      {/* Drawer */}
+      <div
+        className={`fixed top-0 right-0 z-50 flex h-full w-64 flex-col bg-white px-8 py-6 shadow-lg transition-transform dark:bg-gray-950 ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <button
+          onClick={() => setOpen(false)}
+          className="text-muted hover:text-accent mb-8 cursor-pointer self-end text-xs transition-colors select-none"
+          aria-label="Close menu"
+        >
+          [ close ]
+        </button>
+        <nav>
+          <ul className="flex flex-col gap-6">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className={`border-b-2 py-1 text-sm transition-colors ${
+                    isNavItemActive(pathname, item)
+                      ? "border-accent text-accent"
+                      : "hover:text-accent text-muted border-transparent"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </header>
   );
