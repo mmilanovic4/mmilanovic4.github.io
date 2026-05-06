@@ -96,6 +96,7 @@ export function Header() {
         className={`fixed top-0 right-0 z-50 flex h-full w-64 flex-col bg-white px-8 py-6 shadow-lg transition-transform dark:bg-gray-950 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
+        style={{ paddingTop: "max(1.5rem, env(safe-area-inset-top))" }}
       >
         <button
           onClick={() => setOpen(false)}
