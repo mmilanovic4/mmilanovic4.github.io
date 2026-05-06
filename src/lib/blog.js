@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { notFound } from "next/navigation";
 
 const BLOG_DIR = path.join(process.cwd(), "src/content/blog");
 
@@ -21,7 +20,7 @@ export function getAllPosts() {
 export function getPost(slug) {
   const filepath = path.join(BLOG_DIR, `${slug}.md`);
   if (!fs.existsSync(filepath)) {
-    notFound();
+    return null;
   }
   const raw = fs.readFileSync(filepath, "utf-8");
   const { data, content } = matter(raw);
