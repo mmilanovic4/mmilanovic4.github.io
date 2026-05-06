@@ -27,6 +27,15 @@ export function getPost(slug) {
   return { slug, meta: data, content };
 }
 
+export function getAdjacentPosts(slug) {
+  const posts = getAllPosts();
+  const index = posts.findIndex((p) => p.slug === slug);
+  return {
+    prev: posts[index + 1] ?? null,
+    next: posts[index - 1] ?? null,
+  };
+}
+
 export function formatDate(date) {
   return new Date(date)
     .toLocaleDateString("sr-RS", {
