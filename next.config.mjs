@@ -2,7 +2,7 @@ const nextConfig = {
   reactCompiler: true,
   output: "export",
   compiler: {
-    removeConsole: false,
+    removeConsole: true,
   },
   images: {
     unoptimized: true,

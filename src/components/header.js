@@ -12,7 +12,6 @@ const navItems = [
 ];
 
 const isNavItemActive = (pathname, item) => {
-  console?.log({ pathname, item });
   if (item.href === "/") {
     return !navItems
       .filter((i) => i.href !== "/")
