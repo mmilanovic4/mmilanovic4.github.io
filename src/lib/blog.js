@@ -1,18 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { notFound } from "next/navigation";
 
 const BLOG_DIR = path.join(process.cwd(), "src/content/blog");
-
-export function formatDate(date) {
-  return new Date(date)
-    .toLocaleDateString("sr-RS", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    })
-    .replace(/\.$/, "");
-}
 
 export function getAllPosts() {
   const files = fs.readdirSync(BLOG_DIR);
@@ -29,7 +20,20 @@ export function getAllPosts() {
 
 export function getPost(slug) {
   const filepath = path.join(BLOG_DIR, `${slug}.md`);
+  if (!fs.existsSync(filepath)) {
+    notFound();
+  }
   const raw = fs.readFileSync(filepath, "utf-8");
   const { data, content } = matter(raw);
   return { slug, meta: data, content };
+}
+
+export function formatDate(date) {
+  return new Date(date)
+    .toLocaleDateString("sr-RS", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    })
+    .replace(/\.$/, "");
 }

@@ -11,6 +11,15 @@ const navItems = [
   { name: "blog", href: "/blog" },
 ];
 
+const isNavItemActive = (pathname, item) => {
+  if (item.href === "/") {
+    return !navItems
+      .filter((i) => i.href !== "/")
+      .some((i) => pathname === i.href || pathname.startsWith(i.href + "/"));
+  }
+  return pathname === item.href || pathname.startsWith(item.href + "/");
+};
+
 export function Header() {
   const pathname = usePathname();
   return (
@@ -38,8 +47,7 @@ export function Header() {
                 <Link
                   href={item.href}
                   className={`border-b-2 py-1 text-sm transition-colors ${
-                    pathname === item.href ||
-                    pathname.startsWith(item.href + "/")
+                    isNavItemActive(pathname, item)
                       ? "border-accent text-accent"
                       : "hover:text-accent text-muted border-transparent"
                   }`}
