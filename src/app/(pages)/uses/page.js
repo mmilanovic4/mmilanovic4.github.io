@@ -16,7 +16,6 @@ const uses = [
       'MacBook Pro, 14", Apple M5, 16 GB',
       'Lenovo IdeaPad 110, 15.6", Intel Core i7, 16 GB',
       "iPhone 16 Pro, 256 GB",
-      "Nintendo Switch 2",
     ],
   },
   {
@@ -25,7 +24,13 @@ const uses = [
   },
   {
     category: "Gear",
-    items: ["AirPods 4 ANC", "Suunto Race S All Black"],
+    items: [
+      "AirPods 4 ANC",
+      "Nintendo Switch 2",
+      "Suunto Race S All Black",
+      "DJI Spark",
+      "Anker Nano Power Bank",
+    ],
   },
 ];
 
