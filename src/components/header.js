@@ -112,13 +112,17 @@ export function Header() {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className={`w-full border-b-2 py-1 text-sm transition-colors ${
-                    isNavItemActive(pathname, item)
-                      ? "border-accent text-accent"
-                      : "hover:text-accent text-muted border-transparent"
-                  }`}
+                  className={`w-full py-1 text-sm`}
                 >
-                  {item.name}
+                  <span
+                    className={`border-b-2 ${
+                      isNavItemActive(pathname, item)
+                        ? "text-accent border-accent"
+                        : "text-muted border-transparent"
+                    }`}
+                  >
+                    {item.name}
+                  </span>
                 </Link>
               </li>
             ))}
