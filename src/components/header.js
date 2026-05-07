@@ -108,11 +108,11 @@ export function Header() {
         <nav>
           <ul className="flex flex-col gap-6">
             {navItems.map((item) => (
-              <li key={item.href}>
+              <li key={item.href} className="flex w-full">
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className={`border-b-2 py-1 text-sm transition-colors ${
+                  className={`w-full border-b-2 py-1 text-sm transition-colors ${
                     isNavItemActive(pathname, item)
                       ? "border-accent text-accent"
                       : "hover:text-accent text-muted border-transparent"
