@@ -20,9 +20,11 @@ npm run dev
 
 Automatically deployed to GitHub Pages via GitHub Actions on push to `master`.
 
-- [Checkout](https://github.com/actions/checkout) — clones the repository in the CI environment
-- [Setup Node.js](https://github.com/actions/setup-node) — installs the correct Node.js version
-- [GitHub Pages Deploy](https://github.com/JamesIves/github-pages-deploy-action) — deploys the static output to the `gh-pages` branch
+- [Checkout](https://github.com/actions/checkout)
+- [Setup Node.js](https://github.com/actions/setup-node)
+- [Setup Pages](https://github.com/actions/configure-pages)
+- [Upload artifact](https://github.com/actions/upload-pages-artifact)
+- [Deploy to GitHub Pages](https://github.com/actions/deploy-pages)
 
 ## Env
 
