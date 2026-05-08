@@ -16,16 +16,6 @@ npm install
 npm run dev
 ```
 
-## Deployment
-
-Automatically deployed to GitHub Pages via GitHub Actions on push to `master`.
-
-- [Checkout](https://github.com/actions/checkout)
-- [Setup Node.js](https://github.com/actions/setup-node)
-- [Setup Pages](https://github.com/actions/configure-pages)
-- [Upload artifact](https://github.com/actions/upload-pages-artifact)
-- [Deploy to GitHub Pages](https://github.com/actions/deploy-pages)
-
 ## Env
 
 | Variable            | Description                                              |
