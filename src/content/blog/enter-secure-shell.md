@@ -19,7 +19,7 @@ right — the command, the tool and the exploit were all real.
 
 ![The Matrix Reloaded (2003)](/blog/trinity.jpg)
 
-**Note:** The other tool used in this scene, nmap, is also real. Kudos to the Wachowskis.
+**Note:** The other tool used in this scene, `nmap`, is also real. Kudos to the Wachowskis.
 
 ## Of passwords and keys
 
