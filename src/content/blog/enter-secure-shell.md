@@ -21,7 +21,7 @@ right — the command, the tool and the exploit were all real.
 
 **Note:** The other tool used in this scene, `nmap`, is also real. Kudos to the Wachowskis.
 
-## Of passwords and keys
+## Passwords and keys
 
 SSH supports password-based authentication, but key-based
 authentication is more secure and more convenient.
