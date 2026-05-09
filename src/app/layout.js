@@ -5,7 +5,7 @@ import { createMetadata } from "@/lib/metadata";
 
 import "./globals.css";
 
-const jetbrainsMono = JetBrains_Mono({
+const font = JetBrains_Mono({
   subsets: ["latin"],
 });
 
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={`${jetbrainsMono.className} subpixel-antialiased`}>
+      <body className={`${font.className} subpixel-antialiased`}>
         <ThemeProvider>
           <div className="flex min-h-screen flex-col">
             <Header />
