@@ -2,7 +2,7 @@ const nextConfig = {
   reactCompiler: true,
   output: "export",
   compiler: {
-    removeConsole: true,
+    removeConsole: process.env.NODE_ENV === "production",
   },
   images: {
     unoptimized: true,
