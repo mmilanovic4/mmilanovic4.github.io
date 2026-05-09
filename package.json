@@ -26,13 +26,13 @@
     "shiki": "^4.0.2"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.2.4",
+    "@tailwindcss/postcss": "^4.3.0",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint-config-next": "^16.2.6",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",
     "prettier": "^3.8.3",
     "prettier-plugin-tailwindcss": "^0.8.0",
-    "tailwindcss": "^4.2.4"
+    "tailwindcss": "^4.3.0"
   }
 }
