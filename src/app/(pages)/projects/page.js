@@ -18,6 +18,14 @@ const projects = [
     stack: ["Go", "Cobra"],
     href: "https://github.com/mmilanovic4/orbx",
   },
+  {
+    id: "jarvis-ui",
+    name: "jarvis-ui",
+    description:
+      "A local AI assistant interface powered by Ollama — persistent conversations, model switching, and voice input, all running privately on your machine.",
+    stack: ["Next.js", "Ollama", "SQLite", "shadcn/ui"],
+    href: "https://github.com/mmilanovic4/jarvis-ui",
+  },
 ];
 
 export default function Projects() {
