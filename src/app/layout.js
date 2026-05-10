@@ -6,7 +6,9 @@ import { createMetadata } from "@/lib/metadata";
 import "./globals.css";
 
 const font = JetBrains_Mono({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  preload: true,
 });
 
 export const metadata = createMetadata({
