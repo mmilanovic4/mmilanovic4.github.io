@@ -13,3 +13,7 @@ code[data-line-numbers] [data-line]::before {
 figure[data-rehype-pretty-code-figure] pre {
   @apply my-4 overflow-x-auto rounded p-4 text-xs leading-relaxed;
 }
+
+figure[data-rehype-pretty-code-figure] code {
+  min-width: max-content;
+}
