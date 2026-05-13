@@ -8,7 +8,7 @@ export const mdxComponents = {
     if (hasImage) return <>{childArray}</>;
 
     return (
-      <p className="mb-4 text-justify leading-loose" {...props}>
+      <p className="mb-4 text-left leading-loose md:text-justify" {...props}>
         {children}
       </p>
     );
