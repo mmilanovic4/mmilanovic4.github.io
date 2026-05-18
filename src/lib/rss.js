@@ -26,7 +26,7 @@ export function generateRSS() {
       )
       .join("")}
   </channel>
-</rss>`;
+</rss>`.trim();
 
   fs.writeFileSync(path.join(process.cwd(), "public/rss.xml"), rss);
 }
