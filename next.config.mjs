@@ -1,3 +1,5 @@
+import { generateRSS } from "./src/lib/rss.js";
+
 const nextConfig = {
   reactCompiler: true,
   output: "export",
@@ -8,5 +10,9 @@ const nextConfig = {
     unoptimized: true,
   },
 };
+
+if (process.env.NODE_ENV === "production") {
+  generateRSS();
+}
 
 export default nextConfig;

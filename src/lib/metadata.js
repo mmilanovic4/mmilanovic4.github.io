@@ -1,4 +1,5 @@
 const BASE_URL = "https://mmilanovic4.github.io";
+
 const AUTHOR = "Miloš Milanović";
 
 const baseOpenGraph = {

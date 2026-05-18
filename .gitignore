@@ -43,3 +43,6 @@ next-env.d.ts
 certificates
 package-lock.json
 .vscode
+
+# generated files
+public/rss.xml
