@@ -43,7 +43,7 @@ export function Header() {
         <h1 className="text-lg font-bold">Miloš Milanović</h1>
         <p className="text-muted text-sm">full-stack web developer</p>
         <SocialLinks />
-        <hr className="border-gray-200 dark:border-gray-800" />
+        <hr className="border-gray-200 dark:border-gray-700" />
 
         {/* Desktop nav */}
         <nav className="my-4 hidden md:block">
@@ -80,7 +80,7 @@ export function Header() {
           <ThemeToggle />
         </div>
 
-        <hr className="border-gray-200 dark:border-gray-800" />
+        <hr className="border-gray-200 dark:border-gray-700" />
       </div>
 
       {/* Drawer overlay */}

@@ -23,7 +23,7 @@ export default function Blog() {
           {posts.map((post) => (
             <li
               key={post.slug}
-              className="flex flex-col gap-1 border-b border-gray-200 pb-3 last:border-b-0 dark:border-gray-800"
+              className="flex flex-col gap-1 border-b border-gray-200 pb-3 last:border-b-0 dark:border-gray-700"
             >
               <time className="text-muted text-xs">
                 {formatDate(post.date)}

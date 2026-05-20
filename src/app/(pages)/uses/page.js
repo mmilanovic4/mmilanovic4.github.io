@@ -46,7 +46,7 @@ export default function Uses() {
             {section.items.map((item) => (
               <li
                 key={item}
-                className="border-b border-gray-200 pb-2 text-sm last:border-b-0 dark:border-gray-800"
+                className="border-b border-gray-200 pb-2 text-sm last:border-b-0 dark:border-gray-700"
               >
                 {item}
               </li>

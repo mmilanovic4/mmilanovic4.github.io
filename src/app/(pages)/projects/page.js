@@ -37,7 +37,7 @@ export default function Projects() {
           return (
             <li
               key={project.id}
-              className="flex flex-col gap-2 border-b border-gray-200 pb-4 last:border-b-0 dark:border-gray-800"
+              className="flex flex-col gap-2 border-b border-gray-200 pb-4 last:border-b-0 dark:border-gray-700"
             >
               <a
                 href={project.href}
