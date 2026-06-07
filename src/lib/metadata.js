@@ -1,4 +1,4 @@
-const BASE_URL = "https://mmilanovic4.github.io";
+const BASE_URL = "https://mmilanovic4.dev";
 
 const AUTHOR = "Miloš Milanović";
 

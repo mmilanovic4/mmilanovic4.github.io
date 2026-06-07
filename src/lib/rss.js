@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { getAllPosts } from "./blog.js";
 
-const SITE_URL = "https://mmilanovic4.github.io";
+const SITE_URL = "https://mmilanovic4.dev";
 
 export function generateRSS() {
   const posts = getAllPosts();

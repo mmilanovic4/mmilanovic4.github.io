@@ -1,6 +1,6 @@
 # Personal website
 
-[mmilanovic4.github.io](https://mmilanovic4.github.io)
+[mmilanovic4.dev](https://mmilanovic4.dev)
 
 ## Stack
 

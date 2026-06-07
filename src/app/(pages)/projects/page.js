@@ -5,7 +5,7 @@ export const metadata = createMetadata({
   title: "Miloš Milanović | Projects",
   description: "Personal projects.",
   openGraph: {
-    url: "https://mmilanovic4.github.io/projects",
+    url: "https://mmilanovic4.dev/projects",
   },
 });
 

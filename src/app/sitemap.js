@@ -6,25 +6,25 @@ export default function sitemap() {
   const posts = getAllPosts();
 
   const blogUrls = posts.map((post) => ({
-    url: `https://mmilanovic4.github.io/blog/${post.slug}`,
+    url: `https://mmilanovic4.dev/blog/${post.slug}`,
     lastModified: new Date(post.date),
   }));
 
   return [
     {
-      url: "https://mmilanovic4.github.io",
+      url: "https://mmilanovic4.dev",
       lastModified: new Date(),
     },
     {
-      url: "https://mmilanovic4.github.io/resume",
+      url: "https://mmilanovic4.dev/resume",
       lastModified: new Date(),
     },
     {
-      url: "https://mmilanovic4.github.io/projects",
+      url: "https://mmilanovic4.dev/projects",
       lastModified: new Date(),
     },
     {
-      url: "https://mmilanovic4.github.io/blog",
+      url: "https://mmilanovic4.dev/blog",
       lastModified: new Date(),
     },
     ...blogUrls,

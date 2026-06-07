@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
     title: `Miloš Milanović | ${meta.title}`,
     description: meta.description,
     openGraph: {
-      url: `https://mmilanovic4.github.io/blog/${slug}`,
+      url: `https://mmilanovic4.dev/blog/${slug}`,
       type: "article",
     },
   });
