@@ -13,7 +13,7 @@
 
   <!-- Server box -->
   <rect x="200" y="65" width="175" height="56" rx="4" fill="none" stroke="#111" stroke-width="1" style="fill:none;stroke:rgb(17, 17, 17);color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text x="287" y="85" text-anchor="middle" font-size="14" font-weight="600" fill="#111" style="fill:rgb(17, 17, 17);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:14px;font-weight:600;text-anchor:middle;dominant-baseline:auto">Server (Next.js etc.)</text>
+  <text x="287" y="85" text-anchor="middle" font-size="14" font-weight="600" fill="#111" style="fill:rgb(17, 17, 17);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:14px;font-weight:600;text-anchor:middle;dominant-baseline:auto">Server (Next.js etc)</text>
   <text x="287" y="105" text-anchor="middle" font-size="12" fill="#444" style="fill:rgb(68, 68, 68);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">Renders components</text>
 
   <!-- Arrow Server → Browser (Full HTML, tip at x=435) -->
