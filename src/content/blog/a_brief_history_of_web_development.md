@@ -34,7 +34,7 @@ The Jamstack movement extended this further: pre-built static files, a CDN, a he
 
 The pendulum is swinging back. Next.js brought server-side rendering back into fashion, this time with the component model intact. The irony is that the most robust applications being built today look a lot like what was being built in the late nineties — content delivered from a server, JavaScript used where it earns its place, HTML doing most of the work.
 
-![The SSR strikes back](ssr_renaissance.svg)
+![The return of the server](ssr_renaissance.svg)
 
 The tooling is dramatically better. The fundamentals are the same.
 
