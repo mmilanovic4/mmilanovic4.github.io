@@ -1,0 +1,40 @@
+<svg width="680" height="180" viewBox="0 0 680 180" xmlns="http://www.w3.org/2000/svg" role="img" font-family="sans-serif">
+  <title>Era 2: The PHP decade</title>
+  <desc>Server builds HTML dynamically from a database. Ajax enables partial page updates without full reload.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- White background -->
+  <rect width="680" height="180" fill="#fff"/>
+
+  <!-- Database -->
+  <rect x="63" y="55" width="110" height="60" rx="4" fill="none" stroke="#111" stroke-width="1"/>
+  <text x="118" y="81" text-anchor="middle" font-size="14" font-weight="600" fill="#111">Database</text>
+  <text x="118" y="101" text-anchor="middle" font-size="12" fill="#444">user data</text>
+
+  <!-- Arrow DB → Server -->
+  <line x1="173" y1="85" x2="213" y2="85" stroke="#111" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Server / PHP -->
+  <rect x="213" y="45" width="160" height="80" rx="4" fill="none" stroke="#111" stroke-width="1"/>
+  <text x="293" y="73" text-anchor="middle" font-size="14" font-weight="600" fill="#111">Server (PHP)</text>
+  <text x="293" y="93" text-anchor="middle" font-size="12" fill="#444">Builds HTML on the fly</text>
+  <text x="293" y="111" text-anchor="middle" font-size="12" fill="#444">from database queries</text>
+
+  <!-- Arrow Server → Browser (full page) -->
+  <line x1="373" y1="72" x2="443" y2="72" stroke="#111" stroke-width="1" marker-end="url(#arrow)"/>
+  <text x="408" y="63" text-anchor="middle" font-size="11" fill="#555">HTML</text>
+
+  <!-- Arrow Ajax (partial) -->
+  <path d="M443 100 L408 100 L408 118 L373 118" fill="none" stroke="#111" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <text x="408" y="138" text-anchor="middle" font-size="11" fill="#555">Ajax (partial update)</text>
+
+  <!-- Browser -->
+  <rect x="443" y="45" width="175" height="80" rx="4" fill="none" stroke="#111" stroke-width="1"/>
+  <text x="530" y="73" text-anchor="middle" font-size="14" font-weight="600" fill="#111">Browser</text>
+  <text x="530" y="93" text-anchor="middle" font-size="12" fill="#444">Renders full page or</text>
+  <text x="530" y="111" text-anchor="middle" font-size="12" fill="#444">handles partial updates</text>
+</svg>
