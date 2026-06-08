@@ -45,7 +45,7 @@ export function SocialLinks() {
             key={link.href}
             href={link.href}
             title={link.title}
-            className="rounded-full bg-gray-200 p-2.5 dark:bg-gray-700"
+            className="rounded-full border border-gray-200 bg-gray-200 p-2.5 dark:border-white dark:bg-gray-900"
             {...(link.external ? { target: "_blank" } : {})}
           >
             <Icon style={{ color: link.color }} className="size-6 md:size-4" />
