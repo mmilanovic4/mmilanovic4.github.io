@@ -11,6 +11,14 @@ export const metadata = createMetadata({
 
 const projects = [
   {
+    id: "forge",
+    name: "forge",
+    description:
+      "A minimal Next.js boilerplate with authentication, database and a component library ready to go.",
+    stack: ["Next.js", "Better Auth", "Prisma", "PostgreSQL", "shadcn/ui"],
+    href: "https://github.com/mmilanovic4/forge",
+  },
+  {
     id: "orbx",
     name: "orbx",
     description:
