@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components";
 import { createMetadata } from "@/lib/metadata";
 
@@ -17,6 +18,7 @@ const projects = [
       "A minimal Next.js boilerplate with authentication, database and a component library ready to go.",
     stack: ["Next.js", "Better Auth", "Prisma", "PostgreSQL", "shadcn/ui"],
     href: "https://github.com/mmilanovic4/forge",
+    logo: "https://raw.githubusercontent.com/mmilanovic4/forge/main/src/app/icon.svg",
   },
   {
     id: "orbx",
@@ -25,6 +27,7 @@ const projects = [
       "A lightweight CLI toolkit for developers — encryption, encoding, network diagnostics and everyday utilities, all from the terminal.",
     stack: ["Go", "Cobra"],
     href: "https://github.com/mmilanovic4/orbx",
+    logo: "https://raw.githubusercontent.com/mmilanovic4/orbx/main/logo.svg",
   },
 ];
 
@@ -42,8 +45,16 @@ export default function Projects() {
               <a
                 href={project.href}
                 target="_blank"
-                className="text-accent text-sm font-semibold hover:underline"
+                className="text-accent inline-flex gap-2 text-sm font-semibold hover:underline"
               >
+                {project.logo && (
+                  <Image
+                    src={project.logo}
+                    alt={project.name}
+                    width={16}
+                    height={16}
+                  />
+                )}
                 {project.name}
               </a>
               <p className="text-xs">{project.description}</p>
