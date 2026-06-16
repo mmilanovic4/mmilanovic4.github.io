@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mmilanovic4/mmilanovic4.github.io/main/public/logo.png" width="48" height="48" />
+  <img src="https://raw.githubusercontent.com/mmilanovic4/mmilanovic4.github.io/master/public/logo.png" width="48" height="48" />
 </p>
 
 # Personal website
