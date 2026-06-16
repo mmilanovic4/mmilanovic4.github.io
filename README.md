@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/mmilanovic4/mmilanovic4.github.io/master/public/logo.svg" width="48" height="48" />
 </p>
 
-# Personal website
+# Personal Website
 
 [mmilanovic4.dev](https://mmilanovic4.dev)
 
@@ -20,7 +20,7 @@ npm install
 npm run dev
 ```
 
-## Env
+## Environment Variables
 
 | Variable            | Description                                              |
 | ------------------- | -------------------------------------------------------- |
