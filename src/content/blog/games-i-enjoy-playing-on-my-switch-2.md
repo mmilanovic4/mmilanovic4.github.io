@@ -12,7 +12,7 @@ on rotation for me.
 ## FC 26
 
 As someone who follows sport in general, every sports game is tempting and no
-day is long enough for all of them. FC wins that battle, and not just because
+day is long enough for all of them. _FC_ wins that battle, and not just because
 football is the most popular sport in the world. The game itself is better than
 _NBA 2K_ or _Madden_. The physics hold up and the player database is genuinely
 interesting to anyone who follows the game. Over the years it has become less
