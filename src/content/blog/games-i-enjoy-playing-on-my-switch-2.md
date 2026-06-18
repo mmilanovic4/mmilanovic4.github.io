@@ -28,7 +28,7 @@ shift made it worth coming back to.
 Capcom released _RE9_ — _Requiem_ — and as of June 2026 it's probably the best
 thing you can play on Switch 2. The graphics, the story, the replay value. There
 is a specific kind of satisfaction in finishing the game once with The Girl
-delivering trauma, and then starting again with infinite ammo for the _Requiem_
+delivering trauma, and then starting again with infinite ammo for the Requiem
 — this time, you are the threat. The sentimental weight of walking into RPD as
 someone who grew up with Leon means something that is hard to explain to anyone
 who didn't.
@@ -39,7 +39,7 @@ Bundled alongside _Requiem_ came ports of 7 and 8, both brutal in quality.
 
 _RE7_ is widely considered the better game, and it earns that. Louisiana and the
 Baker house is one of the best settings in the series. The DLC holds up too —
-The End of Zoe, where Joe Baker handles moldeds with his bare hands, is one of
+_The End of Zoe_, where Joe Baker handles moldeds with his bare hands, is one of
 the most satisfying things the franchise has produced.
 
 _RE8_ is my personal favourite. The Romanian village, the Dimitrescu estate, the
