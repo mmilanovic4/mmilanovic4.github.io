@@ -6,7 +6,7 @@ export const metadata = createMetadata({
   title: "Miloš Milanović | Résumé",
   description: "Work and education history.",
   openGraph: {
-    url: "https://mmilanovic4.dev/resume",
+    url: "https://milos.fyi/resume",
   },
 });
 

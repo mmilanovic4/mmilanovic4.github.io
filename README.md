@@ -4,7 +4,7 @@
 
 # Personal Website
 
-[mmilanovic4.dev](https://mmilanovic4.dev)
+[milos.fyi](https://milos.fyi)
 
 ## Stack
 

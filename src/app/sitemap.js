@@ -6,25 +6,25 @@ export default function sitemap() {
   const posts = getAllPosts();
 
   const blogUrls = posts.map((post) => ({
-    url: `https://mmilanovic4.dev/blog/${post.slug}`,
+    url: `https://milos.fyi/blog/${post.slug}`,
     lastModified: new Date(post.date),
   }));
 
   return [
     {
-      url: "https://mmilanovic4.dev",
+      url: "https://milos.fyi",
       lastModified: new Date(),
     },
     {
-      url: "https://mmilanovic4.dev/resume",
+      url: "https://milos.fyi/resume",
       lastModified: new Date(),
     },
     {
-      url: "https://mmilanovic4.dev/projects",
+      url: "https://milos.fyi/projects",
       lastModified: new Date(),
     },
     {
-      url: "https://mmilanovic4.dev/blog",
+      url: "https://milos.fyi/blog",
       lastModified: new Date(),
     },
     ...blogUrls,
