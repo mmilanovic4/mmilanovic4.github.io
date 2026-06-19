@@ -20,6 +20,7 @@ export const viewport = {
 };
 
 const theme = process.env.NEXT_PUBLIC_THEME || "blue";
+const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
 export default function RootLayout({ children }) {
   return (
@@ -46,7 +47,7 @@ export default function RootLayout({ children }) {
             <Footer />
           </div>
         </ThemeProvider>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
       </body>
     </html>
   );
