@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { SocialLinks, ThemeToggle } from "@/components";
+import { AUTHOR } from "@/lib/metadata";
 
 const navItems = [
   { name: "home", href: "/" },
@@ -40,7 +41,7 @@ export function Header() {
         </div>
       </div>
       <div className="px-6 md:px-0">
-        <h1 className="text-lg font-bold">Miloš Milanović</h1>
+        <h1 className="text-lg font-bold">{AUTHOR}</h1>
         <p className="text-muted text-sm">full-stack web developer</p>
         <SocialLinks />
         <hr className="border-gray-200 dark:border-gray-700" />

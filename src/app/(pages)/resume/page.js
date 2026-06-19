@@ -1,12 +1,12 @@
 import { Container, ResumeItem } from "@/components";
 import data from "@/content/resume.json";
-import { createMetadata } from "@/lib/metadata";
+import { BASE_URL, createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Miloš Milanović | Résumé",
+  title: "Résumé",
   description: "Work and education history.",
   openGraph: {
-    url: "https://milos.fyi/resume",
+    url: `${BASE_URL}/resume`,
   },
 });
 

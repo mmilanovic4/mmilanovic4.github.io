@@ -4,7 +4,9 @@
 
 # Personal Website
 
-[milos.fyi](https://milos.fyi)
+```bash
+git clone https://github.com/mmilanovic4/mmilanovic4.github.io.git
+```
 
 ## Stack
 

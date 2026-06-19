@@ -1,4 +1,5 @@
 import { getAllPosts } from "@/lib/blog";
+import { BASE_URL } from "@/lib/metadata";
 
 export const dynamic = "force-static";
 
@@ -6,25 +7,25 @@ export default function sitemap() {
   const posts = getAllPosts();
 
   const blogUrls = posts.map((post) => ({
-    url: `https://milos.fyi/blog/${post.slug}`,
+    url: `${BASE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.date),
   }));
 
   return [
     {
-      url: "https://milos.fyi",
+      url: BASE_URL,
       lastModified: new Date(),
     },
     {
-      url: "https://milos.fyi/resume",
+      url: `${BASE_URL}/resume`,
       lastModified: new Date(),
     },
     {
-      url: "https://milos.fyi/projects",
+      url: `${BASE_URL}/projects`,
       lastModified: new Date(),
     },
     {
-      url: "https://milos.fyi/blog",
+      url: `${BASE_URL}/blog`,
       lastModified: new Date(),
     },
     ...blogUrls,

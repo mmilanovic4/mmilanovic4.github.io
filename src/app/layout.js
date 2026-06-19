@@ -11,10 +11,7 @@ const font = JetBrains_Mono({
   preload: true,
 });
 
-export const metadata = createMetadata({
-  title: "Miloš Milanović",
-  description: "Full-stack web developer based in Belgrade, Serbia.",
-});
+export const metadata = createMetadata({});
 
 export const viewport = {
   width: "device-width",

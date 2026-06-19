@@ -3,7 +3,7 @@ import rehypeExternalLinks from "rehype-external-links";
 import rehypePrettyCode from "rehype-pretty-code";
 import { Container, mdxComponents } from "@/components";
 import { formatDate, getAllPosts, getPost } from "@/lib/blog";
-import { createMetadata } from "@/lib/metadata";
+import { BASE_URL, createMetadata } from "@/lib/metadata";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -14,10 +14,10 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const { meta } = getPost(slug);
   return createMetadata({
-    title: `Miloš Milanović | ${meta.title}`,
+    title: meta.title,
     description: meta.description,
     openGraph: {
-      url: `https://milos.fyi/blog/${slug}`,
+      url: `${BASE_URL}/blog/${slug}`,
       type: "article",
     },
   });

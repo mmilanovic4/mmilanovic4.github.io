@@ -1,6 +1,6 @@
-const BASE_URL = "https://milos.fyi";
+export const BASE_URL = "https://milos.fyi";
 
-const AUTHOR = "Miloš Milanović";
+export const AUTHOR = "Miloš Milanović";
 
 const baseOpenGraph = {
   siteName: AUTHOR,
@@ -37,8 +37,10 @@ const baseMeta = {
 export function createMetadata({ title, description, openGraph = {} }) {
   return {
     ...baseMeta,
-    title,
-    description,
+    title: title ? `${AUTHOR} | ${title}` : title,
+    description: description
+      ? description
+      : "Full-stack web developer based in Belgrade, Serbia.",
     alternates: {
       canonical: openGraph.url ?? BASE_URL,
     },

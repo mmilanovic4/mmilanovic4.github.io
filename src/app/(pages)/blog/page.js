@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { Container } from "@/components";
 import { formatDate, getAllPosts } from "@/lib/blog";
-import { createMetadata } from "@/lib/metadata";
+import { BASE_URL, createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Miloš Milanović | Blog",
+  title: "Blog",
   description: "Thoughts.",
   openGraph: {
-    url: "https://milos.fyi/blog",
+    url: `${BASE_URL}/blog`,
   },
 });
 

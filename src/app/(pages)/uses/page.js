@@ -1,11 +1,11 @@
 import { Container } from "@/components";
-import { createMetadata } from "@/lib/metadata";
+import { BASE_URL, createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Miloš Milanović | Uses",
+  title: "Uses",
   description: "Tools, hardware and gear I use daily.",
   openGraph: {
-    url: "https://milos.fyi/uses",
+    url: `${BASE_URL}/uses`,
   },
 });
 

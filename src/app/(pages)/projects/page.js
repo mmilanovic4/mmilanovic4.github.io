@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { Container } from "@/components";
-import { createMetadata } from "@/lib/metadata";
+import { BASE_URL, createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Miloš Milanović | Projects",
+  title: "Projects",
   description: "Personal projects.",
   openGraph: {
-    url: "https://milos.fyi/projects",
+    url: `${BASE_URL}/projects`,
   },
 });
 
