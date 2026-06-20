@@ -37,7 +37,7 @@ const baseMeta = {
 export function createMetadata({ title, description, openGraph = {} }) {
   return {
     ...baseMeta,
-    title: title ? `${AUTHOR} | ${title}` : AUTHOR,
+    title: title ? `${title} | ${AUTHOR}` : AUTHOR,
     description: description
       ? description
       : "Full-stack web developer based in Belgrade, Serbia.",
