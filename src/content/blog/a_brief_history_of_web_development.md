@@ -12,7 +12,7 @@ In the beginning, there was HTML. A file on a server. A browser that rendered it
 
 No build step, no framework, no deployment pipeline. You uploaded a file and it worked. This is still the most reliable deployment model ever invented.
 
-![The document model era](document_model.svg)
+![The document model era](/blog/document_model.svg)
 
 ## The PHP decade
 
@@ -20,7 +20,7 @@ Dynamic content changed everything. PHP let the server build HTML on the fly —
 
 Then Ajax arrived and the browser stopped reloading on every interaction. Gmail and Google Maps showed what the web could actually be. Node.js finished the shift — JavaScript on the server meant one language across the full stack, and PHP's dominance as the server-side language of choice was effectively over. The full-stack developer became a realistic job title.
 
-![The PHP decade](php_decade.svg)
+![The PHP decade](/blog/php_decade.svg)
 
 ## Everything is a component
 
@@ -28,13 +28,13 @@ React introduced a component model in 2013 that changed how people thought about
 
 The Jamstack movement extended this further: pre-built static files, a CDN, a headless CMS. Fast, scalable, deployable anywhere. It peaked, solved real problems and made static sites a serious option again.
 
-![The component era](components.svg)
+![The component era](/blog/components.svg)
 
 ## The SSR renaissance
 
 The pendulum is swinging back. Next.js brought server-side rendering back into fashion, this time with the component model intact. The irony is that the most robust applications being built today look a lot like what was being built in the late nineties — content delivered from a server, JavaScript used where it earns its place, HTML doing most of the work.
 
-![The return of the server](ssr_renaissance.svg)
+![The return of the server](/blog/ssr_renaissance.svg)
 
 The tooling is dramatically better. The fundamentals are the same.
 
