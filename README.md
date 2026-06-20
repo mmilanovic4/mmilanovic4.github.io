@@ -26,5 +26,4 @@ npm run dev
 
 | Variable            | Description                                              |
 | ------------------- | -------------------------------------------------------- |
-| `NEXT_PUBLIC_GA_ID` | Google Analytics ID                                      |
 | `NEXT_PUBLIC_THEME` | Color theme (`blue`, `mint`, `green`, `violet`, `amber`) |
