@@ -12,15 +12,15 @@ const stack = [
 export default function Home() {
   return (
     <Container>
-      <section className="mb-8">
+      <div className="mb-8">
         <p className="text-accent mb-3 text-xs"># about</p>
         <p className="text-sm leading-loose">
           Hey, I{"'"}m Miloš - a full-stack web developer based in{" "}
           <span className="text-accent">Belgrade, Serbia</span>. I build web
           apps with a focus on clean code and good UX.
         </p>
-      </section>
-      <section>
+      </div>
+      <div>
         <p className="text-accent mb-3 text-xs"># stack</p>
         <div className="flex flex-wrap gap-2">
           {stack.map((tech) => (
@@ -32,7 +32,7 @@ export default function Home() {
             </span>
           ))}
         </div>
-      </section>
+      </div>
     </Container>
   );
 }

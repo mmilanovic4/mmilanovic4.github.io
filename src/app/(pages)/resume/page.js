@@ -13,23 +13,23 @@ export const metadata = createMetadata({
 export default function Resume() {
   return (
     <Container>
-      <section className="mb-8">
+      <div className="mb-8">
         <p className="text-accent mb-3 text-xs"># work</p>
         <ul className="flex flex-col gap-2">
           {data.work.map((row) => (
             <ResumeItem key={row.id} item={row} />
           ))}
         </ul>
-      </section>
+      </div>
 
-      <section>
+      <div>
         <p className="text-accent mb-3 text-xs"># education</p>
         <ul className="flex flex-col gap-2">
           {data.education.map((row) => (
             <ResumeItem key={row.id} item={row} />
           ))}
         </ul>
-      </section>
+      </div>
     </Container>
   );
 }

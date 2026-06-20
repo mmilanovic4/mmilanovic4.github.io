@@ -3,9 +3,9 @@ import Image from "next/image";
 export function ResumeItem({ item }) {
   return (
     <li className="flex flex-col gap-2 border-b border-gray-200 pb-3 last:border-b-0 dark:border-gray-700">
-      <time className="text-muted text-xs">
+      <span className="text-muted text-xs">
         {item.from} - {item.to || "present"}
-      </time>
+      </span>
       <div className="flex flex-col flex-wrap gap-2">
         {item.title && (
           <span className="text-strong text-sm font-semibold">

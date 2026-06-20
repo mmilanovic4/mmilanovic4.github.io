@@ -38,7 +38,7 @@ export default function Uses() {
   return (
     <Container>
       {uses.map((section) => (
-        <section key={section.category} className="mb-8">
+        <div key={section.category} className="mb-8">
           <p className="text-accent mb-3 text-xs">
             # {section.category.toLowerCase()}
           </p>
@@ -52,7 +52,7 @@ export default function Uses() {
               </li>
             ))}
           </ul>
-        </section>
+        </div>
       ))}
     </Container>
   );

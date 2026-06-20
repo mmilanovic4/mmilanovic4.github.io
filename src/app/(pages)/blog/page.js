@@ -25,9 +25,9 @@ export default function Blog() {
               key={post.slug}
               className="flex flex-col gap-1 border-b border-gray-200 pb-3 last:border-b-0 dark:border-gray-700"
             >
-              <time className="text-muted text-xs">
+              <span className="text-muted text-xs">
                 {formatDate(post.date)}
-              </time>
+              </span>
               <Link
                 href={`/blog/${post.slug}`}
                 className="text-accent text-sm hover:underline"

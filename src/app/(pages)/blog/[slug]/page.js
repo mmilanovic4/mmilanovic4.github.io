@@ -28,7 +28,7 @@ export default async function BlogPost({ params }) {
   const { meta, content } = getPost(slug);
   return (
     <Container>
-      <time className="text-muted text-xs">{formatDate(meta.date)}</time>
+      <span className="text-muted text-xs">{formatDate(meta.date)}</span>
       <h2 className="text-strong my-3 text-lg font-bold">{meta.title}</h2>
       <hr className="mb-6 border-gray-200 dark:border-gray-700" />
       <article className="blog text-sm">
