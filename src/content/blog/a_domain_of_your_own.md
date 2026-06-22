@@ -43,7 +43,9 @@ mmilanovic4.dev          A      192.0.2.1                Proxied
 www.mmilanovic4.dev      CNAME  mmilanovic4.dev          Proxied
 ```
 
-`192.0.2.1` isn't a real server. It's a reserved address (RFC 5737) that resolves to nothing. It doesn't need to be real, because the record is **Proxied** — Cloudflare's edge intercepts the request before it tries to reach that IP. The actual redirect happens in a **Redirect Rule**:
+`192.0.2.1` isn't a real server. It's a reserved address (RFC 5737) that resolves to nothing. It doesn't need to be real, because the record is **Proxied** — Cloudflare's edge intercepts the request before it tries to reach that IP.
+
+The actual redirect happens in a **Redirect Rule**:
 
 - **When:** hostname equals `mmilanovic4.dev` or `www.mmilanovic4.dev`
 - **Then:** `301` redirect to `https://milos.fyi` + the original path and query string
