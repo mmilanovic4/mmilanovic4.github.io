@@ -29,5 +29,8 @@ export const mdxComponents = {
   ul: (props) => (
     <ul className="mb-4 list-disc pl-5 text-sm leading-loose" {...props} />
   ),
+  ol: (props) => (
+    <ul className="mb-4 list-decimal pl-5 text-sm leading-loose" {...props} />
+  ),
   li: (props) => <li className="mb-1" {...props} />,
 };
