@@ -7,7 +7,7 @@ import {
 
 const links = [
   {
-    href: "mailto:mmilanovic016@gmail.com",
+    href: "mailto:hello@milos.fyi",
     title: "Gmail",
     icon: SiGmail,
     color: "var(--icon-gmail)",
