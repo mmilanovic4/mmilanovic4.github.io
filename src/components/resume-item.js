@@ -22,7 +22,7 @@ export function ResumeItem({ item }) {
               height={16}
             />
           )}
-          <span>{item.name}</span>
+          <span className="lowercase">{item.name}</span>
         </span>
         <span className="text-muted inline-flex items-center gap-1 text-xs">
           {item.cc && (
