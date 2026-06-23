@@ -39,8 +39,8 @@ export default function Uses() {
     <Container>
       {uses.map((section) => (
         <div key={section.category} className="mb-8">
-          <p className="text-accent mb-3 text-xs">
-            # {section.category.toLowerCase()}
+          <p className="text-accent mb-3 text-xs lowercase">
+            # {section.category}
           </p>
           <ul className="flex flex-col gap-2">
             {section.items.map((item) => (
