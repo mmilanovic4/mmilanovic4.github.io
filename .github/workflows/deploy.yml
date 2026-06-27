@@ -33,7 +33,6 @@ jobs:
 
       - name: Build static site 🔧
         env:
-          NEXT_PUBLIC_GA_ID: ${{ vars.NEXT_PUBLIC_GA_ID }}
           NEXT_PUBLIC_THEME: ${{ vars.NEXT_PUBLIC_THEME }}
         run: npm run build
 
