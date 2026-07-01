@@ -1,7 +1,7 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypePrettyCode from "rehype-pretty-code";
-import { Container, mdxComponents } from "@/components";
+import { Container, ProgressLine, mdxComponents } from "@/components";
 import { formatDate, getAllPosts, getPost } from "@/lib/blog";
 import { BASE_URL, createMetadata } from "@/lib/metadata";
 
@@ -28,6 +28,7 @@ export default async function BlogPost({ params }) {
   const { meta, content } = getPost(slug);
   return (
     <Container>
+      <ProgressLine />
       <span className="text-muted text-xs">{formatDate(meta.date)}</span>
       <h2 className="text-strong my-3 text-lg font-bold">{meta.title}</h2>
       <hr className="mb-6 border-gray-200 dark:border-gray-700" />

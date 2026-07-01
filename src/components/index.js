@@ -2,6 +2,7 @@ export * from "./container";
 export * from "./footer";
 export * from "./header";
 export * from "./mdx-components";
+export * from "./progress-line";
 export * from "./resume-item";
 export * from "./social-links";
 export * from "./theme-provider";
