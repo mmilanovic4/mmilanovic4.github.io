@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" width="1254" height="1254" role="img" aria-label="Hashtag logo">
   <!-- Background: rounded black square (app icon) -->
-  <rect x="0" y="0" width="1254" height="1254" rx="90" ry="90" fill="#050505"/>
+  <rect x="0" y="0" width="1254" height="1254" rx="90" ry="90" fill="#111827"/>
 
   <!-- Hashtag (white) -->
   <g fill="#FFFFFF">
