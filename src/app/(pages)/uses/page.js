@@ -20,7 +20,15 @@ const uses = [
   },
   {
     category: "Software",
-    items: ["VS Code", "Ghostty", "Bruno", "MongoDB Compass"],
+    items: [
+      "VS Code",
+      "Ghostty",
+      "Claude Desktop",
+      "Bruno",
+      "Docker",
+      "MongoDB Compass",
+      "Canva & Affinity",
+    ],
   },
   {
     category: "Gear",
@@ -30,6 +38,7 @@ const uses = [
       "Suunto Race S All Black",
       "DJI Spark",
       "Anker Nano Power Bank",
+      "MOYE Core Multiport x9 Hub",
     ],
   },
 ];
