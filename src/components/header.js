@@ -28,7 +28,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="mx-auto w-full max-w-full md:w-125">
+    <header className="w-full">
       <div className="my-6 px-6 md:px-0">
         <div className="relative" style={{ aspectRatio: "4/3" }}>
           <Image
