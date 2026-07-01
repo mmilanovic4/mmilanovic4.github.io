@@ -34,11 +34,15 @@ The ending — the two of them dancing to _Heaven Is a Place on Earth_ as the cr
 
 The odd one out on this list, because there's no futuristic tech here at all — just a rideshare driver, a kidnapping and a social media company that behaves exactly like the ones that already exist. The phenomenon isn't speculative, it's current: a reflex most people already have — checking a notification the second it lands, without even deciding to — and a company that knows exactly how deliberately it engineered that reflex. Andrew Scott's performance carries the whole thing and the ending refuses to give you the closure you're waiting for.
 
+![Smithereens](/blog/smithereens.jpg)
+
 ## Common People — S07E01
 
 A woman gets a brain implant that keeps her alive after a medical emergency — except the company behind it runs on a subscription model and every upgrade tier unlocks something that used to just work. It's _Black Mirror_ doing what it does best: taking something recognizable — a subscription you can't cancel, a price that keeps creeping up, a free tier that gets worse on purpose — and pushing it just far enough to be unbearable.
 
 No twist, no reveal. Just a slow, deliberate squeeze and it's brutal precisely because of how ordinary it all feels.
+
+![Common People](/blog/common_people.jpg)
 
 ## The window, not the fantasy
 
