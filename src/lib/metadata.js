@@ -35,26 +35,28 @@ const baseMeta = {
 };
 
 export function createMetadata({ title, description, openGraph = {} }) {
+  const parsedTitle = title ? `${title} | ${AUTHOR}` : AUTHOR;
+  const parsedDescription = description
+    ? description
+    : "Full-stack web developer based in Belgrade, Serbia.";
   return {
     ...baseMeta,
-    title: title ? `${title} | ${AUTHOR}` : AUTHOR,
-    description: description
-      ? description
-      : "Full-stack web developer based in Belgrade, Serbia.",
+    title: parsedTitle,
+    description: parsedDescription,
     alternates: {
       canonical: openGraph.url ?? BASE_URL,
     },
     openGraph: {
       ...baseOpenGraph,
-      title,
-      description,
+      title: parsedTitle,
+      description: parsedDescription,
       url: BASE_URL,
       ...openGraph,
     },
     twitter: {
       ...baseTwitter,
-      title,
-      description,
+      title: parsedTitle,
+      description: parsedDescription,
     },
   };
 }
