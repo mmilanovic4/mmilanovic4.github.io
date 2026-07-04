@@ -38,8 +38,7 @@ ssh-keygen -t ed25519
 ```
 
 If you manage server access through a web UI (e.g. GitHub), paste the contents of your public key file there.
-If the server is already running with password authentication,
-`ssh-copy-id` handles the rest:
+If the server is already running with password authentication, `ssh-copy-id` handles the rest:
 
 ```bash
 ssh-copy-id -i ~/.ssh/id_ed25519.pub user@192.168.0.5
