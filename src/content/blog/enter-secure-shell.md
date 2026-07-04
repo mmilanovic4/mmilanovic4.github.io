@@ -34,7 +34,7 @@ your public key goes on the server.
 To generate a key pair, use the `ssh-keygen` tool:
 
 ```bash
-ssh-keygen
+ssh-keygen -t ed25519
 ```
 
 If you manage server access through a web UI (e.g. GitHub), paste the contents of your public key file there.
