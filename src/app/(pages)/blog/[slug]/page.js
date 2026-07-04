@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const { meta } = getPost(slug);
   return createMetadata({
-    title: meta.title,
+    title: meta.title ? `${meta.title} | Blog` : "Blog",
     description: meta.description,
     openGraph: {
       url: `${BASE_URL}/blog/${slug}`,
