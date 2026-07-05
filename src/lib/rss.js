@@ -30,5 +30,7 @@ export function generateRSS() {
     });
   }
 
-  fs.writeFileSync(path.join(process.cwd(), "public/rss.xml"), feed.rss2());
+  const xml = feed.rss2().replace(/\s*<generator>[\s\S]*?<\/generator>/, "");
+
+  fs.writeFileSync(path.join(process.cwd(), "public/rss.xml"), xml);
 }
