@@ -2,8 +2,10 @@ import {
   SiGithub,
   SiGmail,
   SiInstagram,
+  SiRss,
   SiYoutube,
 } from "@icons-pack/react-simple-icons";
+import { BASE_URL } from "@/lib/metadata";
 
 const links = [
   {
@@ -33,6 +35,12 @@ const links = [
     color: "var(--icon-youtube)",
     external: true,
   },
+  {
+    href: `${BASE_URL}/rss.xml`,
+    title: "RSS",
+    icon: SiRss,
+    color: "var(--icon-rss)",
+  },
 ];
 
 export function SocialLinks() {
@@ -45,7 +53,7 @@ export function SocialLinks() {
             key={link.href}
             href={link.href}
             title={link.title}
-            className="rounded-full bg-gray-200 p-2.5 dark:bg-gray-700"
+            className="rounded-full bg-gray-200 p-2.5 last:ml-auto dark:bg-gray-700"
             {...(link.external ? { target: "_blank" } : {})}
           >
             <Icon style={{ color: link.color }} className="size-6 md:size-4" />
