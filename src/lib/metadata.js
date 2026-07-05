@@ -45,6 +45,9 @@ export function createMetadata({ title, description, openGraph = {} }) {
     description: parsedDescription,
     alternates: {
       canonical: openGraph.url ?? BASE_URL,
+      types: {
+        "application/rss+xml": [{ url: "/rss.xml", title: AUTHOR }],
+      },
     },
     openGraph: {
       ...baseOpenGraph,
