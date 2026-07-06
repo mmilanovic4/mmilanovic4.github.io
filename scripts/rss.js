@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
 import { Feed } from "feed";
-import { getAllPosts } from "./blog.js";
-import { AUTHOR, BASE_URL } from "./metadata.js";
+import { getAllPosts } from "../src/lib/blog.js";
+import { AUTHOR, BASE_URL } from "../src/lib/metadata.js";
 
 export function generateRSS() {
   const posts = getAllPosts();

@@ -1,4 +1,4 @@
-import { generateRSS } from "./src/lib/rss.js";
+import { generateRSS } from "./scripts/rss.js";
 
 const nextConfig = {
   reactCompiler: true,
