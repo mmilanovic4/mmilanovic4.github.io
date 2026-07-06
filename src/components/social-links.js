@@ -40,6 +40,7 @@ const links = [
     title: "RSS",
     icon: SiRss,
     color: "var(--icon-rss)",
+    external: true,
   },
 ];
 
