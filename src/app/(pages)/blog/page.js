@@ -26,7 +26,7 @@ export default function Blog() {
               className="flex flex-col gap-1 border-b border-gray-200 pb-3 last:border-b-0 dark:border-gray-700"
             >
               <span className="text-muted text-xs">
-                {formatDate(post.date)}
+                {formatDate(post.date)} · {post.readingTime} min read
               </span>
               <Link
                 href={`/blog/${post.slug}`}

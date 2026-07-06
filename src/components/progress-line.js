@@ -25,7 +25,10 @@ export function ProgressLine() {
 
   return (
     <div className="fixed top-0 left-0 z-50 h-0.5 w-full">
-      <div className="bg-accent h-full" style={{ width: `${progress}%` }} />
+      <div
+        className="bg-accent h-full origin-left transition-transform duration-150 ease-out"
+        style={{ transform: `scaleX(${progress / 100})` }}
+      />
     </div>
   );
 }

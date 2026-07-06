@@ -11,8 +11,8 @@ export function getAllPosts() {
     .map((filename) => {
       const slug = filename.replace(".md", "");
       const raw = fs.readFileSync(path.join(BLOG_DIR, filename), "utf-8");
-      const { data } = matter(raw);
-      return { slug, ...data };
+      const { data, content } = matter(raw);
+      return { slug, ...data, readingTime: getReadingTime(content) };
     })
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 }
@@ -34,6 +34,11 @@ export function getAdjacentPosts(slug) {
     prev: posts[index + 1] ?? null,
     next: posts[index - 1] ?? null,
   };
+}
+
+export function getReadingTime(content) {
+  const words = content.trim().split(/\s+/).length;
+  return Math.max(1, Math.round(words / 200));
 }
 
 export function formatDate(date) {
