@@ -22,7 +22,7 @@ The scheme decides everything that follows. `http://` and `https://` point at a 
 
 ## HTTP methods
 
-Every HTTP request carries a method — a verb telling the server what kind of operation this is. curl defaults to GET unless told otherwise, and switches with `-X`. httpbin.org echoes back whatever it receives, which makes it the easiest way to watch a method in action without touching a real API.
+Every HTTP request carries a method — a verb telling the server what kind of operation this is. curl defaults to GET unless told otherwise and switches with `-X`. httpbin.org echoes back whatever it receives, which makes it the easiest way to watch a method in action without touching a real API.
 
 **GET**:
 
@@ -62,7 +62,7 @@ curl -X POST https://httpbin.org/post \
 
 `--json` does exactly that, plus adds `Accept: application/json` — one flag standing in for two.
 
-Not everything is JSON, though. A traditional HTML form sends `application/x-www-form-urlencoded`, and curl sets that header on its own the moment `-d` gets a plain key-value string instead of a JSON blob:
+Not everything is JSON, though. A traditional HTML form sends `application/x-www-form-urlencoded` and curl sets that header on its own the moment `-d` gets a plain key-value string instead of a JSON blob:
 
 ```bash
 curl -X POST https://httpbin.org/post -d "name=Bruce&role=vigilante"
@@ -136,7 +136,7 @@ Timing is a different kind of question — not what went wrong, but how slow it 
 curl -o /dev/null -s -w "%{time_total}\n" https://httpbin.org/get
 ```
 
-`-o /dev/null` throws away the body, `-s` hides the progress bar, and `-w` prints the one number that matters — total time, in seconds.
+`-o /dev/null` throws away the body, `-s` hides the progress bar and `-w` prints the one number that matters — total time, in seconds.
 
 `-w` isn't limited to one number — stack the same idea across every stage of the request instead of just the total:
 
@@ -164,6 +164,6 @@ curl -s https://httpbin.org/get | jq '.headers["User-Agent"]'
 
 ## The GUI never replaced it
 
-Postman has a request builder. Insomnia has environment switching. Bruno commits collections to git. Every generation of API client solves the same problem curl solved in 1998 by never having it in the first place — a request is just a line of text, and a line of text doesn't need an interface wrapped around it.
+Postman has a request builder. Insomnia has environment switching. Bruno commits collections to git. Every generation of API client solves the same problem curl solved in 1998 by never having it in the first place — a request is just a line of text and a line of text doesn't need an interface wrapped around it.
 
 That's the part that doesn't change. The GUI gets rebuilt every few years under a new name. The line curl prints still pastes into a bug report, a CI script or a Slack message and means exactly the same thing every time.
