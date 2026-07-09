@@ -70,6 +70,45 @@ curl -X POST https://httpbin.org/post -d "name=Bruce&role=vigilante"
 
 No `--json`, no manual header — just `-d` and a query-string-shaped body.
 
+## Uploading files
+
+`-d` sends a form as one flat string, which works right up until a field is a file. Bytes, a filename and a content type don't survive being flattened into `name=value` — that's the entire reason `multipart/form-data` exists, and it's what `-F` (`--form`) switches curl to. `-F` also flips the request to POST on its own:
+
+```bash
+curl https://httpbin.org/post -F "file=@batman.png"
+```
+
+The `@` is the whole trick — it tells curl to read the file at that path and send its contents, not the literal text `batman.png`. Leave the `@` off and curl sends an ordinary form field instead:
+
+```bash
+curl https://httpbin.org/post -F "role=vigilante"
+```
+
+Which means one flag covers both halves of a form — the file and the plain fields around it — stacked as high as the request needs:
+
+```bash
+curl https://httpbin.org/post \
+  -F "file=@batman.png" \
+  -F "name=Bruce" \
+  -F "role=vigilante"
+```
+
+curl reads the extension, guesses `Content-Type: image/png` and fills it in without being asked. When the guess is wrong — or the file has no extension to guess from — spell it out after the path:
+
+```bash
+curl https://httpbin.org/post -F "file=@report;type=application/pdf;filename=report.pdf"
+```
+
+`type=` sets the content type, `filename=` sets the name the server sees — handy when the local file is some temp name that means nothing on the other end.
+
+Not every upload wants a form, though. An API that just wants the raw bytes — a PUT to a storage bucket, say — has no use for boundaries and field names. That's `-T` (`--upload-file`), which sends the file as the entire body and PUTs it by default:
+
+```bash
+curl -T batman.png https://httpbin.org/put
+```
+
+No field name, no multipart wrapper, just the bytes as-is. The choice between the two is the choice between filling in a form and handing over a file: `-F` when the server expects form fields, `-T` when it only wants the contents.
+
 ## Headers
 
 Headers carry metadata about a request or a response — content type, authentication, caching rules, anything that isn't the body itself. curl adds them with `-H` and stacks as many as the request needs:
