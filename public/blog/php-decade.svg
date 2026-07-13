@@ -1,36 +1,54 @@
-<svg width="680" height="180" viewBox="0 0 680 180" xmlns="http://www.w3.org/2000/svg" role="img" font-family="sans-serif">
-
-  <!-- White background -->
-  <rect width="680" height="180" fill="#fff"/>
-
-  <!-- Database -->
-  <rect x="63" y="55" width="110" height="60" rx="4" fill="none" stroke="#111" stroke-width="1"/>
-  <text x="118" y="81" text-anchor="middle" font-size="14" font-weight="600" fill="#111">Database</text>
-  <text x="118" y="101" text-anchor="middle" font-size="12" fill="#444">user data</text>
-
-  <!-- Arrow DB → Server (tip at x=213) -->
-  <line x1="173" y1="85" x2="206" y2="85" stroke="#111" stroke-width="1"/>
-  <polygon points="213,85 206,81 206,89" fill="#111"/>
-
-  <!-- Server / PHP -->
-  <rect x="213" y="45" width="160" height="80" rx="4" fill="none" stroke="#111" stroke-width="1"/>
-  <text x="293" y="73" text-anchor="middle" font-size="14" font-weight="600" fill="#111">Server (PHP)</text>
-  <text x="293" y="93" text-anchor="middle" font-size="12" fill="#444">Builds HTML on the fly</text>
-  <text x="293" y="111" text-anchor="middle" font-size="12" fill="#444">from database queries</text>
-
-  <!-- Arrow Server → Browser (full page, tip at x=443) -->
-  <line x1="373" y1="72" x2="436" y2="72" stroke="#111" stroke-width="1"/>
-  <polygon points="443,72 436,68 436,76" fill="#111"/>
-  <text x="408" y="63" text-anchor="middle" font-size="11" fill="#555">HTML</text>
-
-  <!-- Arrow Ajax (partial, tip at x=373) -->
-  <path d="M443 100 L408 100 L408 118 L380 118" fill="none" stroke="#111" stroke-width="1" stroke-dasharray="4 3"/>
-  <polygon points="373,118 380,114 380,122" fill="#111"/>
-  <text x="408" y="138" text-anchor="middle" font-size="11" fill="#555">Ajax (partial update)</text>
-
-  <!-- Browser -->
-  <rect x="443" y="45" width="175" height="80" rx="4" fill="none" stroke="#111" stroke-width="1"/>
-  <text x="530" y="73" text-anchor="middle" font-size="14" font-weight="600" fill="#111">Browser</text>
-  <text x="530" y="93" text-anchor="middle" font-size="12" fill="#444">Renders full page or</text>
-  <text x="530" y="111" text-anchor="middle" font-size="12" fill="#444">handles partial updates</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 680 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <rect x="0" y="0" width="680" height="180" style="fill:white;"/>
+    <path d="M173,59L173,111C173,113.208 171.208,115 169,115L67,115C64.792,115 63,113.208 63,111L63,59C63,56.792 64.792,55 67,55L169,55C171.208,55 173,56.792 173,59Z" style="fill:none;stroke:rgb(17,17,17);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,118,81)">
+        <text x="-31.127px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(17,17,17);">Database</text>
+    </g>
+    <g transform="matrix(1,0,0,1,118,101)">
+        <text x="-25.017px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:rgb(68,68,68);">user data</text>
+    </g>
+    <path d="M173,85L206,85" style="fill:none;fill-rule:nonzero;stroke:rgb(17,17,17);stroke-width:1px;"/>
+    <path d="M213,85L206,81L206,89L213,85Z" style="fill:rgb(17,17,17);fill-rule:nonzero;"/>
+    <path d="M373,49L373,121C373,123.208 371.208,125 369,125L217,125C214.792,125 213,123.208 213,121L213,49C213,46.792 214.792,45 217,45L369,45C371.208,45 373,46.792 373,49Z" style="fill:none;stroke:rgb(17,17,17);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,293,73)">
+        <text x="-42.796px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(17,17,17);">Server (PHP)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,293,93)">
+        <g transform="matrix(12,0,0,12,48.137695,0)">
+        </g>
+        <g transform="matrix(12,0,0,12,51.47168,0)">
+        </g>
+        <text x="-60.138px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:rgb(68,68,68);">Builds HTML<tspan x="8.106px 11.44px " y="0px 0px "> o</tspan>n the ﬂy</text>
+    </g>
+    <g transform="matrix(1,0,0,1,293,111)">
+        <text x="-59.701px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:rgb(68,68,68);">from database queries</text>
+    </g>
+    <path d="M373,72L436,72" style="fill:none;fill-rule:nonzero;stroke:rgb(17,17,17);stroke-width:1px;"/>
+    <path d="M443,72L436,68L436,76L443,72Z" style="fill:rgb(17,17,17);fill-rule:nonzero;"/>
+    <g transform="matrix(1,0,0,1,408,63)">
+        <text x="-14.972px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:rgb(85,85,85);">HTML</text>
+    </g>
+    <g transform="matrix(1.015873,0,0,0.000002,-7.031746,100)">
+        <path d="M443,100L408,100L408,118L380,118" style="fill:none;fill-rule:nonzero;stroke:rgb(17,17,17);stroke-width:1px;stroke-dasharray:4,3;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-18)">
+        <path d="M373,118L380,114L380,122L373,118Z" style="fill:rgb(17,17,17);fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,407,116)">
+        <g transform="matrix(11,0,0,11,13.755371,0)">
+        </g>
+        <text x="-13.755px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:rgb(85,85,85);">AJAX</text>
+    </g>
+    <path d="M618,49L618,121C618,123.208 616.208,125 614,125L447,125C444.792,125 443,123.208 443,121L443,49C443,46.792 444.792,45 447,45L614,45C616.208,45 618,46.792 618,49Z" style="fill:none;stroke:rgb(17,17,17);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,530,73)">
+        <text x="-28.01px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(17,17,17);">Browser</text>
+    </g>
+    <g transform="matrix(1,0,0,1,530,93)">
+        <text x="-54.032px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:rgb(68,68,68);">Renders full page or</text>
+    </g>
+    <g transform="matrix(1,0,0,1,530,111)">
+        <text x="-62.045px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:rgb(68,68,68);">handles partial updates</text>
+    </g>
 </svg>
