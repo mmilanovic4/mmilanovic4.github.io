@@ -4,31 +4,34 @@
       "id": "3",
       "name": "LoanQ",
       "title": "Full-stack web developer",
-      "location": "SYD",
+      "location": "Sydney, Australia",
       "from": 2020,
       "to": null,
       "img": "/cv/loanq.ico",
-      "cc": "au"
+      "cc": "au",
+      "unlocode": "SYD"
     },
     {
       "id": "2",
       "name": "Salestrekker",
       "title": "Full-stack web developer",
-      "location": "SYD",
+      "location": "Sydney, Australia",
       "from": 2018,
       "to": null,
       "img": "/cv/salestrekker.ico",
-      "cc": "au"
+      "cc": "au",
+      "unlocode": "SYD"
     },
     {
       "id": "1",
       "name": "High-Tech Bridge",
       "title": "Junior security engineer",
-      "location": "GVA",
+      "location": "Geneva, Switzerland",
       "from": 2016,
       "to": 2018,
       "img": "/cv/htbridge.ico",
-      "cc": "ch"
+      "cc": "ch",
+      "unlocode": "GVA"
     }
   ],
   "education": [
@@ -36,31 +39,34 @@
       "id": "3",
       "name": "Singidunum University",
       "title": "Master of Informatics",
-      "location": "BEG",
+      "location": "Belgrade, Serbia",
       "from": 2016,
       "to": 2018,
       "img": "/cv/singidunum.ico",
-      "cc": "rs"
+      "cc": "rs",
+      "unlocode": "BEG"
     },
     {
       "id": "2",
       "name": "Singidunum University",
       "title": "Bachelor of Science in Informatics",
-      "location": "BEG",
+      "location": "Belgrade, Serbia",
       "from": 2012,
       "to": 2016,
       "img": "/cv/singidunum.ico",
-      "cc": "rs"
+      "cc": "rs",
+      "unlocode": "BEG"
     },
     {
       "id": "1",
       "name": "ETHS \"Nikola Tesla\"",
       "title": "Computer Technician",
-      "location": "BEG",
+      "location": "Belgrade, Serbia",
       "from": 2008,
       "to": 2012,
       "img": "/cv/tesla.ico",
-      "cc": "rs"
+      "cc": "rs",
+      "unlocode": "BEG"
     }
   ]
 }

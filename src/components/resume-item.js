@@ -34,7 +34,9 @@ export function ResumeItem({ item }) {
               height={16}
             />
           )}
-          <span className="lowercase">{item.location}</span>
+          <span className="lowercase" title={item.location}>
+            {item.unlocode}
+          </span>
         </span>
       </div>
       {item.description && (
