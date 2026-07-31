@@ -2,7 +2,7 @@
 @import "./rpc.css";
 @import "./theme.css";
 
-@variant dark (&:where(html.dark, html.dark *));
+@custom-variant dark (&:where(html.dark, html.dark *));
 
 :root {
   --icon-gmail: #ea4335;
@@ -10,10 +10,14 @@
   --icon-instagram: #ff0069;
   --icon-youtube: #ff0000;
   --icon-rss: #ee802f;
+
+  --icon-border: #d4d4c8;
 }
 
 html.dark {
   --icon-github: #e5e7eb;
+
+  --icon-border: #3a3f4d;
 }
 
 @theme {

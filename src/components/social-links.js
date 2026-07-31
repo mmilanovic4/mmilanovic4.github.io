@@ -46,7 +46,7 @@ const links = [
 
 export function SocialLinks() {
   return (
-    <div className="my-4 flex flex-wrap gap-4">
+    <div className="my-4 flex flex-wrap gap-2 md:gap-3">
       {links.map((link) => {
         const Icon = link.icon;
         return (
@@ -54,10 +54,10 @@ export function SocialLinks() {
             key={link.href}
             href={link.href}
             title={link.title}
-            className="rounded-full bg-gray-200 p-2.5 last:ml-auto dark:bg-gray-700"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-(--icon-border) bg-transparent transition-colors last:ml-auto"
             {...(link.external ? { target: "_blank" } : {})}
           >
-            <Icon style={{ color: link.color }} className="size-6 md:size-4" />
+            <Icon className="size-4" style={{ color: link.color }} />
           </a>
         );
       })}
