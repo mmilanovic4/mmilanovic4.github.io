@@ -1,7 +1,7 @@
 ---
 title: "A brief history of web development"
 date: "2026-06-08"
-description: "What actually changed and what didn't."
+description: "What actually changed and what stayed the same."
 ---
 
 The web was invented in 1989 by Tim Berners-Lee at CERN. Most of what gets called innovation is just the same problems being solved again, with better tooling.
