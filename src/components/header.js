@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -29,29 +28,36 @@ export function Header() {
 
   return (
     <header className="w-full">
-      <div className="my-6 px-6 md:px-0">
-        <div className="relative" style={{ aspectRatio: "4/3" }}>
-          <Image
+      <div className="mt-6 mb-8 px-6 md:px-0">
+        <div
+          className="relative overflow-hidden rounded"
+          style={{ aspectRatio: "4/3" }}
+        >
+          <img
             alt="Profile"
-            className="h-auto w-full rounded object-cover"
+            className="rounded object-cover"
             src="/profile.jpg"
-            fill
-            priority
           />
         </div>
       </div>
       <div className="px-6 md:px-0">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <img
             src="/logo.svg"
             alt="Logo"
-            className="h-6 w-6 rounded-md dark:invert"
+            className="h-8 w-8 shrink-0 rounded-md dark:invert"
           />
-          <h1 className="text-lg font-bold">{AUTHOR}</h1>
+          <div>
+            <h1 className="text-lg leading-tight font-bold">{AUTHOR}</h1>
+            <p className="text-muted mt-0.5 text-sm leading-tight">
+              full-stack web developer
+            </p>
+          </div>
         </div>
-        <p className="text-muted text-sm">full-stack web developer</p>
-        <SocialLinks />
-        <hr className="border-gray-200 dark:border-gray-700" />
+        <div className="mt-5">
+          <SocialLinks />
+        </div>
+        <hr className="mt-5 border-gray-200 dark:border-gray-700" />
 
         {/* Desktop nav */}
         <nav className="my-4 hidden md:block">
