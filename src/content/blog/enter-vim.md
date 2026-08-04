@@ -80,6 +80,7 @@ ciw         change the word under the cursor
 /pattern    search forward
 :%s/a/b/g   replace every "a" with "b" in the file
 :%y+        yank the entire file to the system clipboard
+:%d         delete the entire file's contents
 :wq         write and quit
 :q!         quit without saving
 ```
