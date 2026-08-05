@@ -42,11 +42,13 @@ export function Header() {
       </div>
       <div className="px-6 md:px-0">
         <div className="flex items-center gap-3">
-          <img
-            src="/logo.svg"
-            alt="Logo"
-            className="h-8 w-8 shrink-0 rounded-md dark:invert"
-          />
+          <Link href="/">
+            <img
+              src="/logo.svg"
+              alt="Logo"
+              className="h-8 w-8 shrink-0 rounded-md dark:invert"
+            />
+          </Link>
           <div>
             <h1 className="text-lg leading-tight font-bold">{AUTHOR}</h1>
             <p className="text-muted mt-0.5 text-sm leading-tight">

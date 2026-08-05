@@ -5,6 +5,7 @@ import {
   SiRss,
   SiYoutube,
 } from "@icons-pack/react-simple-icons";
+import Link from "next/link";
 import { BASE_URL } from "@/lib/metadata";
 
 const links = [
@@ -50,7 +51,7 @@ export function SocialLinks() {
       {links.map((link) => {
         const Icon = link.icon;
         return (
-          <a
+          <Link
             key={link.href}
             href={link.href}
             title={link.title}
@@ -58,7 +59,7 @@ export function SocialLinks() {
             {...(link.external ? { target: "_blank" } : {})}
           >
             <Icon className="size-4" style={{ color: link.color }} />
-          </a>
+          </Link>
         );
       })}
     </div>

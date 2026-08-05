@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components";
 import { BASE_URL, createMetadata } from "@/lib/metadata";
 
@@ -42,7 +43,7 @@ export default function Projects() {
               key={project.id}
               className="flex flex-col items-start gap-2 border-b border-gray-200 pb-4 last:border-b-0 dark:border-gray-700"
             >
-              <a
+              <Link
                 href={project.href}
                 target="_blank"
                 className="text-accent inline-flex gap-2 text-sm font-semibold hover:underline"
@@ -56,7 +57,7 @@ export default function Projects() {
                   />
                 )}
                 {project.name}
-              </a>
+              </Link>
               <p className="text-xs">{project.description}</p>
               <div className="flex flex-wrap gap-2">
                 {project.stack.map((tech) => (
