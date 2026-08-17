@@ -15,7 +15,7 @@ export function ResumeItem({ item }) {
         <span className="text-muted inline-flex items-center gap-1 text-xs">
           {item.img && (
             <Image
-              className="rounded-sm"
+              className="rounded"
               src={item.img}
               alt={item.name}
               width={16}

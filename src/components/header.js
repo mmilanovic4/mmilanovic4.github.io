@@ -46,7 +46,7 @@ export function Header() {
             <img
               src="/logo.svg"
               alt="Logo"
-              className="h-8 w-8 shrink-0 rounded-md dark:invert"
+              className="h-8 w-8 shrink-0 rounded dark:invert"
             />
           </Link>
           <div>
