@@ -57,13 +57,24 @@ The narrower thing you do get is worth having. Your device stops sharing a local
 
 So: not anonymity. The opposite of it. The IP is always mine, deliberately.
 
-## Killing the port forward
+## Killing the middlemen
 
-The old way of reaching something at home is to open a port on the router, forward it to an internal address and hope nothing else finds it. Then a dynamic IP that changes, a dynamic DNS client to paper over that and a service exposed to every scanner on the internet whether or not it was ever meant to be.
+The old way of reaching something at home is to open a port on the router, forward it to an internal address and hope nothing else finds it — a service left open to every scanner on the internet whether or not it was ever meant to be found. On a tailnet there's nothing to expose in the first place. The service listens on the machine, the machine is in the network, every other device reaches it by name.
 
-On a tailnet none of that happens, because there's nothing to expose. The service listens on the machine, the machine is in the network, every other device in the network reaches it by name. The router doesn't change.
+When the point is the opposite — a client needs to see today's build, a webhook provider needs a URL that resolves — the usual answer is ngrok. **Funnel** is the same idea on a network that's already there. HTTPS certificates get switched on in the admin console and the attribute goes in the policy file:
 
-Sending files works the same way. **Taildrop** moves a file straight from one of your devices to another — share sheet on the phone, right click on the desktop — with no cloud service in the middle and no cable. macOS to Linux to a phone, none of them caring what the other one is. Same idea as the port forward that never happens: once the devices are on one network, the workaround stops being necessary instead of getting easier.
+```json
+"nodeAttrs": [
+  {
+    "target": ["autogroup:member"],
+    "attr": ["funnel"]
+  }
+]
+```
+
+Then `tailscale funnel 3000` puts a dev server on the internet at the machine's own name, valid certificate, nothing forwarded on the router. That name is the same every time, which is what the free ngrok tier doesn't give you: a webhook URL you configure once. It stays up until `tailscale funnel off` and anything arriving through it is unauthenticated by definition — inside the tailnet identity comes with the network, here it's the app's problem.
+
+**Taildrop** might be the best of the small features. Send Files gets enabled in the admin console, macOS wants the client allowed under `System Settings > General > Login Items & Extensions > Sharing`, and after that it's an entry in the share menu like any other — right click on the desktop, Share on the phone, pick Tailscale, pick the device. macOS to Linux to a phone, none of them caring what the other one is: once the devices are on one network, the workaround stops being necessary instead of getting easier.
 
 ## In short
 
