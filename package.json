@@ -14,23 +14,23 @@
     "analyze": "next experimental-analyze"
   },
   "dependencies": {
-    "@icons-pack/react-simple-icons": "^13.13.0",
-    "@next/third-parties": "^16.2.11",
+    "@icons-pack/react-simple-icons": "^13.15.1",
+    "@next/third-parties": "^16.3.1",
     "feed": "^6.0.0",
     "gray-matter": "^4.0.3",
-    "next": "^16.2.12",
+    "next": "^16.3.1",
     "next-mdx-remote": "^6.0.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "rehype-external-links": "^3.0.0",
     "rehype-pretty-code": "^0.14.5",
-    "shiki": "^4.4.1"
+    "shiki": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
-    "eslint-config-next": "^16.2.12",
+    "eslint-config-next": "^16.3.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.5",
     "prettier": "^3.9.6",
