@@ -8,30 +8,32 @@ export function ResumeItem({ item }) {
       </span>
       <div className="flex flex-col flex-wrap gap-2">
         {item.title && (
-          <span className="text-strong text-sm font-semibold">
+          <span className="text-strong -mt-0.5 mb-0.5 text-sm font-semibold">
             {item.title}
           </span>
         )}
         <span className="text-muted inline-flex items-center gap-1 text-xs">
           {item.img && (
-            <Image
-              className="rounded"
-              src={item.img}
-              alt={item.name}
-              width={16}
-              height={16}
-            />
+            <span className="flex w-5 shrink-0">
+              <Image
+                className="rounded"
+                src={item.img}
+                alt={item.name}
+                width={16}
+                height={16}
+              />
+            </span>
           )}
           <span>{item.name}</span>
         </span>
-        <span className="text-muted inline-flex items-center gap-1 text-xs">
+        <span className="text-muted mt-1 inline-flex items-center gap-1 text-xs">
           {item.cc && (
             <Image
-              className="rounded border border-gray-200 dark:border-gray-700"
+              className="w-5 shrink-0 rounded border border-gray-200 dark:border-gray-700"
               src={`/flags/${item.cc}.svg`}
               alt={item.location}
-              width={16}
-              height={16}
+              width={20}
+              height={15}
             />
           )}
           <span title={item.location}>{item.unlocode}</span>
