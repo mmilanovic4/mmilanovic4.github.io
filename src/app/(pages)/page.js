@@ -15,7 +15,7 @@ export default function Home() {
       <div className="mb-8">
         <p className="text-accent mb-3 text-xs"># about</p>
         <p className="text-sm leading-loose">
-          Hey, I{"'"}m Miloš - a full-stack web developer based in{" "}
+          Hey, I{"'"}m Miloš — a full-stack web developer based in{" "}
           <span className="text-accent">Belgrade, Serbia</span>. I build web
           apps with a focus on clean code and good UX.
         </p>

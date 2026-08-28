@@ -26,6 +26,10 @@ export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  // On a blog post the article title owns the <h1>, so the site name steps down.
+  const isPost = pathname.startsWith("/blog/");
+  const Name = isPost ? "p" : "h1";
+
   return (
     <header className="w-full">
       <div className="mt-6 mb-8 px-6 md:px-0">
@@ -50,7 +54,7 @@ export function Header() {
             />
           </Link>
           <div>
-            <h1 className="text-lg leading-tight font-bold">{AUTHOR}</h1>
+            <Name className="text-lg leading-tight font-bold">{AUTHOR}</Name>
             <p className="text-muted mt-0.5 text-sm leading-tight">
               full-stack web developer
             </p>
@@ -102,14 +106,15 @@ export function Header() {
       {/* Drawer overlay */}
       {open && (
         <div
-          className="fixed inset-0 z-40 bg-black/30"
+          className="fixed inset-0 z-40 bg-black/30 md:hidden"
           onClick={() => setOpen(false)}
         />
       )}
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 z-50 flex h-full w-64 flex-col bg-white px-8 py-6 shadow-lg transition-transform dark:bg-gray-950 ${
+        inert={!open}
+        className={`fixed top-0 right-0 z-50 flex h-full w-64 flex-col bg-white px-8 py-6 shadow-lg transition-transform md:hidden dark:bg-gray-950 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >

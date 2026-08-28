@@ -6,7 +6,7 @@ description: "A tool built to fetch one URL in 1998. Still the fastest way to kn
 
 curl was born in 1996 as httpget, a small tool written by [Daniel Stenberg](https://github.com/bagder) to download currency rates for an IRC bot. He renamed it twice as it grew — urlget once FTP support landed, then curl in 1998 once the tool did more than just "get." He's still the project's lead maintainer today.
 
-![curl - Client URL Request Library](/blog/curl.png)
+![curl — Client URL Request Library](/blog/curl.png)
 
 Every GUI REST client eventually reinvents a piece of what curl already does — a request builder, a history panel, a collection runner. curl never needed any of that. It just never left.
 
@@ -39,10 +39,11 @@ curl "https://httpbin.org/get?x=1&y=2"
 **POST**:
 
 ```bash
-curl -X POST https://httpbin.org/post --json '{"name": "Bruce"}'
+curl https://httpbin.org/post --json '{"name": "Bruce"}'
 ```
 
-The same `--json` flag works for **PUT**, **PATCH** and **DELETE**:
+No `-X` there — `--json` switches the request to POST on its own. The other
+verbs still need it:
 
 ```bash
 curl -X PUT https://httpbin.org/put --json '{"id": "1", "name": "Clark"}'
@@ -55,7 +56,7 @@ curl -X DELETE https://httpbin.org/delete --json '{"id": "1"}'
 `--json` is a fairly recent shorthand — it landed in curl 7.82 (2022). Before that, the same request meant setting the header by hand:
 
 ```bash
-curl -X POST https://httpbin.org/post \
+curl https://httpbin.org/post \
   -H "Content-Type: application/json" \
   -d '{"name": "Bruce"}'
 ```
@@ -65,7 +66,7 @@ curl -X POST https://httpbin.org/post \
 Not everything is JSON, though. A traditional HTML form sends `application/x-www-form-urlencoded` and curl sets that header on its own the moment `-d` gets a plain key-value string instead of a JSON blob:
 
 ```bash
-curl -X POST https://httpbin.org/post -d "name=Bruce&role=vigilante"
+curl https://httpbin.org/post -d "name=Bruce&role=vigilante"
 ```
 
 No `--json`, no manual header — just `-d` and a query-string-shaped body.

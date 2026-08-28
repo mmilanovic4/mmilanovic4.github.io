@@ -6,7 +6,7 @@ description: "Sci-fi as a window into the future and the Black Mirror episodes t
 
 Sci-fi has always been one of my favorite genres, though people tend to lump it together with fantasy and the two aren't the same thing. Fantasy builds a world that couldn't exist. Sci-fi builds one that could — a window into the future, whether it's _Blade Runner_, _The Fifth Element_ or anything else in that tradition. _Black Mirror_ takes that concept and pushes it even further. It's an anthology, which means it can also be watched as a collection of standalone films, and these are my favorite.
 
-![Black Mirror - a contemporary rework of The Twilight Zone](/blog/black-mirror.jpg)
+![Black Mirror — a contemporary rework of The Twilight Zone](/blog/black-mirror.jpg)
 
 ## Nosedive — S03E01
 

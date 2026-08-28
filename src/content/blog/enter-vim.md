@@ -18,7 +18,7 @@ I want to be upfront about something before going further: I'm not the person wh
 
 What Vim is, for me, is the first thing I reach for when quick text editing is needed — a config file on a remote box, a commit message, anything that doesn't warrant opening a full editor for one file.
 
-I tried nano, joe and a few other CLI editors along the way, and neither one ever fully clicked. Joe felt arbitrary in a way I never got past. Nano at least has the decency to print every available command along the bottom of the screen at all times — genuinely the right call for something meant to be approachable — but the keybindings still never became muscle memory for me.
+I tried nano, joe and a few other CLI editors along the way, and none of them ever fully clicked. Joe felt arbitrary in a way I never got past. Nano at least has the decency to print every available command along the bottom of the screen at all times — genuinely the right call for something meant to be approachable — but the keybindings still never became muscle memory for me.
 
 Vim was different, and I can point to exactly why. Back in my university days I came across a PDF on Hacker News, something like 800 pages, that walked through the core concepts of working in a terminal from the ground up — stdin, stdout, environment variables, all of it — with a full chapter each on Vim and Emacs. I haven't been able to track the PDF down again, which is a shame, because it was genuinely one of the better pieces of technical writing I've read. After going through that chapter once, Vim's operations stopped being something I looked up and started being something I just knew. Not memorized — intuitive, the way typing itself is intuitive once you've done it enough.
 

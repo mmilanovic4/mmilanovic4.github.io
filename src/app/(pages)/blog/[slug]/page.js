@@ -33,7 +33,7 @@ export default async function BlogPost({ params }) {
       <span className="text-muted text-xs">
         {formatDate(meta.date)} · {readingTime} min read
       </span>
-      <h2 className="text-strong my-3 text-lg font-bold">{meta.title}</h2>
+      <h1 className="text-strong my-3 text-lg font-bold">{meta.title}</h1>
       <hr className="mb-6 border-gray-200 dark:border-gray-700" />
       <article className="blog text-sm">
         <MDXRemote

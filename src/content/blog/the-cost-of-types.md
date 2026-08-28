@@ -4,7 +4,7 @@ date: "2026-05-03"
 description: "TypeScript solves problems that modern tooling has already solved — at a price."
 ---
 
-Every good programming language resembles one another. Every bad one
+All good programming languages resemble one another. Every bad one
 is bad in its own way. One of JavaScript's most cited flaws is dynamic
 typing. But is it really a flaw?
 

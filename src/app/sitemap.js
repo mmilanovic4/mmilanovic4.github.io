@@ -25,6 +25,10 @@ export default function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `${BASE_URL}/uses`,
+      lastModified: new Date(),
+    },
+    {
       url: `${BASE_URL}/blog`,
       lastModified: new Date(),
     },
