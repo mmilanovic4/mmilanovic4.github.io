@@ -3,7 +3,7 @@
     {
       "id": "3",
       "name": "LoanQ",
-      "title": "Full-stack web developer",
+      "title": "Full-Stack Web Developer",
       "location": "Sydney, Australia",
       "from": 2020,
       "to": null,
@@ -14,7 +14,7 @@
     {
       "id": "2",
       "name": "Salestrekker",
-      "title": "Full-stack web developer",
+      "title": "Full-Stack Web Developer",
       "location": "Sydney, Australia",
       "from": 2018,
       "to": null,
@@ -25,7 +25,7 @@
     {
       "id": "1",
       "name": "High-Tech Bridge",
-      "title": "Junior security engineer",
+      "title": "Junior Security Engineer",
       "location": "Geneva, Switzerland",
       "from": 2016,
       "to": 2018,
