@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/mmilanovic4/mmilanovic4.github.io/master/public/logo.svg" width="48" height="48" />
 </p>
 
-# Personal Website
+# Website
 
 ```bash
 git clone https://github.com/mmilanovic4/mmilanovic4.github.io.git
