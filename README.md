@@ -21,9 +21,3 @@ git clone https://github.com/mmilanovic4/mmilanovic4.github.io.git
 npm install
 npm run dev
 ```
-
-## Environment Variables
-
-| Variable            | Description                                              |
-| ------------------- | -------------------------------------------------------- |
-| `NEXT_PUBLIC_THEME` | Color theme (`blue`, `mint`, `green`, `violet`, `amber`) |
