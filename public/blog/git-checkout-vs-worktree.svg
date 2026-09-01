@@ -24,7 +24,7 @@
     <text class="wt-sub" x="30" y="66">one working directory, branches take turns</text>
 
     <rect x="60" y="100" width="220" height="52" rx="8" fill="#faf5ff" stroke="#8250df" stroke-width="1"/>
-    <text class="wt-node-title" x="170" y="120" text-anchor="middle" dominant-baseline="central" fill="#4c2889">myrepo/</text>
+    <text class="wt-node-title" x="170" y="120" text-anchor="middle" dominant-baseline="central" fill="#4c2889">app/</text>
     <text class="wt-node-sub" x="170" y="138" text-anchor="middle" dominant-baseline="central" fill="#6639ba">.git + working files</text>
 
     <line class="wt-edge" x1="170" y1="152" x2="170" y2="178" marker-end="url(#wt-arrow)"/>
@@ -49,7 +49,7 @@
     <text class="wt-sub" x="410" y="66">four directories, four branches at once</text>
 
     <rect x="475" y="100" width="180" height="52" rx="8" fill="#faf5ff" stroke="#8250df" stroke-width="1"/>
-    <text class="wt-node-title" x="565" y="120" text-anchor="middle" dominant-baseline="central" fill="#4c2889">myrepo/.git</text>
+    <text class="wt-node-title" x="565" y="120" text-anchor="middle" dominant-baseline="central" fill="#4c2889">app/.git</text>
     <text class="wt-node-sub" x="565" y="138" text-anchor="middle" dominant-baseline="central" fill="#6639ba">shared object store</text>
 
     <path class="wt-edge" d="M565,152 C565,186 448,182 448,213"/>
