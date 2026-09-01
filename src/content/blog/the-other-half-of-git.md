@@ -18,7 +18,7 @@ Merge and rebase do the same job — take the work from one branch and put it in
 
 **Rebase** replays your commits on top of the other branch, one at a time. Same changes, new commits, new SHAs, no merge commit and a straight line where the fork used to be.
 
-![Merge vs rebase](/blog/merge-vs-rebase.svg)
+![Merge vs rebase](/blog/git-merge-vs-rebase.svg)
 
 So it's a trade: an accurate history against a readable one.
 
@@ -119,6 +119,8 @@ git worktree add ../feature-x feature/x
 ```
 
 Same repository either way — one object store, one set of branches and tags, shared by both. A commit made in either place is immediately visible from the other. What each worktree gets of its own is a `HEAD`, an index, files on disk and its own bisect state. The stash isn't on that list: `refs/stash` is shared, so an entry pushed in one worktree turns up in `git stash list` in all of them.
+
+![Checkout vs worktree](/blog/git-checkout-vs-worktree.svg)
 
 The new directory doesn't get a `.git` directory of its own either. It gets a `.git` file pointing back at `.git/worktrees/feature-x` in the original repository, which is where all of that per-worktree state actually lives.
 
