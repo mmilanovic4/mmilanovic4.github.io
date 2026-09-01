@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" width="760" height="340" role="img" aria-label="Confidence plotted against competence: it spikes to a peak while competence is still near zero, collapses into a valley, then climbs slowly to a plateau below that first peak">
+  <style>
+    .dk text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dk-title { font-size: 17px; font-weight: 600; fill: #24292f; }
+    .dk-sub { font-size: 13px; fill: #57606a; }
+    .dk-note { font-size: 12px; fill: #57606a; }
+    .dk-axis-name { font-size: 12px; fill: #57606a; }
+    .dk-axis-end { font-size: 11px; fill: #8c959f; }
+    .dk-axis { stroke: #d0d7de; stroke-width: 1; }
+    .dk-curve { fill: none; stroke-width: 2; stroke-linecap: round; }
+    .dk-early { stroke: #bf3989; }
+    .dk-late { stroke: #0969da; }
+    .dk-halo-early { fill: #bf3989; opacity: 0.14; }
+    .dk-halo-late { fill: #0969da; opacity: 0.14; }
+    .dk-n-early { fill: #bf3989; }
+    .dk-n-late { fill: #0969da; }
+    .dk-n-out { fill: #ffffff; stroke: #d0d7de; stroke-width: 2; }
+  </style>
+
+  <rect x="0" y="0" width="760" height="340" fill="#ffffff"/>
+
+  <g class="dk">
+    <text class="dk-title" x="30" y="44">the Dunning-Kruger effect</text>
+    <text class="dk-sub" x="30" y="66">confidence, plotted against actual competence</text>
+
+    <line class="dk-axis" x1="90" y1="95" x2="90" y2="292"/>
+    <line class="dk-axis" x1="90" y1="292" x2="728" y2="292"/>
+
+    <text class="dk-axis-end" x="78" y="100" text-anchor="end">high</text>
+    <text class="dk-axis-end" x="78" y="288" text-anchor="end">low</text>
+    <text class="dk-axis-name" x="42" y="193" text-anchor="middle" transform="rotate(-90 42 193)">confidence</text>
+
+    <text class="dk-axis-end" x="90" y="314">knows nothing</text>
+    <text class="dk-axis-name" x="409" y="314" text-anchor="middle">competence</text>
+    <text class="dk-axis-end" x="728" y="314" text-anchor="end">expert</text>
+
+    <path class="dk-curve dk-early" d="M96,288 C114,286 137,130 168,126 C188,123 214,254 300,254"/>
+    <path class="dk-curve dk-late" d="M300,254 C368,254 620,128 700,128"/>
+
+    <circle class="dk-halo-early" cx="168" cy="126" r="11"/>
+    <circle class="dk-n-early" cx="168" cy="126" r="5"/>
+
+    <circle class="dk-n-out" cx="300" cy="254" r="5"/>
+
+    <circle class="dk-halo-late" cx="700" cy="128" r="11"/>
+    <circle class="dk-n-late" cx="700" cy="128" r="5"/>
+
+    <text class="dk-note" x="186" y="116">peak of Mount Stupid</text>
+    <text class="dk-note" x="300" y="278" text-anchor="middle">valley of despair</text>
+    <text class="dk-note" x="505" y="232">slope of enlightenment</text>
+    <text class="dk-note" x="720" y="112" text-anchor="end">plateau of sustainability</text>
+  </g>
+</svg>

@@ -1,35 +1,50 @@
-<svg width="100%" viewBox="0 0 690 220" xmlns="http://www.w3.org/2000/svg" role="img" font-family="sans-serif" style="">
-  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">SSR flow diagram</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" width="760" height="260" role="img" aria-label="The server renders the components to HTML and sends it first, and the JavaScript bundle follows to hydrate only the interactive parts">
+  <style>
+    .sr text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .sr-title { font-size: 17px; font-weight: 600; fill: #24292f; }
+    .sr-sub { font-size: 13px; fill: #57606a; }
+    .sr-node-title { font-size: 13px; font-weight: 600; }
+    .sr-node-sub { font-size: 12px; }
+    .sr-label { font-size: 12px; fill: #57606a; }
+    .sr-edge { stroke: #8c959f; stroke-width: 1.5; fill: none; }
+    .sr-edge-dash { stroke: #8c959f; stroke-width: 1.5; fill: none; stroke-dasharray: 4 4; }
+  </style>
 
-  <rect width="680" height="210" fill="#fff" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <defs>
+    <marker id="sr-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#8c959f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
 
-  <!-- Database -->
-  <rect x="60" y="65" width="100" height="56" rx="4" fill="none" stroke="#111" stroke-width="1" style="fill:none;stroke:rgb(17, 17, 17);color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text x="110" y="93" text-anchor="middle" font-size="14" font-weight="600" fill="#111" dominant-baseline="central" style="fill:rgb(17, 17, 17);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:14px;font-weight:600;text-anchor:middle;dominant-baseline:central">Database</text>
+  <rect x="0" y="0" width="760" height="260" fill="#ffffff"/>
 
-  <!-- Arrow DB → Server (tip at x=200) -->
-  <line x1="160" y1="93" x2="193" y2="93" stroke="#111" stroke-width="1" style="fill:rgb(0, 0, 0);stroke:rgb(17, 17, 17);color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <polygon points="200,93 193,89 193,97" fill="#111"/>
+  <g class="sr">
+    <text class="sr-title" x="30" y="44">the SSR renaissance</text>
+    <text class="sr-sub" x="30" y="66">the same server-rendered page, with the component model intact</text>
 
-  <!-- Server box -->
-  <rect x="200" y="65" width="175" height="56" rx="4" fill="none" stroke="#111" stroke-width="1" style="fill:none;stroke:rgb(17, 17, 17);color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text x="287" y="85" text-anchor="middle" font-size="14" font-weight="600" fill="#111" style="fill:rgb(17, 17, 17);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:14px;font-weight:600;text-anchor:middle;dominant-baseline:auto">Server (Next.js etc)</text>
-  <text x="287" y="105" text-anchor="middle" font-size="12" fill="#444" style="fill:rgb(68, 68, 68);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">Renders components</text>
+    <rect x="30" y="122" width="140" height="64" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+    <text class="sr-node-title" x="100" y="144" text-anchor="middle" dominant-baseline="central" fill="#24292f">database</text>
+    <text class="sr-node-sub" x="100" y="164" text-anchor="middle" dominant-baseline="central" fill="#57606a">user data</text>
 
-  <!-- Arrow Server → Browser (Full HTML, tip at x=435) -->
-  <line x1="375" y1="75" x2="428" y2="75" stroke="#111" stroke-width="1" style="fill:rgb(0, 0, 0);stroke:rgb(17, 17, 17);color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <polygon points="435,75 428,71 428,79" fill="#111"/>
-  <text x="405" y="65" text-anchor="middle" font-size="11" fill="#555" style="fill:rgb(85, 85, 85);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:11px;font-weight:400;text-anchor:middle;dominant-baseline:auto">HTML</text>
+    <text class="sr-label" x="210" y="140" text-anchor="middle">query</text>
+    <line class="sr-edge" x1="172" y1="154" x2="248" y2="154" marker-end="url(#sr-arrow)"/>
 
-  <!-- Arrow Browser → Server (JS hydration, dashed, tip at x=375) -->
-  <line x1="435" y1="111" x2="382" y2="111" stroke="#111" stroke-width="1" stroke-dasharray="4 3" style="fill:rgb(0, 0, 0);stroke:rgb(17, 17, 17);color:rgb(255, 255, 255);stroke-width:1px;stroke-dasharray:4px, 3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <polygon points="375,111 382,107 382,115" fill="#111"/>
-  <text x="405" y="130" text-anchor="middle" font-size="11" fill="#555" style="fill:rgb(85, 85, 85);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:11px;font-weight:400;text-anchor:middle;dominant-baseline:auto">JS</text>
+    <rect x="250" y="110" width="200" height="88" rx="8" fill="#faf5ff" stroke="#8250df" stroke-width="1"/>
+    <text class="sr-node-title" x="350" y="134" text-anchor="middle" dominant-baseline="central" fill="#4c2889">server (Next.js)</text>
+    <text class="sr-node-sub" x="350" y="155" text-anchor="middle" dominant-baseline="central" fill="#6639ba">renders the components</text>
+    <text class="sr-node-sub" x="350" y="174" text-anchor="middle" dominant-baseline="central" fill="#6639ba">to HTML</text>
 
-  <!-- Browser box -->
-  <rect x="435" y="45" width="185" height="96" rx="4" fill="none" stroke="#111" stroke-width="1" style="fill:none;stroke:rgb(17, 17, 17);color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text x="527" y="71" text-anchor="middle" font-size="14" font-weight="600" fill="#111" style="fill:rgb(17, 17, 17);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:14px;font-weight:600;text-anchor:middle;dominant-baseline:auto">Browser</text>
-  <text x="527" y="91" text-anchor="middle" font-size="12" fill="#444" style="fill:rgb(68, 68, 68);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">Displays HTML immediately</text>
-  <text x="527" y="109" text-anchor="middle" font-size="12" fill="#444" style="fill:rgb(68, 68, 68);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">JS hydrates interactive</text>
-  <text x="527" y="127" text-anchor="middle" font-size="12" fill="#444" style="fill:rgb(68, 68, 68);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">parts only</text>
+    <text class="sr-label" x="490" y="124" text-anchor="middle">HTML first</text>
+    <line class="sr-edge" x1="452" y1="138" x2="528" y2="138" marker-end="url(#sr-arrow)"/>
+
+    <line class="sr-edge-dash" x1="452" y1="172" x2="528" y2="172" marker-end="url(#sr-arrow)"/>
+    <text class="sr-label" x="490" y="190" text-anchor="middle">JS after</text>
+
+    <rect x="530" y="110" width="200" height="88" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="1"/>
+    <text class="sr-node-title" x="630" y="134" text-anchor="middle" dominant-baseline="central" fill="#0a3069">browser</text>
+    <text class="sr-node-sub" x="630" y="155" text-anchor="middle" dominant-baseline="central" fill="#185fa5">paints the HTML at once,</text>
+    <text class="sr-node-sub" x="630" y="174" text-anchor="middle" dominant-baseline="central" fill="#185fa5">hydrates the moving parts</text>
+
+    <text class="sr-sub" x="380" y="232" text-anchor="middle">JavaScript is used where it earns its place</text>
+  </g>
 </svg>

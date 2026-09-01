@@ -8,7 +8,7 @@ The Dunning-Kruger effect describes a cognitive bias where people with
 limited knowledge in a domain overestimate their own competence. It was
 identified in 1999.
 
-![Dunning-Kruger curve](/blog/dunning-kruger-effect.png)
+![Dunning-Kruger curve](/blog/dunning-kruger-effect.svg)
 
 ## Chasing perfection
 
