@@ -30,12 +30,14 @@ export default async function BlogPost({ params }) {
   return (
     <Container>
       <ProgressLine />
-      <span className="text-muted text-xs">
+      <span className="text-muted text-xs md:text-sm lg:text-base">
         {formatDate(meta.date)} · {readingTime} min read
       </span>
-      <h1 className="text-strong my-3 text-lg font-bold">{meta.title}</h1>
+      <h1 className="text-strong my-3 text-lg font-bold md:text-xl lg:text-2xl">
+        {meta.title}
+      </h1>
       <hr className="mb-6 border-gray-200 dark:border-gray-700" />
-      <article className="blog text-sm">
+      <article className="blog text-sm md:text-base lg:text-lg">
         <MDXRemote
           source={content}
           components={mdxComponents}

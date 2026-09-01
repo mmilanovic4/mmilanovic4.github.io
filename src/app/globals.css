@@ -64,3 +64,36 @@ html.dark .text-strong {
 .blog code {
   @apply rounded px-1 py-0.5;
 }
+
+/* A hyphen is a break opportunity, so flags like `-L` and `--verbose` were
+   splitting across lines -- worse against justified text. Inline code only:
+   `pre` sets `white-space: pre`, and overriding its child would collapse the
+   indentation inside code blocks. Held to md and up, where the column is wide
+   enough that the longest inline span still fits on one line. */
+@media (min-width: 768px) {
+  .blog :not(pre) > code {
+    white-space: nowrap;
+  }
+}
+
+/* Images break out 40px past each edge of the prose column: they have no upper
+   readable size, the measure does. Code blocks deliberately stay in the column
+   -- the prose line above one usually introduces it, so they have to align. */
+.media-wide {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .media-wide {
+    position: relative;
+    left: 50%;
+    width: min(720px, calc(100vw - 3rem));
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .media-wide {
+    width: min(880px, calc(100vw - 3rem));
+  }
+}

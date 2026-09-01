@@ -45,7 +45,7 @@ export default function Projects() {
               <a
                 href={project.href}
                 target="_blank"
-                className="text-accent inline-flex gap-2 text-sm font-semibold hover:underline"
+                className="text-accent inline-flex gap-2 text-sm font-semibold hover:underline md:text-base lg:text-lg"
               >
                 {project.logo && (
                   <Image
@@ -58,12 +58,14 @@ export default function Projects() {
                 )}
                 {project.name}
               </a>
-              <p className="text-xs">{project.description}</p>
+              <p className="text-xs md:text-sm lg:text-base">
+                {project.description}
+              </p>
               <div className="flex flex-wrap gap-2">
                 {project.stack.map((tech) => (
                   <span
                     key={tech}
-                    className="bg-accent-light text-accent-dark rounded px-2 py-1 text-xs"
+                    className="bg-accent-light text-accent-dark rounded px-2 py-1 text-xs md:text-sm"
                   >
                     {tech}
                   </span>

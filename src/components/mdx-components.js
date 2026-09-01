@@ -14,23 +14,39 @@ export const mdxComponents = {
     );
   },
   h2: (props) => (
-    <h2 className="text-strong mt-8 mb-3 text-base font-bold" {...props} />
+    <h2
+      className="text-strong mt-8 mb-3 text-base font-bold md:text-lg lg:text-xl"
+      {...props}
+    />
   ),
   h3: (props) => (
-    <h3 className="text-strong mt-6 mb-2 text-sm font-bold" {...props} />
+    <h3
+      className="text-strong mt-6 mb-2 text-sm font-bold md:text-base lg:text-lg"
+      {...props}
+    />
   ),
   img: ({ src, alt }) => (
-    <div className="my-6">
+    <div className="media-wide my-6">
       <img src={src} alt={alt} className="w-full rounded" />
-      {alt && <p className="text-muted mt-2 text-center text-xs">{alt}</p>}
+      {alt && (
+        <p className="text-muted mt-2 text-center text-xs md:text-sm lg:text-base">
+          {alt}
+        </p>
+      )}
     </div>
   ),
   figure: (props) => <figure className="my-4" {...props} />,
   ul: (props) => (
-    <ul className="mb-4 list-disc pl-5 text-sm leading-loose" {...props} />
+    <ul
+      className="mb-4 list-disc pl-5 text-sm leading-loose md:text-base lg:text-lg"
+      {...props}
+    />
   ),
   ol: (props) => (
-    <ol className="mb-4 list-decimal pl-5 text-sm leading-loose" {...props} />
+    <ol
+      className="mb-4 list-decimal pl-5 text-sm leading-loose md:text-base lg:text-lg"
+      {...props}
+    />
   ),
   li: (props) => <li className="mb-1" {...props} />,
 };

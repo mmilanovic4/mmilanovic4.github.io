@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
       <body className={`${font.className} subpixel-antialiased`}>
         <ThemeProvider>
           <div className="flex min-h-screen flex-col">
-            <div className="mx-auto w-full max-w-full md:w-140">
+            <div className="mx-auto w-full max-w-full md:w-160 lg:w-200">
               <Header />
               <main className="mb-8 w-full max-w-full px-6 md:px-0">
                 {children}

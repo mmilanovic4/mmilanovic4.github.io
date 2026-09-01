@@ -7,11 +7,11 @@ code[data-line-numbers] {
 code[data-line-numbers] [data-line]::before {
   counter-increment: line;
   content: counter(line);
-  @apply mr-4 inline-block w-4 text-right text-xs text-gray-400;
+  @apply mr-4 inline-block w-6 text-right text-sm text-gray-400 md:text-base lg:text-lg;
 }
 
 figure[data-rehype-pretty-code-figure] pre {
-  @apply my-4 overflow-x-auto rounded p-4 text-xs leading-relaxed;
+  @apply my-4 overflow-x-auto rounded p-4 text-sm leading-relaxed md:text-base lg:text-lg;
 }
 
 figure[data-rehype-pretty-code-figure] code {

@@ -14,7 +14,7 @@ export default function Home() {
     <Container>
       <div className="mb-8">
         <p className="text-accent mb-3 text-xs"># about</p>
-        <p className="text-sm leading-loose">
+        <p className="text-sm leading-loose md:text-base lg:text-lg">
           Hey, I{"'"}m Miloš — a full-stack web developer based in{" "}
           <span className="text-accent">Belgrade, Serbia</span>. I build web
           apps with a focus on clean code and good UX.
@@ -26,7 +26,7 @@ export default function Home() {
           {stack.map((tech) => (
             <span
               key={tech}
-              className="bg-accent-light text-accent-dark rounded px-2 py-1 text-xs"
+              className="bg-accent-light text-accent-dark rounded px-2 py-1 text-xs md:text-sm"
             >
               {tech}
             </span>
