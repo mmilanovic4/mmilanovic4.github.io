@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" role="img" aria-label="Merge keeps the fork in history, rebase replays the commits into a straight line">
+  <style>
+    .rvm text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .rvm-title { font-size: 17px; font-weight: 600; fill: #24292f; }
+    .rvm-sub { font-size: 13px; fill: #57606a; }
+    .rvm-branch { font-size: 13px; fill: #57606a; }
+    .rvm-branch-feat { font-size: 13px; fill: #bf3989; }
+    .rvm-edge { stroke: #8c959f; stroke-width: 2; fill: none; }
+    .rvm-ghost { stroke: #bf3989; stroke-width: 2; fill: none; stroke-dasharray: 4 4; opacity: 0.45; }
+    .rvm-ghost-node { stroke-dasharray: 3 3; }
+    .rvm-move { stroke: #8c959f; stroke-width: 2; fill: none; stroke-dasharray: 4 4; opacity: 0.6; }
+    .rvm-arrow { fill: #8c959f; opacity: 0.6; stroke: none; }
+    .rvm-divider { stroke: #d0d7de; stroke-width: 1; }
+    .rvm-n-main { fill: #0969da; }
+    .rvm-n-feat { fill: #bf3989; }
+    .rvm-n-merge { fill: #8250df; }
+  </style>
+
+  <rect x="0" y="0" width="760" height="300" fill="#ffffff"/>
+
+  <g class="rvm">
+    <text class="rvm-title" x="30" y="44">merge</text>
+    <text class="rvm-sub" x="30" y="66">the fork stays in the history</text>
+
+    <path class="rvm-edge" d="M40,210 H300"/>
+    <path class="rvm-edge" d="M100,210 C130,210 130,130 160,130"/>
+    <path class="rvm-edge" d="M160,130 H220"/>
+    <path class="rvm-edge" d="M220,130 C260,130 260,210 300,210"/>
+
+    <circle class="rvm-n-main" cx="40" cy="210" r="8"/>
+    <circle class="rvm-n-main" cx="100" cy="210" r="8"/>
+    <circle class="rvm-n-main" cx="160" cy="210" r="8"/>
+    <circle class="rvm-n-main" cx="220" cy="210" r="8"/>
+    <circle class="rvm-n-merge" cx="300" cy="210" r="9"/>
+
+    <circle class="rvm-n-feat" cx="160" cy="130" r="8"/>
+    <circle class="rvm-n-feat" cx="220" cy="130" r="8"/>
+
+    <text class="rvm-branch-feat" x="152" y="108">feature</text>
+    <text class="rvm-branch" x="32" y="246">main</text>
+    <text class="rvm-sub" x="300" y="246" text-anchor="middle">merge commit</text>
+
+    <line class="rvm-divider" x1="380" y1="40" x2="380" y2="262"/>
+
+    <text class="rvm-title" x="430" y="44">rebase</text>
+    <text class="rvm-sub" x="430" y="66">the same work, replayed on top</text>
+
+    <path class="rvm-ghost" d="M485,210 C515,210 515,130 540,130"/>
+    <path class="rvm-ghost" d="M540,130 H595"/>
+    <circle class="rvm-ghost rvm-ghost-node" cx="540" cy="130" r="8"/>
+    <circle class="rvm-ghost rvm-ghost-node" cx="595" cy="130" r="8"/>
+
+    <path class="rvm-move" d="M615,148 C650,166 652,172 664,183"/>
+    <path class="rvm-arrow" d="M670,190 L660.8,185.8 L667.8,180.2 Z"/>
+
+    <path class="rvm-edge" d="M430,210 H705"/>
+
+    <circle class="rvm-n-main" cx="430" cy="210" r="8"/>
+    <circle class="rvm-n-main" cx="485" cy="210" r="8"/>
+    <circle class="rvm-n-main" cx="540" cy="210" r="8"/>
+    <circle class="rvm-n-main" cx="595" cy="210" r="8"/>
+    <circle class="rvm-n-feat" cx="650" cy="210" r="8"/>
+    <circle class="rvm-n-feat" cx="705" cy="210" r="8"/>
+
+    <text class="rvm-branch" x="422" y="246">main</text>
+    <text class="rvm-branch-feat" x="705" y="246" text-anchor="middle">feature</text>
+  </g>
+</svg>
