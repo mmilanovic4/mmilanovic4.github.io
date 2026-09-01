@@ -47,6 +47,8 @@ Three dots asks both sides at once. `<` marks commits on the left, `>` on the ri
 git log --left-right --oneline main...dev
 ```
 
+![Two dots vs three dots](/blog/git-2-dots-vs-3-dots.svg)
+
 Filtering by who wrote it, either by name or email:
 
 ```bash
