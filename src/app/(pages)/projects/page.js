@@ -45,15 +45,15 @@ export default function Projects() {
               <a
                 href={project.href}
                 target="_blank"
-                className="text-accent inline-flex gap-2 text-sm font-semibold hover:underline md:text-base lg:text-lg"
+                className="text-accent inline-flex items-center gap-2 text-sm font-semibold hover:underline md:text-base lg:text-lg"
               >
                 {project.logo && (
                   <Image
                     src={project.logo}
                     alt={project.name}
-                    width={16}
-                    height={16}
-                    className="h-4 w-4"
+                    width={20}
+                    height={20}
+                    className="h-4 w-4 shrink-0 lg:h-5 lg:w-5"
                   />
                 )}
                 {project.name}
