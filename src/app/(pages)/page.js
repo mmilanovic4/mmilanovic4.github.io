@@ -1,13 +1,5 @@
 import { Container } from "@/components";
-
-const stack = [
-  "JavaScript",
-  "Next.js",
-  "Node.js",
-  "MongoDB",
-  "PostgreSQL",
-  "Go",
-];
+import { stack } from "@/content";
 
 export default function Home() {
   return (

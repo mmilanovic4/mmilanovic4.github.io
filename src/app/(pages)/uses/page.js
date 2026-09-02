@@ -1,4 +1,5 @@
 import { Container } from "@/components";
+import { uses } from "@/content";
 import { BASE_URL, createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
@@ -8,40 +9,6 @@ export const metadata = createMetadata({
     url: `${BASE_URL}/uses`,
   },
 });
-
-const uses = [
-  {
-    category: "Hardware",
-    items: [
-      'MacBook Pro, 14", Apple M5, 16 GB',
-      'Lenovo IdeaPad 110, 15.6", Intel Core i7, 16 GB',
-      "iPhone 16 Pro, 256 GB",
-    ],
-  },
-  {
-    category: "Software",
-    items: [
-      "VS Code",
-      "Ghostty",
-      "Claude Desktop",
-      "Bruno",
-      "Docker",
-      "MongoDB Compass",
-      "Canva & Affinity",
-    ],
-  },
-  {
-    category: "Gear",
-    items: [
-      "AirPods 4 ANC",
-      "Nintendo Switch 2",
-      "Suunto Race S All Black",
-      "DJI Spark",
-      "Anker Nano Power Bank",
-      "MOYE Core Multiport x9 Hub",
-    ],
-  },
-];
 
 export default function Uses() {
   return (

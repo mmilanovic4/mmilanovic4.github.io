@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components";
+import { projects } from "@/content";
 import { BASE_URL, createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
@@ -9,27 +10,6 @@ export const metadata = createMetadata({
     url: `${BASE_URL}/projects`,
   },
 });
-
-const projects = [
-  {
-    id: "forge",
-    name: "forge",
-    description:
-      "A minimal Next.js boilerplate with authentication, database and a component library ready to go.",
-    stack: ["Next.js", "Better Auth", "Prisma", "PostgreSQL", "shadcn/ui"],
-    href: "https://github.com/mmilanovic4/forge",
-    logo: "https://raw.githubusercontent.com/mmilanovic4/forge/main/src/app/icon.svg",
-  },
-  {
-    id: "orbx",
-    name: "orbx",
-    description:
-      "A lightweight CLI toolkit for developers — encryption, encoding, network diagnostics and everyday utilities, all from the terminal.",
-    stack: ["Go", "Cobra"],
-    href: "https://github.com/mmilanovic4/orbx",
-    logo: "https://raw.githubusercontent.com/mmilanovic4/orbx/main/logo.svg",
-  },
-];
 
 export default function Projects() {
   return (

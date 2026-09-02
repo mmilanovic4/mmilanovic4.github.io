@@ -1,4 +1,5 @@
 {
+  "stack": ["JavaScript", "Next.js", "Node.js", "MongoDB", "PostgreSQL", "Go"],
   "work": [
     {
       "id": "3",
@@ -67,6 +68,58 @@
       "img": "/cv/tesla.ico",
       "cc": "rs",
       "unlocode": "BEG"
+    }
+  ],
+  "projects": [
+    {
+      "id": "forge",
+      "name": "forge",
+      "description": "A minimal Next.js boilerplate with authentication, database and a component library ready to go.",
+      "stack": ["Next.js", "Better Auth", "Prisma", "PostgreSQL", "shadcn/ui"],
+      "href": "https://github.com/mmilanovic4/forge",
+      "logo": "https://raw.githubusercontent.com/mmilanovic4/forge/main/src/app/icon.svg"
+    },
+    {
+      "id": "orbx",
+      "name": "orbx",
+      "description": "A lightweight CLI toolkit for developers — encryption, encoding, network diagnostics and everyday utilities, all from the terminal.",
+      "stack": ["Go", "Cobra"],
+      "href": "https://github.com/mmilanovic4/orbx",
+      "logo": "https://raw.githubusercontent.com/mmilanovic4/orbx/main/logo.svg"
+    }
+  ],
+  "uses": [
+    {
+      "category": "Hardware",
+      "items": [
+        "MacBook Pro, 14\", Apple M5, 16 GB",
+        "Lenovo IdeaPad 110, 15.6\", Intel Core i7, 16 GB",
+        "iPhone 16 Pro, 256 GB"
+      ]
+    },
+    {
+      "category": "Software",
+      "items": [
+        "VS Code",
+        "Ghostty",
+        "Claude Desktop",
+        "Bruno",
+        "Docker",
+        "Forklift",
+        "MongoDB Compass",
+        "Canva & Affinity"
+      ]
+    },
+    {
+      "category": "Gear",
+      "items": [
+        "AirPods 4 ANC",
+        "Nintendo Switch 2",
+        "Suunto Race S All Black",
+        "DJI Spark",
+        "Anker Nano Power Bank",
+        "MOYE Core Multiport x9 Hub"
+      ]
     }
   ]
 }
