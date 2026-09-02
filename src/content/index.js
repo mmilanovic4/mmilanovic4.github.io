@@ -1,3 +1,3 @@
-import site from "./site.json";
+import data from "./data.json";
 
-export const { education, projects, stack, uses, work } = site;
+export const { education, projects, stack, uses, work } = data;
