@@ -94,7 +94,11 @@
       "items": [
         "MacBook Pro, 14\", Apple M5, 16 GB",
         "Lenovo IdeaPad 110, 15.6\", Intel Core i7, 16 GB",
-        "iPhone 16 Pro, 256 GB"
+        "iPhone 16 Pro, 256 GB",
+        "Dell P2422H, 24\"",
+        "Canon CanoScan LiDE 400",
+        "Satechi Type-C Multi-Port Adapter 4K with Ethernet V2",
+        "MOYE Core Multiport x9 Hub"
       ]
     },
     {
@@ -104,7 +108,7 @@
         "Ghostty",
         "Claude Desktop",
         "Bruno",
-        "Docker",
+        "Docker Desktop",
         "Forklift/Cyberduck",
         "MongoDB Compass",
         "Canva & Affinity"
@@ -117,8 +121,7 @@
         "Nintendo Switch 2",
         "Suunto Race S All Black",
         "DJI Spark",
-        "Anker Nano Power Bank",
-        "MOYE Core Multiport x9 Hub"
+        "Anker Nano Power Bank"
       ]
     }
   ]
