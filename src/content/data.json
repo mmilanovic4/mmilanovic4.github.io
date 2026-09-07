@@ -77,7 +77,7 @@
       "description": "A minimal Next.js boilerplate with authentication, database and a component library ready to go.",
       "stack": ["Next.js", "Better Auth", "Prisma", "PostgreSQL", "shadcn/ui"],
       "href": "https://github.com/mmilanovic4/forge",
-      "logo": "https://raw.githubusercontent.com/mmilanovic4/forge/main/src/app/icon.svg"
+      "logo": "/projects/forge.svg"
     },
     {
       "id": "orbx",
@@ -85,7 +85,7 @@
       "description": "A lightweight CLI toolkit for developers — encryption, encoding, network diagnostics and everyday utilities, all from the terminal.",
       "stack": ["Go", "Cobra"],
       "href": "https://github.com/mmilanovic4/orbx",
-      "logo": "https://raw.githubusercontent.com/mmilanovic4/orbx/main/logo.svg"
+      "logo": "/projects/orbx.svg"
     }
   ],
   "uses": [
