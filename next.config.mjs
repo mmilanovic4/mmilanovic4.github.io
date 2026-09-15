@@ -9,6 +9,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    inlineCss: true,
+  },
 };
 
 if (process.env.NODE_ENV === "production") {
