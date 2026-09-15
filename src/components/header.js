@@ -40,7 +40,12 @@ export function Header() {
           <img
             alt="Profile"
             className="rounded object-cover"
-            src="/profile.jpg"
+            src="/profile-800.webp"
+            srcSet="/profile-480.webp 480w, /profile-800.webp 800w, /profile-1000.webp 1000w"
+            sizes="(min-width: 1024px) 800px, (min-width: 768px) 640px, calc(100vw - 48px)"
+            width={1000}
+            height={750}
+            fetchPriority="high"
           />
         </div>
       </div>
