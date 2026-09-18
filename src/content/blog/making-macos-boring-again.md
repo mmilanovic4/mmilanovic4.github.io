@@ -36,11 +36,11 @@ Three settings, all in **System Settings > Desktop & Dock**, all doing the same 
 
 **Dim widgets on desktop: Always.** Widgets are a glanceable thing, not a thing to look at. Dimmed, they sit behind the work instead of next to it — you see them when you look for them and you don't when you don't. The default only dims them in certain conditions, which means sometimes they're loud and sometimes they aren't. Always is the setting where I stop noticing them, which is the point of a widget.
 
-![Dimmed widgets](/blog/dimmed-widgets.png)
-
 **Stage Manager: off.** It solves a window management problem I don't have, and it does it by moving things around on their own.
 
-**The Dock** gets hidden, magnification off, and _Show suggested and recent apps in the Dock_ turned off so it stops growing on its own. A dock that changes size depending on what I opened an hour ago isn't a dock, it's a feed.
+**The Dock** stays visible, but with magnification off and _Show suggested and recent apps in the Dock_ turned off so it stops growing on its own. A dock that changes size depending on what I opened an hour ago isn't a dock, it's a feed.
+
+![My macOS 27 desktop — dark wallpaper, dimmed widgets and a Dock with no suggested apps](/blog/boring-desktop.png)
 
 ## Things I didn't have to change
 
