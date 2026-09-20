@@ -3,7 +3,15 @@
 
 @custom-variant dark (&:where(html.dark, html.dark *));
 
+/* WebKit moves `position: fixed` layers with the elastic overscroll at the end
+   of a document -- a compositor effect, so layout still reports top: 0 while the
+   progress line has visually slid off the top edge. Chromium keeps fixed layers
+   pinned, which is why this only ever showed up in Safari, and only at the very
+   bottom of a post. Killing the vertical bounce is the smallest change that
+   keeps the line where the design puts it. */
 html {
+  overscroll-behavior-y: none;
+
   --accent: #1a6bbf;
   --accent-light: #e6f1fb;
   --accent-dark: #0c447c;
