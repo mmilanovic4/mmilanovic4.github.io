@@ -55,7 +55,8 @@ html.dark body {
   @apply text-accent underline underline-offset-[3px] hover:opacity-80;
 }
 
-.blog code {
+/* Inline code only: code blocks take their padding from `pre` (rpc.css). */
+.blog :not(pre) > code {
   @apply rounded px-1 py-0.5;
 }
 
