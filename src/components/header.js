@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useSelectedLayoutSegments } from "next/navigation";
 import { useState } from "react";
 import { SocialLinks, ThemeToggle } from "@/components";
 import { AUTHOR } from "@/lib/metadata";
@@ -23,7 +23,11 @@ const isNavItemActive = (pathname, item) => {
 };
 
 export function Header() {
-  const pathname = usePathname();
+  // From the rendered route, not the URL: GitHub Pages serves the 404 at any
+  // address, so /blog/typo must still match the prerendered 404 (home active).
+  const pathname = `/${useSelectedLayoutSegments()
+    .filter((segment) => !segment.startsWith("("))
+    .join("/")}`;
   const [open, setOpen] = useState(false);
 
   // On a blog post the article title owns the <h1>, so the site name steps down.
