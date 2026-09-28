@@ -3,9 +3,15 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const ThemeContext = createContext(null);
 
+// Reading localStorage throws when the visitor blocks cookies and site data;
+// the theme then just lasts for the visit instead of taking the page down.
 function getInitialTheme() {
   if (typeof window === "undefined") return false;
-  return localStorage.getItem("theme") === "dark";
+  try {
+    return localStorage.getItem("theme") === "dark";
+  } catch {
+    return false;
+  }
 }
 
 export function ThemeProvider({ children }) {
@@ -13,7 +19,11 @@ export function ThemeProvider({ children }) {
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);
-    localStorage.setItem("theme", dark ? "dark" : "light");
+    try {
+      localStorage.setItem("theme", dark ? "dark" : "light");
+    } catch {
+      // Storage blocked, see getInitialTheme.
+    }
   }, [dark]);
 
   return (

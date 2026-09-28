@@ -41,20 +41,14 @@ html.dark body {
   @apply bg-[#22272e] text-gray-100;
 }
 
-.text-muted {
-  @apply text-gray-500;
+/* Utilities, not plain classes: unlayered CSS beats every layer, so a plain
+   `.text-muted` silently overrode `hover:text-accent` next to it. */
+@utility text-muted {
+  @apply text-gray-500 dark:text-gray-400;
 }
 
-html.dark .text-muted {
-  @apply text-gray-400;
-}
-
-.text-strong {
-  @apply text-gray-800;
-}
-
-html.dark .text-strong {
-  @apply text-gray-200;
+@utility text-strong {
+  @apply text-gray-800 dark:text-gray-200;
 }
 
 .blog a {
