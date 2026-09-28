@@ -53,13 +53,6 @@ export default async function BlogPost({ params }) {
                   {
                     theme: "nord",
                     defaultLang: "plaintext",
-                    langs: [
-                      "plaintext",
-                      "javascript",
-                      "typescript",
-                      "go",
-                      "bash",
-                    ],
                   },
                 ],
               ],
