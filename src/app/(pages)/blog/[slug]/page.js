@@ -1,8 +1,7 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
-import rehypeExternalLinks from "rehype-external-links";
-import rehypePrettyCode from "rehype-pretty-code";
 import { Container, ProgressLine, mdxComponents } from "@/components";
 import { formatDate, getAllPosts, getPost, getReadingTime } from "@/lib/blog";
+import { rehypePlugins } from "@/lib/mdx";
 import { BASE_URL, createMetadata } from "@/lib/metadata";
 
 export async function generateStaticParams() {
@@ -41,23 +40,7 @@ export default async function BlogPost({ params }) {
         <MDXRemote
           source={content}
           components={mdxComponents}
-          options={{
-            mdxOptions: {
-              rehypePlugins: [
-                [
-                  rehypeExternalLinks,
-                  { target: "_blank", rel: ["noopener", "noreferrer"] },
-                ],
-                [
-                  rehypePrettyCode,
-                  {
-                    theme: "nord",
-                    defaultLang: "plaintext",
-                  },
-                ],
-              ],
-            },
-          }}
+          options={{ mdxOptions: { rehypePlugins } }}
         />
       </article>
     </Container>
