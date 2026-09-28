@@ -22,7 +22,7 @@ What I appreciate about the slider specifically is that it isn't an accessibilit
 
 The other setting I turn on immediately lives in **System Settings > Accessibility > Display**: **Show borders**.
 
-Liquid Glass leans on transparency and depth to tell you what's a control and what's just surface. That works right up until the thing behind the control has any texture of its own. Show borders draws an actual outline around interactive elements, and on macOS it does exactly what it says — buttons look like buttons, toolbars separate from content, and nothing else changes.
+Liquid Glass leans on transparency and depth to tell you what's a control and what's just surface. That works right up until the thing behind the control has any texture of its own. Show borders draws an actual outline around interactive elements, and on macOS it does exactly what it says — buttons look like buttons, toolbars separate from content and nothing else changes.
 
 On iOS the same setting exists and doesn't land nearly as well. Turn it on in both and open Safari: on the Mac the outlines go where a border belongs, while on iPhone every icon along the bottom bar gets boxed individually. Instead of one clean control strip you get a row of small rectangles fighting for attention. The setting is technically doing its job. It's just producing more visual noise than it removes.
 
