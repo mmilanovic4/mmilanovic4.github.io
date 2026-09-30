@@ -42,4 +42,6 @@ The model has one lesson for the customer: **leave**. Cancel before the renewal,
 
 Mullvad charges **€5** a month. One month or ten years, the rate is the same and its pricing page says it never runs sales. That's more than Surfshark's intro price and less than its renewal, which is about where a price lands when nobody is paying for someone else's discount.
 
-I'd rather pay a price I can get twice.
+For the record, it's the pricing model I like, not the product. For things like streaming, Mullvad is a considerably weaker service than either of the other two.
+
+I just want a price I can get twice.
