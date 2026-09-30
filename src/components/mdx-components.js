@@ -7,6 +7,22 @@ export const mdxComponents = {
 
     if (hasImage) return <>{childArray}</>;
 
+    // A paragraph that is nothing but emphasis (`_Added 30.09.2026._`) is a
+    // note about the text, not part of it, so it gets the same muted, one-step
+    // smaller treatment as the post date and image captions.
+    const isNote = childArray.length === 1 && childArray[0]?.type === "em";
+
+    if (isNote) {
+      return (
+        <p
+          className="text-muted mb-4 text-xs md:text-sm lg:text-base"
+          {...props}
+        >
+          {children}
+        </p>
+      );
+    }
+
     return (
       <p className="mb-4 text-left leading-loose md:text-justify" {...props}>
         {children}
