@@ -31,6 +31,15 @@ git config --global rerere.enabled true
 
 The first stops `git pull` from writing `Merge branch 'main' of ...` commits nobody asked for. The second — reuse recorded resolution — remembers how a conflict was resolved and replays that resolution when the same one comes back. On a long-lived branch that gets rebased more than once, it's the difference between resolving a conflict once and resolving it every single time.
 
+The first one has a cost: a rebase wants a clean working tree, so `git pull` with anything uncommitted now stops at `cannot pull with rebase: You have unstaged changes`. `--autostash` does the stash, the pull and the pop in one go, and a third setting makes it the default:
+
+```bash
+git pull --autostash
+git config --global rebase.autoStash true
+```
+
+If what comes back collides with what was pulled, the pull still succeeds — the conflict markers land in the file and the entry stays in `git stash list` as `autostash` until it's dropped by hand.
+
 ## Asking history a question
 
 Every commit is a record: an author, a date, a message and a diff. `git log` with no arguments prints all of them in order, which is the least useful thing it does. With arguments it's closer to a query language, and ranges are where it starts.
