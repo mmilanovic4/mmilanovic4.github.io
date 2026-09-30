@@ -1,4 +1,16 @@
+import Link from "next/link";
+
+// Root-relative and without a file extension: another page on this site,
+// not an asset like /rss.xml and not a protocol-relative //host URL.
+const isInternalPage = (href) => /^\/(?!\/)[^.]*$/.test(href ?? "");
+
 export const mdxComponents = {
+  a: ({ href, ...props }) =>
+    isInternalPage(href) ? (
+      <Link href={href} {...props} />
+    ) : (
+      <a href={href} {...props} />
+    ),
   p: ({ children, ...props }) => {
     const childArray = Array.isArray(children) ? children : [children];
     const hasImage = childArray.some(

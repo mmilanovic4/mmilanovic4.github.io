@@ -6,7 +6,7 @@ description: "A VPN at $2.49 a month is a fine deal. The second bill is where it
 
 Surfshark Starter is advertised at **$2.49** a month. That's the two-year plan, paid upfront, with three extra months on top — **$67.23** for 27 months. From Serbia the checkout adds **20%** VAT, so the actual charge is **$80.68**, or **$2.99** a month.
 
-That's a good price. It's also the only time you get it.
+That's a good price. Unfortunately, it's also the only time you'll get it.
 
 ## The second bill
 
@@ -34,7 +34,7 @@ None of this is hidden. The renewal price is in the terms, Surfshark says it ema
 
 But **$7.90** isn't what it costs either. The same company sells the same service to a stranger for **$2.99** on the same day. The gap between those two prices isn't infrastructure. It looks like a bet that I won't read the email.
 
-I once wrote that Insomnia isn't a scammy app, it just feels like one. Same thing here.
+I [once wrote](/blog/top-5-development-tools-i-use-in-2026) that Insomnia isn't a scammy app, it just feels like one. Same thing here.
 
 ## Leaving pays
 
