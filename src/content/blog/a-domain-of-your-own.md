@@ -32,6 +32,20 @@ Set all of them to **Proxied** (orange cloud) in Cloudflare. Traffic now goes th
 
 **Cloudflare Pages** does the same job without leaving the dashboard. Point it at your repo, it builds the site and serves it from Cloudflare's edge. One fewer provider, same result. Either way: static files, a CDN in front, nothing to maintain.
 
+### Turn on Always Use HTTPS
+
+_Added 30.09.2026._
+
+Free TLS doesn't mean HTTPS only. GitHub issues a certificate for a custom domain when DNS points straight at it. Behind the orange cloud it doesn't, so **Enforce HTTPS** in the repo settings stays unavailable. Cloudflare serves the certificate instead, but nothing sends `http://` to `https://` — the site answers on both.
+
+Turn on **Always Use HTTPS** under **SSL/TLS → Edge Certificates**, then check:
+
+```bash
+curl -I http://milos.fyi
+```
+
+You want a `301` pointing at `https://`. A `200` means plain HTTP is still being served.
+
 ## Redirecting the old domain
 
 At some point you get a better domain. The old one still has links pointing to it — old posts, old profiles, maybe an old email address. Don't let those links break. Redirect them and lock the old domain down so it can't be used against you later.
