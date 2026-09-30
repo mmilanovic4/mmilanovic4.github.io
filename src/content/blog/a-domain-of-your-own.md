@@ -34,8 +34,6 @@ Set all of them to **Proxied** (orange cloud) in Cloudflare. Traffic now goes th
 
 ### Turn on Always Use HTTPS
 
-_Added 30.09.2026._
-
 Free TLS doesn't mean HTTPS only. GitHub issues a certificate for a custom domain when DNS points straight at it. Behind the orange cloud it doesn't, so **Enforce HTTPS** in the repo settings stays unavailable. Cloudflare serves the certificate instead, but nothing sends `http://` to `https://` — the site answers on both.
 
 Turn on **Always Use HTTPS** under **SSL/TLS → Edge Certificates**, then check:

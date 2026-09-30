@@ -86,6 +86,53 @@ rsync -avz ./out/ user@server:/var/www/app/
 If you're deploying static files to a server, rsync is what you want.
 It only transfers what changed.
 
+## Tunnels
+
+SSH doesn't stop at a shell. The same encrypted connection can carry any TCP traffic: a port opens on one end and whatever arrives there comes out on the other. That's port forwarding, and it comes in three flavours.
+
+**Local (`-L`)** — outbound. The port opens on your machine:
+
+```bash
+ssh -L 5432:db.internal:5432 user@bastion
+```
+
+Connect to `localhost:5432` and the traffic travels through SSH to `bastion`, which opens the connection to `db.internal:5432` on your behalf. Use it when the server can reach something you can't — a database in a private network, an admin panel bound to localhost.
+
+![Local forwarding](/blog/ssh-local-forwarding.svg)
+
+**Remote (`-R`)** — inbound. The port opens on the server:
+
+```bash
+ssh -R 9090:localhost:3000 user@vps
+```
+
+The same tunnel, walked the other way: whoever connects to port 9090 on the VPS lands on port 3000 of your machine. Use it to show a dev server to someone outside your network, to receive a webhook locally or to get back to a machine behind NAT or a firewall — that machine dials out to the VPS, so nothing has to be opened on its side. In conversation this is a reverse tunnel. Same thing.
+
+![Remote forwarding](/blog/ssh-remote-forwarding.svg)
+
+**Note:** A remote forward listens only on the server's own loopback address until `GatewayPorts yes` is set in its `sshd_config`. This is the usual reason a reverse tunnel "doesn't work".
+
+**Dynamic (`-D`)** — outbound again, but without a fixed destination:
+
+```bash
+ssh -D 1080 user@server
+```
+
+With `-L`, one port leads to one place, decided up front. Here SSH runs a SOCKS proxy on `localhost:1080` and the client names the destination for every connection. Point a browser at it and each site you open is fetched from the server. A poor man's VPN, for TCP only.
+
+![Dynamic forwarding](/blog/ssh-dynamic-forwarding.svg)
+
+Add `-N` when you want the tunnel without a shell and `-f` to send it to the background. A tunnel you open every day belongs in the config file:
+
+```bash
+Host            db
+HostName        bastion
+User            user
+LocalForward    5432 db.internal:5432
+```
+
+`ssh -N db` now does the same as the first command. `RemoteForward` and `DynamicForward` cover the other two.
+
 ## Thirty years and counting
 
 SSH is one of those rare tools that has remained essential regardless
