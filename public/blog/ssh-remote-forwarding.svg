@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" width="760" height="260" role="img" aria-label="Remote forwarding opens a port on the server; your machine dials out to build the tunnel and traffic from outside travels back through it to a service running locally">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180" width="760" height="180" role="img" aria-label="Remote forwarding opens a port on the server; your machine dials out to build the tunnel and traffic from outside travels back through it to a service running locally">
   <style>
     .rf text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-    .rf-title { font-size: 17px; font-weight: 600; fill: #24292f; }
     .rf-sub { font-size: 13px; fill: #57606a; }
     .rf-node-title { font-size: 13px; font-weight: 600; }
     .rf-node-sub { font-size: 12px; }
@@ -22,35 +21,32 @@
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="760" height="260" fill="#ffffff"/>
+  <rect x="0" y="0" width="760" height="180" fill="#ffffff"/>
 
   <g class="rf">
-    <text class="rf-title" x="30" y="44">remote forwarding (-R)</text>
-    <text class="rf-sub" x="30" y="66">a port on the server that comes out on your side</text>
+    <rect class="rf-tunnel" x="194" y="63" width="112" height="22"/>
+    <line class="rf-edge-tunnel" x1="286" y1="74" x2="214" y2="74" marker-end="url(#rf-arrow-tunnel)"/>
+    <text class="rf-label-tunnel" x="250" y="52" text-anchor="middle">SSH tunnel</text>
+    <text class="rf-label" x="250" y="104" text-anchor="middle">you dial out</text>
 
-    <rect class="rf-tunnel" x="194" y="143" width="112" height="22"/>
-    <line class="rf-edge-tunnel" x1="286" y1="154" x2="214" y2="154" marker-end="url(#rf-arrow-tunnel)"/>
-    <text class="rf-label-tunnel" x="250" y="132" text-anchor="middle">SSH tunnel</text>
-    <text class="rf-label" x="250" y="184" text-anchor="middle">you dial out</text>
+    <rect x="30" y="30" width="170" height="88" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="1"/>
+    <text class="rf-node-title" x="115" y="54" text-anchor="middle" dominant-baseline="central" fill="#0a3069">your machine</text>
+    <text class="rf-node-sub" x="115" y="75" text-anchor="middle" dominant-baseline="central" fill="#185fa5">dev server on</text>
+    <text class="rf-mono" x="115" y="94" text-anchor="middle" dominant-baseline="central" fill="#185fa5">localhost:3000</text>
 
-    <rect x="30" y="110" width="170" height="88" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="1"/>
-    <text class="rf-node-title" x="115" y="134" text-anchor="middle" dominant-baseline="central" fill="#0a3069">your machine</text>
-    <text class="rf-node-sub" x="115" y="155" text-anchor="middle" dominant-baseline="central" fill="#185fa5">dev server on</text>
-    <text class="rf-mono" x="115" y="174" text-anchor="middle" dominant-baseline="central" fill="#185fa5">localhost:3000</text>
+    <rect x="300" y="30" width="160" height="88" rx="8" fill="#faf5ff" stroke="#8250df" stroke-width="1"/>
+    <text class="rf-node-title" x="380" y="54" text-anchor="middle" dominant-baseline="central" fill="#4c2889">vps</text>
+    <text class="rf-node-sub" x="380" y="75" text-anchor="middle" dominant-baseline="central" fill="#6639ba">port opens here</text>
+    <text class="rf-mono" x="380" y="94" text-anchor="middle" dominant-baseline="central" fill="#6639ba">vps:9090</text>
 
-    <rect x="300" y="110" width="160" height="88" rx="8" fill="#faf5ff" stroke="#8250df" stroke-width="1"/>
-    <text class="rf-node-title" x="380" y="134" text-anchor="middle" dominant-baseline="central" fill="#4c2889">vps</text>
-    <text class="rf-node-sub" x="380" y="155" text-anchor="middle" dominant-baseline="central" fill="#6639ba">port opens here</text>
-    <text class="rf-mono" x="380" y="174" text-anchor="middle" dominant-baseline="central" fill="#6639ba">vps:9090</text>
+    <text class="rf-label" x="510" y="60" text-anchor="middle">plain TCP</text>
+    <line class="rf-edge" x1="558" y1="74" x2="462" y2="74" marker-end="url(#rf-arrow)"/>
 
-    <text class="rf-label" x="510" y="140" text-anchor="middle">plain TCP</text>
-    <line class="rf-edge" x1="558" y1="154" x2="462" y2="154" marker-end="url(#rf-arrow)"/>
+    <rect x="560" y="30" width="170" height="88" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+    <text class="rf-node-title" x="645" y="54" text-anchor="middle" dominant-baseline="central" fill="#24292f">anyone else</text>
+    <text class="rf-node-sub" x="645" y="75" text-anchor="middle" dominant-baseline="central" fill="#57606a">a colleague, a client,</text>
+    <text class="rf-node-sub" x="645" y="94" text-anchor="middle" dominant-baseline="central" fill="#57606a">a webhook</text>
 
-    <rect x="560" y="110" width="170" height="88" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
-    <text class="rf-node-title" x="645" y="134" text-anchor="middle" dominant-baseline="central" fill="#24292f">anyone else</text>
-    <text class="rf-node-sub" x="645" y="155" text-anchor="middle" dominant-baseline="central" fill="#57606a">a colleague, a client,</text>
-    <text class="rf-node-sub" x="645" y="174" text-anchor="middle" dominant-baseline="central" fill="#57606a">a webhook</text>
-
-    <text class="rf-sub" x="380" y="232" text-anchor="middle">the tunnel is dialled from inside, so nothing has to be opened on your side</text>
+    <text class="rf-sub" x="380" y="152" text-anchor="middle">the tunnel is dialled from inside, so nothing has to be opened on your side</text>
   </g>
 </svg>

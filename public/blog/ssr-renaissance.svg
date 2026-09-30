@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" width="760" height="260" role="img" aria-label="The server renders the components to HTML and sends it first, and the JavaScript bundle follows to hydrate only the interactive parts">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180" width="760" height="180" role="img" aria-label="The server renders the components to HTML and sends it first, and the JavaScript bundle follows to hydrate only the interactive parts">
   <style>
     .sr text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-    .sr-title { font-size: 17px; font-weight: 600; fill: #24292f; }
     .sr-sub { font-size: 13px; fill: #57606a; }
     .sr-node-title { font-size: 13px; font-weight: 600; }
     .sr-node-sub { font-size: 12px; }
@@ -16,35 +15,32 @@
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="760" height="260" fill="#ffffff"/>
+  <rect x="0" y="0" width="760" height="180" fill="#ffffff"/>
 
   <g class="sr">
-    <text class="sr-title" x="30" y="44">the SSR renaissance</text>
-    <text class="sr-sub" x="30" y="66">the same server-rendered page, with the component model intact</text>
+    <rect x="30" y="42" width="140" height="64" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+    <text class="sr-node-title" x="100" y="64" text-anchor="middle" dominant-baseline="central" fill="#24292f">database</text>
+    <text class="sr-node-sub" x="100" y="84" text-anchor="middle" dominant-baseline="central" fill="#57606a">user data</text>
 
-    <rect x="30" y="122" width="140" height="64" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
-    <text class="sr-node-title" x="100" y="144" text-anchor="middle" dominant-baseline="central" fill="#24292f">database</text>
-    <text class="sr-node-sub" x="100" y="164" text-anchor="middle" dominant-baseline="central" fill="#57606a">user data</text>
+    <text class="sr-label" x="210" y="60" text-anchor="middle">query</text>
+    <line class="sr-edge" x1="172" y1="74" x2="248" y2="74" marker-end="url(#sr-arrow)"/>
 
-    <text class="sr-label" x="210" y="140" text-anchor="middle">query</text>
-    <line class="sr-edge" x1="172" y1="154" x2="248" y2="154" marker-end="url(#sr-arrow)"/>
+    <rect x="250" y="30" width="200" height="88" rx="8" fill="#faf5ff" stroke="#8250df" stroke-width="1"/>
+    <text class="sr-node-title" x="350" y="54" text-anchor="middle" dominant-baseline="central" fill="#4c2889">server (Next.js)</text>
+    <text class="sr-node-sub" x="350" y="75" text-anchor="middle" dominant-baseline="central" fill="#6639ba">renders the components</text>
+    <text class="sr-node-sub" x="350" y="94" text-anchor="middle" dominant-baseline="central" fill="#6639ba">to HTML</text>
 
-    <rect x="250" y="110" width="200" height="88" rx="8" fill="#faf5ff" stroke="#8250df" stroke-width="1"/>
-    <text class="sr-node-title" x="350" y="134" text-anchor="middle" dominant-baseline="central" fill="#4c2889">server (Next.js)</text>
-    <text class="sr-node-sub" x="350" y="155" text-anchor="middle" dominant-baseline="central" fill="#6639ba">renders the components</text>
-    <text class="sr-node-sub" x="350" y="174" text-anchor="middle" dominant-baseline="central" fill="#6639ba">to HTML</text>
+    <text class="sr-label" x="490" y="44" text-anchor="middle">HTML first</text>
+    <line class="sr-edge" x1="452" y1="58" x2="528" y2="58" marker-end="url(#sr-arrow)"/>
 
-    <text class="sr-label" x="490" y="124" text-anchor="middle">HTML first</text>
-    <line class="sr-edge" x1="452" y1="138" x2="528" y2="138" marker-end="url(#sr-arrow)"/>
+    <line class="sr-edge-dash" x1="452" y1="92" x2="528" y2="92" marker-end="url(#sr-arrow)"/>
+    <text class="sr-label" x="490" y="110" text-anchor="middle">JS after</text>
 
-    <line class="sr-edge-dash" x1="452" y1="172" x2="528" y2="172" marker-end="url(#sr-arrow)"/>
-    <text class="sr-label" x="490" y="190" text-anchor="middle">JS after</text>
+    <rect x="530" y="30" width="200" height="88" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="1"/>
+    <text class="sr-node-title" x="630" y="54" text-anchor="middle" dominant-baseline="central" fill="#0a3069">browser</text>
+    <text class="sr-node-sub" x="630" y="75" text-anchor="middle" dominant-baseline="central" fill="#185fa5">paints the HTML at once,</text>
+    <text class="sr-node-sub" x="630" y="94" text-anchor="middle" dominant-baseline="central" fill="#185fa5">hydrates the moving parts</text>
 
-    <rect x="530" y="110" width="200" height="88" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="1"/>
-    <text class="sr-node-title" x="630" y="134" text-anchor="middle" dominant-baseline="central" fill="#0a3069">browser</text>
-    <text class="sr-node-sub" x="630" y="155" text-anchor="middle" dominant-baseline="central" fill="#185fa5">paints the HTML at once,</text>
-    <text class="sr-node-sub" x="630" y="174" text-anchor="middle" dominant-baseline="central" fill="#185fa5">hydrates the moving parts</text>
-
-    <text class="sr-sub" x="380" y="232" text-anchor="middle">JavaScript is used where it earns its place</text>
+    <text class="sr-sub" x="380" y="152" text-anchor="middle">JavaScript is used where it earns its place</text>
   </g>
 </svg>

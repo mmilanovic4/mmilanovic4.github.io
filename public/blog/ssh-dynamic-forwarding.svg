@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" width="760" height="280" role="img" aria-label="Dynamic forwarding opens a SOCKS proxy on your machine; every connection made through it travels the SSH tunnel and the server connects to whatever destination the client asked for">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 210" width="760" height="210" role="img" aria-label="Dynamic forwarding opens a SOCKS proxy on your machine; every connection made through it travels the SSH tunnel and the server connects to whatever destination the client asked for">
   <style>
     .df text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-    .df-title { font-size: 17px; font-weight: 600; fill: #24292f; }
     .df-sub { font-size: 13px; fill: #57606a; }
     .df-node-title { font-size: 13px; font-weight: 600; }
     .df-node-sub { font-size: 12px; }
@@ -22,40 +21,37 @@
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="760" height="280" fill="#ffffff"/>
+  <rect x="0" y="0" width="760" height="210" fill="#ffffff"/>
 
   <g class="df">
-    <text class="df-title" x="30" y="44">dynamic forwarding (-D)</text>
-    <text class="df-sub" x="30" y="66">a SOCKS proxy on your machine, with the destination picked per connection</text>
+    <rect class="df-tunnel" x="194" y="79" width="112" height="22"/>
+    <line class="df-edge-tunnel" x1="214" y1="90" x2="286" y2="90" marker-end="url(#df-arrow-tunnel)"/>
+    <text class="df-label-tunnel" x="250" y="68" text-anchor="middle">SSH tunnel</text>
+    <text class="df-label" x="250" y="120" text-anchor="middle">you dial out</text>
 
-    <rect class="df-tunnel" x="194" y="149" width="112" height="22"/>
-    <line class="df-edge-tunnel" x1="214" y1="160" x2="286" y2="160" marker-end="url(#df-arrow-tunnel)"/>
-    <text class="df-label-tunnel" x="250" y="138" text-anchor="middle">SSH tunnel</text>
-    <text class="df-label" x="250" y="190" text-anchor="middle">you dial out</text>
+    <rect x="30" y="46" width="170" height="88" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="1"/>
+    <text class="df-node-title" x="115" y="70" text-anchor="middle" dominant-baseline="central" fill="#0a3069">your machine</text>
+    <text class="df-node-sub" x="115" y="91" text-anchor="middle" dominant-baseline="central" fill="#185fa5">SOCKS proxy on</text>
+    <text class="df-mono" x="115" y="110" text-anchor="middle" dominant-baseline="central" fill="#185fa5">localhost:1080</text>
 
-    <rect x="30" y="116" width="170" height="88" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="1"/>
-    <text class="df-node-title" x="115" y="140" text-anchor="middle" dominant-baseline="central" fill="#0a3069">your machine</text>
-    <text class="df-node-sub" x="115" y="161" text-anchor="middle" dominant-baseline="central" fill="#185fa5">SOCKS proxy on</text>
-    <text class="df-mono" x="115" y="180" text-anchor="middle" dominant-baseline="central" fill="#185fa5">localhost:1080</text>
+    <rect x="300" y="46" width="160" height="88" rx="8" fill="#faf5ff" stroke="#8250df" stroke-width="1"/>
+    <text class="df-node-title" x="380" y="70" text-anchor="middle" dominant-baseline="central" fill="#4c2889">server</text>
+    <text class="df-node-sub" x="380" y="91" text-anchor="middle" dominant-baseline="central" fill="#6639ba">connects wherever</text>
+    <text class="df-node-sub" x="380" y="110" text-anchor="middle" dominant-baseline="central" fill="#6639ba">the client asks</text>
 
-    <rect x="300" y="116" width="160" height="88" rx="8" fill="#faf5ff" stroke="#8250df" stroke-width="1"/>
-    <text class="df-node-title" x="380" y="140" text-anchor="middle" dominant-baseline="central" fill="#4c2889">server</text>
-    <text class="df-node-sub" x="380" y="161" text-anchor="middle" dominant-baseline="central" fill="#6639ba">connects wherever</text>
-    <text class="df-node-sub" x="380" y="180" text-anchor="middle" dominant-baseline="central" fill="#6639ba">the client asks</text>
+    <line class="df-edge" x1="462" y1="78" x2="558" y2="46" marker-end="url(#df-arrow)"/>
+    <line class="df-edge" x1="462" y1="90" x2="558" y2="90" marker-end="url(#df-arrow)"/>
+    <line class="df-edge" x1="462" y1="102" x2="558" y2="134" marker-end="url(#df-arrow)"/>
 
-    <line class="df-edge" x1="462" y1="148" x2="558" y2="116" marker-end="url(#df-arrow)"/>
-    <line class="df-edge" x1="462" y1="160" x2="558" y2="160" marker-end="url(#df-arrow)"/>
-    <line class="df-edge" x1="462" y1="172" x2="558" y2="204" marker-end="url(#df-arrow)"/>
+    <rect x="560" y="30" width="170" height="32" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+    <text class="df-mono" x="645" y="46" text-anchor="middle" dominant-baseline="central" fill="#24292f">example.com:443</text>
 
-    <rect x="560" y="100" width="170" height="32" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
-    <text class="df-mono" x="645" y="116" text-anchor="middle" dominant-baseline="central" fill="#24292f">example.com:443</text>
+    <rect x="560" y="74" width="170" height="32" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+    <text class="df-mono" x="645" y="90" text-anchor="middle" dominant-baseline="central" fill="#24292f">httpbin.org:443</text>
 
-    <rect x="560" y="144" width="170" height="32" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
-    <text class="df-mono" x="645" y="160" text-anchor="middle" dominant-baseline="central" fill="#24292f">httpbin.org:443</text>
+    <rect x="560" y="118" width="170" height="32" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+    <text class="df-node-sub" x="645" y="134" text-anchor="middle" dominant-baseline="central" fill="#57606a">anything else over TCP</text>
 
-    <rect x="560" y="188" width="170" height="32" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
-    <text class="df-node-sub" x="645" y="204" text-anchor="middle" dominant-baseline="central" fill="#57606a">anything else over TCP</text>
-
-    <text class="df-sub" x="380" y="254" text-anchor="middle">one port, no fixed destination</text>
+    <text class="df-sub" x="380" y="184" text-anchor="middle">one port, no fixed destination</text>
   </g>
 </svg>
