@@ -40,8 +40,6 @@ I [once wrote](/blog/top-5-development-tools-i-use-in-2026) that Insomnia isn't 
 
 The model has one lesson for the customer: **leave**. Cancel before the renewal, come back as a new customer or move to the other brand under the same roof and collect the intro price there. Staying is the only thing on the invoice that costs extra.
 
-Mullvad charges **€5** a month (about **$5.70**). One month or ten years, the rate is the same and its pricing page says it never runs sales. That's more than Surfshark's intro price and less than its renewal, which is about where a price lands when nobody is paying for someone else's discount.
-
-For the record, it's the pricing model I like, not the product. For things like streaming, Mullvad is a considerably weaker service than either of the other two.
+Mullvad VPN charges **€5** a month (about **$5.70**). One month or ten years, the rate is the same and its pricing page says it never runs sales. That's more than Surfshark's intro price and less than its renewal, which is about where a price lands when nobody is paying for someone else's discount. And for the record, it's the pricing model I like, not the product. For things like streaming, Mullvad is a considerably weaker service than either of the other two.
 
 I just want a price I can get twice.
