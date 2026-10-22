@@ -10,7 +10,7 @@ I landed at Narita and the only thing I had to do before the first train was cre
 
 For the first day I used it the way it was meant to be used — JR lines, in and out of gates. Then a konbini took it. Then a vending machine. By the end of the week it was paying for everything under a few thousand yen, and the other cards in my wallet hadn't moved.
 
-![Suica in Apple Wallet](/blog/suica-card.png)
+![Suica card](/blog/suica-card.png)
 
 ## What it covers
 
