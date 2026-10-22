@@ -8,9 +8,9 @@ const baseOpenGraph = {
   type: "website",
   images: [
     {
-      url: `${BASE_URL}/profile.jpg`,
-      width: 1000,
-      height: 750,
+      url: `${BASE_URL}/og.png`,
+      width: 1200,
+      height: 630,
       alt: AUTHOR,
     },
   ],
@@ -18,7 +18,7 @@ const baseOpenGraph = {
 
 const baseTwitter = {
   card: "summary_large_image",
-  images: [`${BASE_URL}/profile.jpg`],
+  images: [`${BASE_URL}/og.png`],
 };
 
 const baseMeta = {
