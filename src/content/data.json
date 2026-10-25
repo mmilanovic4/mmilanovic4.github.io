@@ -95,9 +95,10 @@
         "MacBook Pro, 14\", Apple M5, 16 GB",
         "iPhone 16 Pro, 256 GB",
         "Dell P2422H, 24\"",
+        "Logitech Pebble 2 Combo (Pebble Keys 2 K380s & Pebble Mouse 2 M350s)",
         "Mi Computer Monitor Light Bar",
-        "Canon CanoScan LiDE 400",
         "Satechi Type-C Multi-Port Adapter 4K with Ethernet V2",
+        "Canon CanoScan LiDE 400",
         "Raspberry Pi 5, 4 GB"
       ]
     },
@@ -106,6 +107,7 @@
       "items": [
         "VS Code",
         "Ghostty",
+        "Termius (iOS)",
         "Bruno",
         "Claude Desktop",
         "Docker Desktop",
