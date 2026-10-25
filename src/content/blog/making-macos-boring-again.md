@@ -12,7 +12,7 @@ My setup is deliberately unremarkable. Nothing animates that doesn't have to, no
 
 The single most useful change in Golden Gate isn't a feature. It's a slider.
 
-Tahoe gave you a look and a couple of switches around the edges of it. Golden Gate gives you a continuous control over how transparent or opaque the whole effect is, sitting in **System Settings > Appearance** next to the tinted and clear options. Push it all the way to the opaque end and Liquid Glass stops being glass. Panels become panels. Sidebars stop showing you a blurred smear of whatever is behind them.
+Tahoe gave you a look and a couple of switches around the edges of it. Golden Gate gives you a continuous control over how transparent or opaque the whole effect is, sitting in `System Settings > Appearance` next to the tinted and clear options. Push it all the way to the opaque end and Liquid Glass stops being glass. Panels become panels. Sidebars stop showing you a blurred smear of whatever is behind them.
 
 Full tinted, slider all the way over. That's the whole configuration and it's the reason this post isn't about how much I dislike Liquid Glass.
 
@@ -20,7 +20,7 @@ What I appreciate about the slider specifically is that it isn't an accessibilit
 
 ## Show borders
 
-The other setting I turn on immediately lives in **System Settings > Accessibility > Display**: **Show borders**.
+The other setting I turn on immediately lives in `System Settings > Accessibility > Display`: **Show borders**.
 
 Liquid Glass leans on transparency and depth to tell you what's a control and what's just surface. That works right up until the thing behind the control has any texture of its own. Show borders draws an actual outline around interactive elements, and on macOS it does exactly what it says — buttons look like buttons, toolbars separate from content and nothing else changes.
 
@@ -32,7 +32,7 @@ That gap is the general shape of the thing: macOS gives you real levers over the
 
 ## The desktop
 
-Three settings, all in **System Settings > Desktop & Dock**, all doing the same job.
+Three settings, all in `System Settings > Desktop & Dock`, all doing the same job.
 
 **Dim widgets on desktop: Always.** Widgets are a glanceable thing, not a thing to look at. Dimmed, they sit behind the work instead of next to it — you see them when you look for them and you don't when you don't. The default only dims them in certain conditions, which means sometimes they're loud and sometimes they aren't. Always is the setting where I stop noticing them, which is the point of a widget.
 

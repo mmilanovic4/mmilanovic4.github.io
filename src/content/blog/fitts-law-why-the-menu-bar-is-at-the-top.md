@@ -38,7 +38,7 @@ A menu bar inside a window gets none of that. It's a thin strip between the titl
 
 Where two edges meet, the target is unlimited in both directions. That makes the four corners the easiest pixels on the screen to hit: no aiming at all. On a Mac, the top-left one opens the Apple menu.
 
-**Hot Corners**, under **System Settings > Desktop & Dock**, turn the corners into shortcuts — push the pointer into one and Mission Control opens, the screen locks or the windows clear out of the way. Since Monterey, the bottom-right corner opens a Quick Note out of the box. Mine shows the desktop instead — a habit from the Show desktop days on Windows and Linux.
+**Hot Corners**, under `System Settings > Desktop & Dock`, turn the corners into shortcuts — push the pointer into one and Mission Control opens, the screen locks or the windows clear out of the way. Since Monterey, the bottom-right corner opens a Quick Note out of the box. Mine shows the desktop instead — a habit from the Show desktop days on Windows and Linux.
 
 Microsoft learned the same lesson the hard way. Windows 95 put the Start button in the bottom-left corner, then wrapped it in a thin border that didn't respond to clicks — throw the pointer into the corner, click and nothing happened. A later version removed the border. Office 2007 did the opposite on purpose: on a maximized window, the round Office Button's hit area runs all the way into the top-left corner of the screen. [Jensen Harris](https://learn.microsoft.com/en-us/archive/blogs/jensenh/giving-you-fitts), who led the design of that interface, named Fitts's law as one of the reasons.
 
@@ -50,7 +50,7 @@ Then there's the question of whose menus they are. The menu bar belongs to the a
 
 More displays made it worse. For most of its history, the Mac had one menu bar, on the main display, so a window on the second screen kept its menus on another screen entirely. OS X Mavericks fixed that in 2013 by giving every display its own.
 
-And an edge only works while it's an edge. My Dell stands behind the MacBook, but in **System Settings > Displays** it's arranged to the right of it, so the top of both screens stays a wall. Arranged above — closer to where it actually stands — it would turn the MacBook's menu bar into a doorway: the pointer would sail straight through it into the Dell.
+And an edge only works while it's an edge. My Dell stands behind the MacBook, but in `System Settings > Displays` it's arranged to the right of it, so the top of both screens stays a wall. Arranged above — closer to where it actually stands — it would turn the MacBook's menu bar into a doorway: the pointer would sail straight through it into the Dell.
 
 ## On the web
 

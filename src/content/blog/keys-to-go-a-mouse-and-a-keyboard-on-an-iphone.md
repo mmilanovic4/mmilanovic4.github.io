@@ -32,13 +32,13 @@ Pairing took less time than unboxing. F1, F2 and F3 double as Easy-Switch keys, 
 
 The mouse does the same thing from underneath: one button, three channels and three lights on the bottom. The two don't have to follow each other — the mouse can stay on the Mac while the keyboard is on the phone.
 
-One thing iOS doesn't tell you: the **Hardware Keyboard** section in **Settings > General > Keyboard** only exists while a keyboard is connected. Disconnect it and the menu is gone, which is a strange place to keep the settings for the thing you're trying to set up. That's where the layout lives, one per input language. Mine didn't match what was printed on the keys until I set every language to **U.S.**
+One thing iOS doesn't tell you: the **Hardware Keyboard** section in `Settings > General > Keyboard` only exists while a keyboard is connected. Disconnect it and the menu is gone, which is a strange place to keep the settings for the thing you're trying to set up. That's where the layout lives, one per input language. Mine didn't match what was printed on the keys until I set every language to **U.S.**
 
 ## A mouse on an iPhone
 
 I didn't expect this part to work at all. The iPhone supports a mouse through AssistiveTouch: pair it over Bluetooth, switch AssistiveTouch on and a round pointer shows up that taps wherever you click.
 
-The catch is that AssistiveTouch lives in **Settings > Accessibility > Touch** and leaving it on means a floating button on the screen the rest of the time. So I opened Shortcuts and described what I wanted in a sentence — a shortcut that turns AssistiveTouch on. It built one. I duplicated it, flipped on to off and named them Mouse On and Mouse Off. They live in a home screen widget next to the same pair for Low Power, Bluetooth and Wi-Fi.
+The catch is that AssistiveTouch lives in `Settings > Accessibility > Touch` and leaving it on means a floating button on the screen the rest of the time. So I opened Shortcuts and described what I wanted in a sentence — a shortcut that turns AssistiveTouch on. It built one. I duplicated it, flipped on to off and named them Mouse On and Mouse Off. They live in a home screen widget next to the same pair for Low Power, Bluetooth and Wi-Fi.
 
 ![Shortcuts widget on my iPhone](/blog/shortcuts-widget.png)
 
