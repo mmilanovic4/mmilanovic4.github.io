@@ -24,7 +24,7 @@ Apple's **Magic Keyboard** types better than anything else on the list and costs
 
 The same store had it in a combo with the **Pebble Mouse 2 M350s** for **6,999 RSD**. **2,000 RSD** for a mouse I hadn't planned on. I bought it anyway and it turned out to be the part I liked most.
 
-![Pebble 2 Combo on the desk](/blog/pebble-2-combo.png)
+![Pebble 2 Combo](/blog/pebble-2-combo.png)
 
 ## Three lights
 
