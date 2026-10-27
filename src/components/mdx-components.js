@@ -55,7 +55,15 @@ export const mdxComponents = {
   ),
   img: ({ src, alt }) => (
     <div className="media-wide my-6">
-      <img src={src} alt={alt} className="w-full rounded" />
+      {/* Lazy, so React leaves these out of the RSC preload hints: otherwise
+          every prefetched post link preloads that post's images. */}
+      <img
+        src={src}
+        alt={alt}
+        className="w-full rounded"
+        loading="lazy"
+        decoding="async"
+      />
       {alt && (
         <p className="text-muted mt-2 text-center text-xs md:text-sm lg:text-base">
           {alt}
