@@ -6,7 +6,6 @@
     "dev": "next dev --port 1234",
     "build": "next build",
     "postbuild": "node scripts/postbuild.js",
-    "start": "next start",
     "lint": "eslint",
     "fix": "eslint --fix",
     "format": "prettier src --write",
