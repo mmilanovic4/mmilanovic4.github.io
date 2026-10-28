@@ -2,6 +2,7 @@
 title: "AI and the Dunning-Kruger effect in web development"
 date: "2026-05-16"
 description: "'The less I know the better'"
+tags: ["web"]
 ---
 
 The Dunning-Kruger effect describes a cognitive bias where people with

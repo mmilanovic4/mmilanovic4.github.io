@@ -2,6 +2,7 @@
 title: "Fitts's law: why the menu bar is at the top"
 date: "2026-10-04"
 description: "A 1954 law in one decision: a target on the edge of the screen can't be overshot."
+tags: ["apple"]
 ---
 
 In the fall of 1980, the Lisa got its first pull-down menus. Each window carried its own menu bar along the top. Bill Atkinson, who was building the interface, kept a Polaroid camera next to his computer and photographed every milestone. By about the end of that year, [his photos](https://www.folklore.org/Busy_Being_Born.html) show the menu bar at the top of the screen instead.

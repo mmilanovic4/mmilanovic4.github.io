@@ -2,6 +2,7 @@
 title: "The mesh: a simple guide to Tailscale"
 date: "2026-08-17"
 description: "Not the kind of VPN that hides where you are — the kind that gets you back to your own machines."
+tags: ["tools", "network"]
 ---
 
 A VPN is an encrypted tunnel between your device and a server that then talks to the internet on your behalf.

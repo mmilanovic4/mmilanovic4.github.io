@@ -27,6 +27,7 @@ export function generateRSS() {
       link: url,
       description: post.description || "",
       date: new Date(post.date),
+      category: post.tags.map((name) => ({ name })),
     });
   }
 

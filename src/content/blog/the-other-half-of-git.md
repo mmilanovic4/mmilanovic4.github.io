@@ -2,6 +2,7 @@
 title: "The other half of git"
 date: "2026-09-01"
 description: "Rebase, log flags that turn history into an answer and a second working directory."
+tags: ["tools"]
 ---
 
 Git was written in 2005 by Linus Torvalds — the same person behind Linux, for much the same reason: the tool he needed didn't exist yet.

@@ -2,6 +2,7 @@
 title: "Making macOS boring again"
 date: "2026-09-18"
 description: "Liquid Glass finally got a slider. Here's the rest of the settings that get the interface out of the way."
+tags: ["apple"]
 ---
 
 Every OS release ships with a list of things it wants you to notice. Most of my first hour after an upgrade goes into turning those off.

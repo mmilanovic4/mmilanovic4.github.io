@@ -2,6 +2,7 @@
 title: "Games I enjoy playing on my Switch 2"
 date: "2026-06-18"
 description: "What's been on rotation and what's next."
+tags: ["culture"]
 ---
 
 The Switch 2 is the console that fits around your life, not the other way

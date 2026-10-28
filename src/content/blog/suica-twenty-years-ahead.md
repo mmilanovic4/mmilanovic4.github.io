@@ -2,6 +2,7 @@
 title: "Suica: twenty years ahead"
 date: "2026-10-20"
 description: "No app to install, no account to make. One card from 2001 that paid for everything."
+tags: ["apple", "culture"]
 ---
 
 Suica is a prepaid card issued by JR East. The money sits on a chip inside it, you tap it against a reader and the reader subtracts the fare. It launched in **2001** as a replacement for paper train tickets.

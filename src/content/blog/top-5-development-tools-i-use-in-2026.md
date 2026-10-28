@@ -2,6 +2,7 @@
 title: "Top 5 development tools I use in 2026"
 date: "2026-04-30"
 description: "A personal list of tools I rely on daily — from the obvious to the ones I built myself."
+tags: ["tools"]
 ---
 
 Tools come and go. These five have stuck around long enough to earn a spot on this list.

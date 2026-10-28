@@ -2,6 +2,7 @@
 title: "The cost of types"
 date: "2026-05-03"
 description: "TypeScript solves problems that modern tooling has already solved — at a price."
+tags: ["web"]
 ---
 
 All good programming languages resemble one another. Every bad one

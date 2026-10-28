@@ -12,7 +12,12 @@ export function getAllPosts() {
       const slug = filename.replace(".md", "");
       const raw = fs.readFileSync(path.join(BLOG_DIR, filename), "utf-8");
       const { data, content } = matter(raw);
-      return { slug, ...data, readingTime: getReadingTime(content) };
+      return {
+        slug,
+        ...data,
+        tags: data.tags ?? [],
+        readingTime: getReadingTime(content),
+      };
     })
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 }
@@ -36,20 +41,15 @@ export function getAdjacentPosts(slug) {
   };
 }
 
+export function getAllTags() {
+  return [...new Set(getAllPosts().flatMap((post) => post.tags))].sort();
+}
+
+export function getPostsByTag(tag) {
+  return getAllPosts().filter((post) => post.tags.includes(tag));
+}
+
 export function getReadingTime(content) {
   const words = content.trim().split(/\s+/).length;
   return Math.max(1, Math.round(words / 200));
-}
-
-export function formatDate(date) {
-  // "2026-06-08" parses as UTC midnight, so format in UTC too: the build
-  // machine's zone turned it into 07.06.2026 anywhere west of UTC.
-  return new Date(date)
-    .toLocaleDateString("sr-RS", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-      timeZone: "UTC",
-    })
-    .replace(/\.$/, "");
 }

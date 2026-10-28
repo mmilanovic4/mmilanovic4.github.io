@@ -31,7 +31,9 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   // On a blog post the article title owns the <h1>, so the site name steps down.
-  const isPost = pathname.startsWith("/blog/");
+  // A tag page is a list like /blog, so it keeps the name as its <h1>.
+  const isPost =
+    pathname.startsWith("/blog/") && !pathname.startsWith("/blog/tags/");
   const Name = isPost ? "p" : "h1";
 
   return (

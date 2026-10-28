@@ -2,6 +2,7 @@
 title: "Enter Secure Shell"
 date: "2026-05-08"
 description: "A 30-year-old protocol that still powers the internet."
+tags: ["tools", "network"]
 ---
 
 SSH — Secure Shell — is an application layer protocol for remote access, built in 1995. Thirty years later, it runs on nearly every server in the world and hasn't gone anywhere.

@@ -2,6 +2,7 @@
 title: "A domain of your own"
 date: "2026-06-22"
 description: "Hosting, redirects and a mailbox that isn't one — all from one domain on Cloudflare."
+tags: ["web", "network"]
 ---
 
 You rent almost everything online — your handle on a platform, your storage, your reach. A domain is different. You own it. Point it wherever you want, move it whenever you want and it keeps working even after the platform underneath changes.

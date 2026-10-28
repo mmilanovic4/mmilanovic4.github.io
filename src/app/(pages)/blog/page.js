@@ -1,6 +1,5 @@
-import Link from "next/link";
-import { Container } from "@/components";
-import { formatDate, getAllPosts } from "@/lib/blog";
+import { Container, PostList, TagList } from "@/components";
+import { getAllPosts, getAllTags } from "@/lib/blog";
 import { BASE_URL, createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
@@ -13,37 +12,22 @@ export const metadata = createMetadata({
 
 export default function Blog() {
   const posts = getAllPosts();
+  const tags = getAllTags();
   return (
     <Container>
-      <p className="text-accent mb-6 text-xs"># blog</p>
+      {tags.length > 0 && (
+        <div className="mb-8">
+          <p className="text-accent mb-3 text-xs"># tags</p>
+          <TagList tags={tags} />
+        </div>
+      )}
+      <p className="text-accent mb-3 text-xs"># blog</p>
       {posts.length === 0 ? (
         <p className="text-muted text-sm md:text-base lg:text-lg">
           Coming soon.
         </p>
       ) : (
-        <ul className="flex flex-col gap-2">
-          {posts.map((post) => (
-            <li
-              key={post.slug}
-              className="flex flex-col gap-1 border-b border-gray-200 pb-3 last:border-b-0 dark:border-gray-700"
-            >
-              <span className="text-muted text-xs md:text-sm lg:text-base">
-                {formatDate(post.date)} · {post.readingTime} min read
-              </span>
-              <Link
-                href={`/blog/${post.slug}`}
-                className="text-accent text-sm hover:underline md:text-base lg:text-lg"
-              >
-                {post.title}
-              </Link>
-              {post.description && (
-                <p className="text-muted text-xs md:text-sm lg:text-base">
-                  {post.description}
-                </p>
-              )}
-            </li>
-          ))}
-        </ul>
+        <PostList posts={posts} />
       )}
     </Container>
   );

@@ -1,6 +1,7 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { Container, ProgressLine, mdxComponents } from "@/components";
-import { formatDate, getAllPosts, getPost, getReadingTime } from "@/lib/blog";
+import { Container, ProgressLine, TagList, mdxComponents } from "@/components";
+import { getAllPosts, getPost, getReadingTime } from "@/lib/blog";
+import { formatDate } from "@/lib/date";
 import { rehypePlugins } from "@/lib/mdx";
 import { BASE_URL, createMetadata } from "@/lib/metadata";
 
@@ -35,6 +36,7 @@ export default async function BlogPost({ params }) {
       <h1 className="text-strong my-3 text-lg font-bold md:text-xl lg:text-2xl">
         {meta.title}
       </h1>
+      <TagList tags={meta.tags} className="mb-4" />
       <hr className="mb-6 border-gray-200 dark:border-gray-700" />
       <article className="blog text-sm md:text-base lg:text-lg">
         <MDXRemote

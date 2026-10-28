@@ -2,6 +2,7 @@
 title: "Yarn: A tale of two versions"
 date: "2026-06-03"
 description: "Yarn v1 has been in maintenance mode since 2020. Yet it remains the most widely deployed version. Here's why."
+tags: ["tools", "web"]
 ---
 
 Most developers know Yarn. Fewer know there are effectively two

@@ -2,6 +2,7 @@
 title: "Enter curl"
 date: "2026-07-08"
 description: "A tool built to fetch one URL in 1998. Still the fastest way to know what's actually happening on the wire."
+tags: ["tools", "network"]
 ---
 
 curl was born in 1996 as httpget, a small tool written by [Daniel Stenberg](https://github.com/bagder) to download currency rates for an IRC bot. He renamed it twice as it grew — urlget once FTP support landed, then curl in 1998 once the tool did more than just "get." He's still the project's lead maintainer today.

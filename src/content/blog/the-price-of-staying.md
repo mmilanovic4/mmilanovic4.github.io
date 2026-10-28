@@ -2,6 +2,7 @@
 title: "The price of staying"
 date: "2026-09-30"
 description: "The cheapest way to keep a VPN is to keep cancelling it."
+tags: ["network"]
 ---
 
 Surfshark Starter is advertised at **$2.49** a month. That's the two-year plan, paid upfront, with three extra months on top — **$67.23** for 27 months. From Serbia the checkout adds **20%** VAT, so the actual charge is **$80.68**, or **$2.99** a month.

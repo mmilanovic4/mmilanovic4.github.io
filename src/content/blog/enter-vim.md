@@ -2,6 +2,7 @@
 title: "Enter Vim"
 date: "2026-07-31"
 description: "A modal editor built for a terminal that had no arrow keys. Still the first thing I reach for when quick text editing is needed."
+tags: ["tools"]
 ---
 
 vi was written in 1976 by Bill Joy, then a graduate student at Berkeley, as a visual mode bolted onto `ex` — itself an extension of an earlier line editor. The terminal Joy was developing on, the ADM-3A, had no dedicated arrow keys. The keys `h`, `j`, `k`, `l` had arrows printed directly on the keycaps, doing double duty (a similar idea shows up in PC gaming, where WASD stands in for arrow keys since the mouse hand can't reach them). Modal editing wasn't a design philosophy at the start — it was a workaround for hardware that didn't have the keys a text editor would normally want.

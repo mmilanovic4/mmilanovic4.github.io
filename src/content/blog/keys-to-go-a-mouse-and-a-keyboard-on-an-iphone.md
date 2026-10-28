@@ -2,6 +2,7 @@
 title: "Keys to go: a mouse and a keyboard on an iPhone"
 date: "2026-10-25"
 description: "One environment variable, one nano session and the Bluetooth keyboard that came out of it."
+tags: ["apple"]
 ---
 
 I've used Termius for SSH on my iPhone for years. Most of what I do through it is small — checking a service, reading a log, restarting something that should have restarted itself. The on-screen keyboard is bad at all of it, but for a two-line command bad is good enough.
