@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
-import { useState } from "react";
+import { useRef } from "react";
 import { SocialLinks, ThemeToggle } from "@/components";
 import { AUTHOR } from "@/lib/metadata";
 
@@ -28,7 +28,7 @@ export function Header() {
   const pathname = `/${useSelectedLayoutSegments()
     .filter((segment) => !segment.startsWith("("))
     .join("/")}`;
-  const [open, setOpen] = useState(false);
+  const drawer = useRef(null);
 
   // On a blog post the article title owns the <h1>, so the site name steps down.
   // A tag page is a list like /blog, so it keeps the name as its <h1>.
@@ -102,7 +102,7 @@ export function Header() {
         {/* Mobile nav */}
         <div className="my-4 flex items-center justify-between md:hidden">
           <button
-            onClick={() => setOpen(true)}
+            onClick={() => drawer.current.showModal()}
             className="text-muted hover:text-accent cursor-pointer text-xs transition-colors select-none"
             aria-label="Open menu"
           >
@@ -114,52 +114,49 @@ export function Header() {
         <hr className="border-gray-200 dark:border-gray-700" />
       </div>
 
-      {/* Drawer overlay */}
-      {open && (
-        <div
-          className="fixed inset-0 z-40 bg-black/30 md:hidden"
-          onClick={() => setOpen(false)}
-        />
-      )}
-
-      {/* Drawer */}
-      <div
-        inert={!open}
-        className={`fixed top-0 right-0 z-50 flex h-full w-64 flex-col bg-white px-8 py-6 shadow-lg transition-transform md:hidden dark:bg-gray-950 ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
+      {/* Drawer: a modal dialog moves focus inside, keeps it there, closes on
+          Escape and makes the page behind inert. */}
+      <dialog
+        ref={drawer}
+        aria-label="Menu"
+        // The content fills the dialog, so a click on the dialog itself is a
+        // click on the backdrop.
+        onClick={(e) => e.target === e.currentTarget && drawer.current.close()}
+        className="top-0 right-0 left-auto h-full max-h-none w-64 translate-x-full bg-white shadow-lg transition-[translate,display,overlay] transition-discrete backdrop:bg-black/30 open:translate-x-0 dark:bg-gray-950 starting:open:translate-x-full"
       >
-        <button
-          onClick={() => setOpen(false)}
-          className="text-muted hover:text-accent mb-8 cursor-pointer self-end text-xs transition-colors select-none"
-          aria-label="Close menu"
-        >
-          [ close ]
-        </button>
-        <nav>
-          <ul className="flex flex-col gap-6">
-            {navItems.map((item) => (
-              <li key={item.href} className="flex w-full">
-                <Link
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className={`w-full py-1 text-sm`}
-                >
-                  <span
-                    className={`border-b-2 ${
-                      isNavItemActive(pathname, item)
-                        ? "text-accent border-accent"
-                        : "text-muted border-transparent"
-                    }`}
+        <div className="flex h-full flex-col px-8 py-6">
+          <button
+            onClick={() => drawer.current.close()}
+            className="text-muted hover:text-accent mb-8 cursor-pointer self-end text-xs transition-colors select-none"
+            aria-label="Close menu"
+          >
+            [ close ]
+          </button>
+          <nav>
+            <ul className="flex flex-col gap-6">
+              {navItems.map((item) => (
+                <li key={item.href} className="flex w-full">
+                  <Link
+                    href={item.href}
+                    onClick={() => drawer.current.close()}
+                    className={`w-full py-1 text-sm`}
                   >
-                    {item.name}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
+                    <span
+                      className={`border-b-2 ${
+                        isNavItemActive(pathname, item)
+                          ? "text-accent border-accent"
+                          : "text-muted border-transparent"
+                      }`}
+                    >
+                      {item.name}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </dialog>
     </header>
   );
 }
