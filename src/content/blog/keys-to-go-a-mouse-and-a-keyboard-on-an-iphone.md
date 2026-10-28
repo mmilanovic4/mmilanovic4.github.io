@@ -25,7 +25,7 @@ Apple's **Magic Keyboard** types better than anything else on the list and costs
 
 The same store had it in a combo with the **Pebble Mouse 2 M350s** for **6,999 RSD**. **2,000 RSD** for a mouse I hadn't planned on. I bought it anyway and it turned out to be the part I liked most.
 
-![Pebble 2 Combo](/blog/pebble-2-combo.png)
+![Pebble 2 Combo](/blog/pebble-2-combo.webp)
 
 ## Three lights
 
@@ -41,7 +41,7 @@ I didn't expect this part to work at all. The iPhone supports a mouse through As
 
 The catch is that AssistiveTouch lives in `Settings > Accessibility > Touch` and leaving it on means a floating button on the screen the rest of the time. So I opened Shortcuts and described what I wanted in a sentence — a shortcut that turns AssistiveTouch on. It built one. I duplicated it, flipped on to off and named them Mouse On and Mouse Off. They live in a home screen widget next to the same pair for Low Power, Bluetooth and Wi-Fi.
 
-![Shortcuts widget on my iPhone](/blog/shortcuts-widget.png)
+![Shortcuts widget on my iPhone](/blog/shortcuts-widget.webp)
 
 Termius doesn't need a mouse. Everything around it is a different story and it's the first time a pointer on a phone has felt like a feature instead of a curiosity.
 

@@ -15,7 +15,7 @@ The vanilla answer, I know. But there's a reason everyone uses it — it just wo
 
 Another vanilla pick, but I genuinely love it. I have tried some other popular alternatives like iTerm2, Warp or Ghostty, but the built-in macOS Terminal is surprisingly capable once you configure it properly. Like VS Code, the configuration possibilities are endless — and I prefer keeping my stack lean. Plus, there are a bunch of available themes so I get to match my VS Code theme in Terminal as well.
 
-![GitHub Dark Dimmed on VSCode and Terminal](/blog/github-dark-dimmed.png)
+![GitHub Dark Dimmed on VSCode and Terminal](/blog/github-dark-dimmed.webp)
 
 A lot of built-in Apple apps follow the same pattern — they make you feel like you don't need an alternative.
 

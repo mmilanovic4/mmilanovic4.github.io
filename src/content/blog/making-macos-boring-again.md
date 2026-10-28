@@ -27,7 +27,7 @@ Liquid Glass leans on transparency and depth to tell you what's a control and wh
 
 On iOS the same setting exists and doesn't land nearly as well. Turn it on in both and open Safari: on the Mac the outlines go where a border belongs, while on iPhone every icon along the bottom bar gets boxed individually. Instead of one clean control strip you get a row of small rectangles fighting for attention. The setting is technically doing its job. It's just producing more visual noise than it removes.
 
-![Show borders in Safari — macOS above, iOS below](/blog/show-borders-comparison.png)
+![Show borders in Safari — macOS above, iOS below](/blog/show-borders-comparison.webp)
 
 That gap is the general shape of the thing: macOS gives you real levers over the look, iOS gives you the same switch with less room to be right about it.
 
@@ -41,7 +41,7 @@ Three settings, all in `System Settings > Desktop & Dock`, all doing the same jo
 
 **The Dock** stays visible, but with magnification off and _Show suggested and recent apps in the Dock_ turned off so it stops growing on its own. A dock that changes size depending on what I opened an hour ago isn't a dock, it's a feed.
 
-![My macOS 27 desktop — dark wallpaper, dimmed widgets and a Dock with no suggested apps](/blog/boring-desktop.png)
+![My macOS 27 desktop — dark wallpaper, dimmed widgets and a Dock with no suggested apps](/blog/boring-desktop.webp)
 
 ## Things I didn't have to change
 

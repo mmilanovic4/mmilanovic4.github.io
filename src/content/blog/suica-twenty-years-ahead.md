@@ -11,7 +11,7 @@ I landed at Narita and the only thing I had to do before the first train was cre
 
 For the first day I used it the way it was meant to be used — JR lines, in and out of gates. Then a konbini took it. Then a vending machine. By the end of the week it was paying for everything under a few thousand yen, and the other cards in my wallet hadn't moved.
 
-![Suica card](/blog/suica-card.png)
+![Suica card](/blog/suica-card.webp)
 
 ## What it covers
 
@@ -25,7 +25,7 @@ That design came out of a hard requirement: a gate in Tokyo cannot wait for a ne
 
 The transaction list in Wallet isn't just a column of amounts. Each entry carries an icon for what kind of place it was — a train, a vending machine, a shop — so a day reads back as a route instead of a ledger. That's possible because the terminal writes the merchant type onto the card along with the amount, which means Wallet has something to show beyond the number. It's a small thing that nobody advertises and I noticed it on day one.
 
-![Suica transactions in Apple Wallet](/blog/suica-transactions.png)
+![Suica transactions in Apple Wallet](/blog/suica-transactions.webp)
 
 **Express Transit** is the setting that makes the rest of it work. Switched on, the card is live without Face ID, without a confirmation, without waking the phone first. You hold the phone near the reader and it's done. Every other contactless payment I use asks me to prove who I am; this one decided that a gate with forty people behind me isn't the place for that question.
 

@@ -13,7 +13,7 @@ That's a good price. Unfortunately, it's also the only time you'll get it.
 
 Under the total, the checkout says the plan will renew every 12 months at the _then-applicable renewal price_. The number itself isn't on that page. It's one link away, in the terms: **$79.00** a year before taxes, and the two-year plan comes back as a one-year one.
 
-![Surfshark checkout — the renewal price is a link, not a number](/blog/surfshark-checkout.png)
+![Surfshark checkout — the renewal price is a link, not a number](/blog/surfshark-checkout.webp)
 
 With VAT that's **$94.80** — **$7.90** a month for what used to be **$2.99**. One year at the renewal price costs more than the first 27 months did.
 
@@ -25,7 +25,7 @@ NordVPN Basic runs the same play with bigger numbers, shown in euros from here: 
 
 To Nord's credit, the renewal price is printed right under the offer on the pricing page and again at checkout. And its **69%** badge is honest almost by accident: it's measured against the renewal price. The discount is the size of the jump.
 
-![NordVPN checkout — same paragraph, with the number in it](/blog/nordvpn-checkout.png)
+![NordVPN checkout — same paragraph, with the number in it](/blog/nordvpn-checkout.webp)
 
 The two also share a parent company. Nord Security and Surfshark announced a merger in February 2022 and kept running as separate brands.
 
