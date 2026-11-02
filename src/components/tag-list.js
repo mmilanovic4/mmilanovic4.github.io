@@ -6,7 +6,7 @@ export function TagList({ tags, className = "" }) {
   }
   return (
     <div className={`flex flex-wrap gap-2 ${className}`}>
-      {tags.map((tag) => (
+      {tags.toSorted().map((tag) => (
         <Link
           key={tag}
           href={`/blog/tags/${tag}`}
