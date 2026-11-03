@@ -102,7 +102,13 @@ export function Header() {
         {/* Mobile nav */}
         <div className="my-4 flex items-center justify-between md:hidden">
           <button
-            onClick={() => drawer.current.showModal()}
+            onClick={() => {
+              drawer.current.showModal();
+              // showModal() focuses [ close ], and iOS Safari rings it even
+              // after a tap. Focusing the dialog itself still announces
+              // "Menu, dialog" and the next Tab reaches [ close ].
+              drawer.current.focus();
+            }}
             className="text-muted hover:text-accent cursor-pointer text-xs transition-colors select-none"
             aria-label="Open menu"
           >
@@ -119,10 +125,11 @@ export function Header() {
       <dialog
         ref={drawer}
         aria-label="Menu"
+        tabIndex={-1}
         // The content fills the dialog, so a click on the dialog itself is a
         // click on the backdrop.
         onClick={(e) => e.target === e.currentTarget && drawer.current.close()}
-        className="top-0 right-0 left-auto h-full max-h-none w-64 translate-x-full bg-white shadow-lg transition-[translate,display,overlay] transition-discrete backdrop:bg-black/30 open:translate-x-0 dark:bg-gray-950 starting:open:translate-x-full"
+        className="top-0 right-0 left-auto h-full outline-none max-h-none w-64 translate-x-full bg-white shadow-lg transition-[translate,display,overlay] transition-discrete backdrop:bg-black/30 open:translate-x-0 dark:bg-gray-950 starting:open:translate-x-full"
       >
         <div className="flex h-full flex-col px-8 py-6">
           <button
