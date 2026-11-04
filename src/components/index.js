@@ -1,6 +1,7 @@
 export * from "./container";
 export * from "./footer";
 export * from "./header";
+export * from "./loop-video";
 export * from "./mdx-components";
 export * from "./post-list";
 export * from "./progress-line";

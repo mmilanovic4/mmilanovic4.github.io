@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LoopVideo } from "./loop-video";
 
 // Root-relative and without a file extension: another page on this site,
 // not an asset like /rss.xml and not a protocol-relative //host URL.
@@ -10,15 +11,7 @@ const isVideo = (src) => /\.(mp4|webm)$/i.test(src ?? "");
 
 const Media = ({ src, alt, className = "w-full" }) =>
   isVideo(src) ? (
-    <video
-      src={src}
-      aria-label={alt}
-      className={`rounded ${className}`}
-      autoPlay
-      muted
-      loop
-      playsInline
-    />
+    <LoopVideo src={src} alt={alt} className={className} />
   ) : (
     // Lazy, so React leaves these out of the RSC preload hints: otherwise
     // every prefetched post link preloads that post's images.
