@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
 import { useRef } from "react";
-import { SocialLinks, ThemeToggle } from "@/components";
+import { ProgressLine, SocialLinks, ThemeToggle } from "@/components";
 import { AUTHOR } from "@/lib/metadata";
 
 const navItems = [
@@ -37,133 +37,145 @@ export function Header() {
   const Name = isPost ? "p" : "h1";
 
   return (
-    <header className="w-full">
-      <div className="mt-6 mb-8 px-6 md:px-0">
-        <div
-          className="relative overflow-hidden rounded"
-          style={{ aspectRatio: "4/3" }}
-        >
-          <img
-            alt="Profile"
-            className="rounded object-cover"
-            src="/profile-800.webp"
-            srcSet="/profile-480.webp 480w, /profile-800.webp 800w, /profile-1000.webp 1000w"
-            sizes="(min-width: 1024px) 800px, (min-width: 768px) 640px, calc(100vw - 48px)"
-            width={1000}
-            height={750}
-            fetchPriority="high"
-          />
-        </div>
-      </div>
-      <div className="px-6 md:px-0">
-        <div className="flex items-center gap-3">
-          <Link href="/">
+    <>
+      <header className="w-full">
+        <div className="mt-6 mb-8 px-6 md:px-0">
+          <div
+            className="relative overflow-hidden rounded"
+            style={{ aspectRatio: "4/3" }}
+          >
             <img
-              src="/logo.svg"
-              alt="Logo"
-              className="h-8 w-8 shrink-0 rounded dark:invert"
+              alt="Profile"
+              className="rounded object-cover"
+              src="/profile-800.webp"
+              srcSet="/profile-480.webp 480w, /profile-800.webp 800w, /profile-1000.webp 1000w"
+              sizes="(min-width: 1024px) 800px, (min-width: 768px) 640px, calc(100vw - 48px)"
+              width={1000}
+              height={750}
+              fetchPriority="high"
             />
-          </Link>
-          <div>
-            <Name className="text-lg leading-tight font-bold">{AUTHOR}</Name>
-            <p className="text-muted mt-0.5 text-sm leading-tight">
-              full-stack web developer
-            </p>
           </div>
         </div>
-        <div className="mt-5">
-          <SocialLinks />
-        </div>
-        <hr className="mt-5 border-gray-200 dark:border-gray-700" />
+        <div className="px-6 md:px-0">
+          <div className="flex items-center gap-3">
+            <Link href="/">
+              <img
+                src="/logo.svg"
+                alt="Logo"
+                className="h-8 w-8 shrink-0 rounded dark:invert"
+              />
+            </Link>
+            <div>
+              <Name className="text-lg leading-tight font-bold">{AUTHOR}</Name>
+              <p className="text-muted mt-0.5 text-sm leading-tight">
+                full-stack web developer
+              </p>
+            </div>
+          </div>
+          <div className="mt-5">
+            <SocialLinks />
+          </div>
+          <hr className="mt-5 border-gray-200 dark:border-gray-700" />
 
-        {/* Desktop nav */}
-        <nav className="my-4 hidden md:block">
-          <ul className="flex gap-6">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={`border-b-2 py-1 text-sm transition-colors ${
-                    isNavItemActive(pathname, item)
-                      ? "border-accent text-accent"
-                      : "hover:text-accent text-muted border-transparent"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-            <li className="ml-auto">
-              <ThemeToggle />
-            </li>
-          </ul>
-        </nav>
-
-        {/* Mobile nav */}
-        <div className="my-4 flex items-center justify-between md:hidden">
-          <button
-            onClick={() => {
-              drawer.current.showModal();
-              // showModal() focuses [ close ], and iOS Safari rings it even
-              // after a tap. Focusing the dialog itself still announces
-              // "Menu, dialog" and the next Tab reaches [ close ].
-              drawer.current.focus();
-            }}
-            className="text-muted hover:text-accent cursor-pointer text-xs transition-colors select-none"
-            aria-label="Open menu"
-          >
-            [ menu ]
-          </button>
-          <ThemeToggle />
-        </div>
-
-        <hr className="border-gray-200 dark:border-gray-700" />
-      </div>
-
-      {/* Drawer: a modal dialog moves focus inside, keeps it there, closes on
-          Escape and makes the page behind inert. */}
-      <dialog
-        ref={drawer}
-        aria-label="Menu"
-        tabIndex={-1}
-        // The content fills the dialog, so a click on the dialog itself is a
-        // click on the backdrop.
-        onClick={(e) => e.target === e.currentTarget && drawer.current.close()}
-        className="top-0 right-0 left-auto h-full outline-none max-h-none w-64 translate-x-full bg-white shadow-lg transition-[translate,display,overlay] transition-discrete backdrop:bg-black/30 open:translate-x-0 dark:bg-gray-950 starting:open:translate-x-full"
-      >
-        <div className="flex h-full flex-col px-8 py-6">
-          <button
-            onClick={() => drawer.current.close()}
-            className="text-muted hover:text-accent mb-8 cursor-pointer self-end text-xs transition-colors select-none"
-            aria-label="Close menu"
-          >
-            [ close ]
-          </button>
-          <nav>
-            <ul className="flex flex-col gap-6">
+          {/* Desktop nav */}
+          <nav className="my-4 hidden md:block">
+            <ul className="flex gap-6">
               {navItems.map((item) => (
-                <li key={item.href} className="flex w-full">
+                <li key={item.href}>
                   <Link
                     href={item.href}
-                    onClick={() => drawer.current.close()}
-                    className={`w-full py-1 text-sm`}
+                    className={`border-b-2 py-1 text-sm transition-colors ${
+                      isNavItemActive(pathname, item)
+                        ? "border-accent text-accent"
+                        : "hover:text-accent text-muted border-transparent"
+                    }`}
                   >
-                    <span
-                      className={`border-b-2 ${
-                        isNavItemActive(pathname, item)
-                          ? "text-accent border-accent"
-                          : "text-muted border-transparent"
-                      }`}
-                    >
-                      {item.name}
-                    </span>
+                    {item.name}
                   </Link>
                 </li>
               ))}
+              <li className="ml-auto">
+                <ThemeToggle />
+              </li>
             </ul>
           </nav>
+
+          <hr className="hidden border-gray-200 md:block dark:border-gray-700" />
         </div>
-      </dialog>
-    </header>
+
+        {/* Drawer: a modal dialog moves focus inside, keeps it there, closes on
+          Escape and makes the page behind inert. */}
+        <dialog
+          ref={drawer}
+          aria-label="Menu"
+          tabIndex={-1}
+          // The content fills the dialog, so a click on the dialog itself is a
+          // click on the backdrop.
+          onClick={(e) =>
+            e.target === e.currentTarget && drawer.current.close()
+          }
+          className="top-0 right-0 left-auto h-full max-h-none w-64 translate-x-full bg-white shadow-lg transition-[translate,display,overlay] transition-discrete outline-none backdrop:bg-black/30 open:translate-x-0 dark:bg-gray-950 starting:open:translate-x-full"
+        >
+          <div className="flex h-full flex-col px-8 pt-[max(1.5rem,env(safe-area-inset-top))] pb-6">
+            <button
+              onClick={() => drawer.current.close()}
+              className="text-muted hover:text-accent mb-8 cursor-pointer self-end text-xs transition-colors select-none"
+              aria-label="Close menu"
+            >
+              [ close ]
+            </button>
+            <nav>
+              <ul className="flex flex-col gap-6">
+                {navItems.map((item) => (
+                  <li key={item.href} className="flex w-full">
+                    <Link
+                      href={item.href}
+                      onClick={() => drawer.current.close()}
+                      className={`w-full py-1 text-sm`}
+                    >
+                      <span
+                        className={`border-b-2 ${
+                          isNavItemActive(pathname, item)
+                            ? "text-accent border-accent"
+                            : "text-muted border-transparent"
+                        }`}
+                      >
+                        {item.name}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        </dialog>
+      </header>
+
+      {/* Mobile bar: a sibling of <header>, not a child, so it sticks for the
+          whole page -- sticky only holds within its parent. Its bottom border
+          doubles as the reading progress track on a post. From md up the
+          wrappers drop out and the progress line pins to the viewport top. */}
+      <div className="bg-page sticky top-0 z-40 px-6 pt-[env(safe-area-inset-top)] md:contents">
+        <div className="relative border-b border-gray-200 py-4 md:contents dark:border-gray-700">
+          <div className="flex items-center justify-between md:hidden">
+            <button
+              onClick={() => {
+                drawer.current.showModal();
+                // showModal() focuses [ close ], and iOS Safari rings it even
+                // after a tap. Focusing the dialog itself still announces
+                // "Menu, dialog" and the next Tab reaches [ close ].
+                drawer.current.focus();
+              }}
+              className="text-muted hover:text-accent cursor-pointer text-xs transition-colors select-none"
+              aria-label="Open menu"
+            >
+              [ menu ]
+            </button>
+            <ThemeToggle />
+          </div>
+          {isPost && <ProgressLine />}
+        </div>
+      </div>
+    </>
   );
 }

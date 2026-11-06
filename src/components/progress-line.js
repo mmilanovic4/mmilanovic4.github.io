@@ -24,7 +24,7 @@ export function ProgressLine() {
   }, [pathname]);
 
   return (
-    <div className="fixed top-0 left-0 z-50 h-0.5 w-full">
+    <div className="absolute -bottom-px left-0 z-50 h-0.5 w-full md:fixed md:top-0 md:bottom-auto">
       <div className="bg-accent h-full" style={{ width: `${progress}%` }} />
     </div>
   );

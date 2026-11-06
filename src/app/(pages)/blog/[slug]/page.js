@@ -1,5 +1,5 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { Container, ProgressLine, TagList, mdxComponents } from "@/components";
+import { Container, TagList, mdxComponents } from "@/components";
 import { getAllPosts, getPost, getReadingTime } from "@/lib/blog";
 import { formatDate } from "@/lib/date";
 import { rehypePlugins } from "@/lib/mdx";
@@ -29,7 +29,6 @@ export default async function BlogPost({ params }) {
   const readingTime = getReadingTime(content);
   return (
     <Container>
-      <ProgressLine />
       <span className="text-muted text-xs md:text-sm lg:text-base">
         {formatDate(meta.date)} · {readingTime} min read
       </span>

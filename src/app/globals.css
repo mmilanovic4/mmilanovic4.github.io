@@ -34,17 +34,23 @@ html.dark {
 }
 
 body {
-  @apply scroll-smooth bg-white text-gray-900;
+  @apply bg-page scroll-smooth text-gray-900;
 }
 
 html.dark body {
-  @apply bg-[#22272e] text-gray-100;
+  @apply text-gray-100;
 }
 
 /* Utilities, not plain classes: unlayered CSS beats every layer, so a plain
    `.text-muted` silently overrode `hover:text-accent` next to it. */
 @utility text-muted {
   @apply text-gray-500 dark:text-gray-400;
+}
+
+/* The page background, shared with the sticky mobile bar that has to cover
+   the text scrolling under it. */
+@utility bg-page {
+  @apply bg-white dark:bg-[#22272e];
 }
 
 @utility text-strong {
