@@ -30,21 +30,36 @@ export function Header() {
     .join("/")}`;
   const drawer = useRef(null);
 
-  // Slides the drawer out before closing it: once closed, a dialog leaves the
-  // top layer at once and has nothing left to animate (keeping it there for
-  // the exit needs CSS `overlay`, which Safari lacks). Matches the 200ms exit
-  // transition on [data-closing] below.
+  // Both ways run the same 200ms slide and backdrop fade, driven by
+  // [data-out] (off-screen) rather than by CSS alone: a closed dialog leaves
+  // the top layer at once, so the exit has to finish before close() (keeping
+  // it there needs CSS `overlay`, which Safari lacks), and the entry starts
+  // from [data-out] right after showModal().
+  const openDrawer = () => {
+    const dialog = drawer.current;
+    dialog.dataset.out = "";
+    dialog.showModal();
+    // showModal() focuses [ close ], and iOS Safari rings it even after a
+    // tap. Focusing the dialog itself still announces "Menu, dialog" and the
+    // next Tab reaches [ close ].
+    dialog.focus();
+    // Reading a style settles it off-screen, so dropping the mark right after
+    // is a change the transition runs from -- without waiting for a frame.
+    getComputedStyle(dialog).translate;
+    delete dialog.dataset.out;
+  };
+
   const closeDrawer = () => {
     const dialog = drawer.current;
-    if (!dialog.open || "closing" in dialog.dataset) return;
+    if (!dialog.open || "out" in dialog.dataset) return;
     if (matchMedia("(prefers-reduced-motion: reduce)").matches)
       return dialog.close();
-    dialog.dataset.closing = "";
+    dialog.dataset.out = "";
     setTimeout(() => {
       // Closed first, then unmarked: the other way round it would slide
       // back in for a frame.
       dialog.close();
-      delete dialog.dataset.closing;
+      delete dialog.dataset.out;
     }, 200);
   };
 
@@ -122,9 +137,9 @@ export function Header() {
         </div>
 
         {/* Drawer: a modal dialog moves focus inside, keeps it there, closes on
-          Escape and makes the page behind inert. It slides in over 300ms,
-          easing out, while the backdrop fades in, and leaves faster, easing
-          in, over 200ms. */}
+          Escape and makes the page behind inert. It slides in and out over
+          200ms while the backdrop fades, easing out on the way in and in on
+          the way out: one motion, played forwards and back. */}
         <dialog
           ref={drawer}
           aria-label="Menu"
@@ -137,7 +152,7 @@ export function Header() {
             e.preventDefault();
             closeDrawer();
           }}
-          className="top-0 right-0 left-auto h-full max-h-none w-64 translate-x-full bg-white shadow-lg transition-[translate] duration-300 ease-out outline-none backdrop:bg-black/30 backdrop:transition-opacity backdrop:duration-300 open:translate-x-0 data-closing:translate-x-full data-closing:duration-200 data-closing:ease-in data-closing:backdrop:opacity-0 data-closing:backdrop:duration-200 motion-reduce:transition-none motion-reduce:backdrop:transition-none dark:bg-gray-950 starting:open:translate-x-full starting:open:backdrop:opacity-0"
+          className="top-0 right-0 left-auto h-full max-h-none w-64 translate-x-full bg-white shadow-lg transition-[translate] duration-200 ease-out outline-none backdrop:bg-black/30 backdrop:transition-opacity backdrop:duration-200 backdrop:ease-out open:translate-x-0 data-out:translate-x-full data-out:ease-in data-out:backdrop:opacity-0 data-out:backdrop:ease-in motion-reduce:transition-none motion-reduce:backdrop:transition-none dark:bg-gray-950"
         >
           <div className="flex h-full flex-col px-8 pt-[max(1.5rem,env(safe-area-inset-top))] pb-6">
             <button
@@ -182,13 +197,7 @@ export function Header() {
         <div className="relative border-b border-gray-200 py-4 md:contents dark:border-gray-700">
           <div className="flex items-center justify-between md:hidden">
             <button
-              onClick={() => {
-                drawer.current.showModal();
-                // showModal() focuses [ close ], and iOS Safari rings it even
-                // after a tap. Focusing the dialog itself still announces
-                // "Menu, dialog" and the next Tab reaches [ close ].
-                drawer.current.focus();
-              }}
+              onClick={openDrawer}
               className="text-muted hover:text-accent cursor-pointer text-xs transition-colors select-none"
               aria-label="Open menu"
             >
