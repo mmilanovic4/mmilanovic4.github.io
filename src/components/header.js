@@ -30,6 +30,24 @@ export function Header() {
     .join("/")}`;
   const drawer = useRef(null);
 
+  // Slides the drawer out before closing it: once closed, a dialog leaves the
+  // top layer at once and has nothing left to animate (keeping it there for
+  // the exit needs CSS `overlay`, which Safari lacks). Matches the 200ms exit
+  // transition on [data-closing] below.
+  const closeDrawer = () => {
+    const dialog = drawer.current;
+    if (!dialog.open || "closing" in dialog.dataset) return;
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches)
+      return dialog.close();
+    dialog.dataset.closing = "";
+    setTimeout(() => {
+      // Closed first, then unmarked: the other way round it would slide
+      // back in for a frame.
+      dialog.close();
+      delete dialog.dataset.closing;
+    }, 200);
+  };
+
   // On a blog post the article title owns the <h1>, so the site name steps down.
   // A tag page is a list like /blog, so it keeps the name as its <h1>.
   const isPost =
@@ -104,21 +122,26 @@ export function Header() {
         </div>
 
         {/* Drawer: a modal dialog moves focus inside, keeps it there, closes on
-          Escape and makes the page behind inert. */}
+          Escape and makes the page behind inert. It slides in over 300ms,
+          easing out, while the backdrop fades in, and leaves faster, easing
+          in, over 200ms. */}
         <dialog
           ref={drawer}
           aria-label="Menu"
           tabIndex={-1}
           // The content fills the dialog, so a click on the dialog itself is a
           // click on the backdrop.
-          onClick={(e) =>
-            e.target === e.currentTarget && drawer.current.close()
-          }
-          className="top-0 right-0 left-auto h-full max-h-none w-64 translate-x-full bg-white shadow-lg transition-[translate,display,overlay] transition-discrete outline-none backdrop:bg-black/30 open:translate-x-0 dark:bg-gray-950 starting:open:translate-x-full"
+          onClick={(e) => e.target === e.currentTarget && closeDrawer()}
+          onCancel={(e) => {
+            // Escape: animate out like every other way of closing.
+            e.preventDefault();
+            closeDrawer();
+          }}
+          className="top-0 right-0 left-auto h-full max-h-none w-64 translate-x-full bg-white shadow-lg transition-[translate] duration-300 ease-out outline-none backdrop:bg-black/30 backdrop:transition-opacity backdrop:duration-300 open:translate-x-0 data-closing:translate-x-full data-closing:duration-200 data-closing:ease-in data-closing:backdrop:opacity-0 data-closing:backdrop:duration-200 motion-reduce:transition-none motion-reduce:backdrop:transition-none dark:bg-gray-950 starting:open:translate-x-full starting:open:backdrop:opacity-0"
         >
           <div className="flex h-full flex-col px-8 pt-[max(1.5rem,env(safe-area-inset-top))] pb-6">
             <button
-              onClick={() => drawer.current.close()}
+              onClick={closeDrawer}
               className="text-muted hover:text-accent mb-8 cursor-pointer self-end text-xs transition-colors select-none"
               aria-label="Close menu"
             >
@@ -130,7 +153,7 @@ export function Header() {
                   <li key={item.href} className="flex w-full">
                     <Link
                       href={item.href}
-                      onClick={() => drawer.current.close()}
+                      onClick={closeDrawer}
                       className={`w-full py-1 text-sm`}
                     >
                       <span
