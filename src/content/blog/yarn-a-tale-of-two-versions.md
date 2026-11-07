@@ -8,7 +8,7 @@ tags: ["tools", "web"]
 Most developers know Yarn. Fewer know there are effectively two
 completely different tools sharing the same name.
 
-![Yarn package manager](/blog/yarn.webp)
+![Yarn package manager](/blog/yarn.webp "1155x518")
 
 ## Yarn Classic (v1)
 

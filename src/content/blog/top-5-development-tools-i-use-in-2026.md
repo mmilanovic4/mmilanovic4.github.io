@@ -15,7 +15,7 @@ The vanilla answer, I know. But there's a reason everyone uses it — it just wo
 
 Another vanilla pick, but I genuinely love it. I have tried some other popular alternatives like iTerm2, Warp or Ghostty, but the built-in macOS Terminal is surprisingly capable once you configure it properly. Like VS Code, the configuration possibilities are endless — and I prefer keeping my stack lean. Plus, there are a bunch of available themes so I get to match my VS Code theme in Terminal as well.
 
-![GitHub Dark Dimmed on VSCode and Terminal](/blog/github-dark-dimmed.webp)
+![GitHub Dark Dimmed on VSCode and Terminal](/blog/github-dark-dimmed.webp "1500x943")
 
 A lot of built-in Apple apps follow the same pattern — they make you feel like you don't need an alternative.
 
@@ -45,4 +45,4 @@ go install github.com/mmilanovic4/orbx@latest
 
 There is an infamous [XKCD comic](https://xkcd.com/1168/) about people not being able to remember exactly how the `tar` command goes. And it rings true — it's easy to forget the exact CLI syntax for each tool, especially if you're not using it daily. That's the problem orbx was built to solve.
 
-!["I don't know what's worse — the fact that after 15 years of using tar I still can't keep the flags straight, or that after 15 years of technological advancement I'm still mucking with tar flags that were 15 years old when I started." — Randall Munroe](https://imgs.xkcd.com/comics/tar_2x.png)
+!["I don't know what's worse — the fact that after 15 years of using tar I still can't keep the flags straight, or that after 15 years of technological advancement I'm still mucking with tar flags that were 15 years old when I started." — Randall Munroe](https://imgs.xkcd.com/comics/tar_2x.png "1425x458")

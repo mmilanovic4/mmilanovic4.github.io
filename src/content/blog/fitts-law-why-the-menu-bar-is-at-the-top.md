@@ -33,7 +33,7 @@ In Fitts's terms, the menu bar's height along the line of movement has no limit.
 
 A menu bar inside a window gets none of that. It's a thin strip between the title bar and the content. A pointer moving fast enough to get there quickly is moving fast enough to fly past it. The hand has to slow down, aim and stop — the part Fitts's law charges for.
 
-![Menu bar vs window menu](/blog/menu-bar-vs-window-menu.svg)
+![Menu bar vs window menu](/blog/menu-bar-vs-window-menu.svg "760x298")
 
 ## Four corners
 

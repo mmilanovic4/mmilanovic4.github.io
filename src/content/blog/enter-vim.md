@@ -7,11 +7,11 @@ tags: ["tools"]
 
 vi was written in 1976 by Bill Joy, then a graduate student at Berkeley, as a visual mode bolted onto `ex` — itself an extension of an earlier line editor. The terminal Joy was developing on, the ADM-3A, had no dedicated arrow keys. The keys `h`, `j`, `k`, `l` had arrows printed directly on the keycaps, doing double duty (a similar idea shows up in PC gaming, where WASD stands in for arrow keys since the mouse hand can't reach them). Modal editing wasn't a design philosophy at the start — it was a workaround for hardware that didn't have the keys a text editor would normally want.
 
-![Vi IMproved](/blog/vim.webp)
+![Vi IMproved](/blog/vim.webp "1100x550")
 
 Fifteen years later, Vim — Vi IMproved — was released in 1991, first for the Amiga. Multi-level undo, visual mode, syntax highlighting, a plugin system eventually built around it. The hardware that produced vi's constraints is long gone. The constraints themselves outlived it.
 
-![The ADM-3A layout that gave Vim its movement keys](/blog/adm3a-keyboard.svg)
+![The ADM-3A layout that gave Vim its movement keys](/blog/adm3a-keyboard.svg "950x320")
 
 ## Not a religion, just a default
 

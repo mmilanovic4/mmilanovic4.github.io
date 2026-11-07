@@ -18,7 +18,7 @@ tool: SSHNuke, an exploit targeting a vulnerability in older versions
 of the SSH protocol. It's one of the few times Hollywood got hacking
 right — the command, the tool and the exploit were all real.
 
-![The Matrix Reloaded (2003)](/blog/trinity.jpg)
+![The Matrix Reloaded (2003)](/blog/trinity.jpg "1200x728")
 
 **Note:** The other tool used in this scene, `nmap`, is also real. Kudos to the Wachowskis.
 
@@ -99,7 +99,7 @@ ssh -L 5432:db.internal:5432 user@bastion
 
 Connect to `localhost:5432` and the traffic travels through SSH to `bastion`, which opens the connection to `db.internal:5432` on your behalf. Use it when the server can reach something you can't — a database in a private network, an admin panel bound to localhost.
 
-![Local forwarding](/blog/ssh-local-forwarding.svg)
+![Local forwarding](/blog/ssh-local-forwarding.svg "760x180")
 
 **Remote (`-R`)** — inbound. The port opens on the server:
 
@@ -109,7 +109,7 @@ ssh -R 9090:localhost:3000 user@vps
 
 The same tunnel, walked the other way: whoever connects to port 9090 on the VPS lands on port 3000 of your machine. Use it to show a dev server to someone outside your network, to receive a webhook locally or to get back to a machine behind NAT or a firewall — that machine dials out to the VPS, so nothing has to be opened on its side. In conversation this is a reverse tunnel. Same thing.
 
-![Remote forwarding](/blog/ssh-remote-forwarding.svg)
+![Remote forwarding](/blog/ssh-remote-forwarding.svg "760x180")
 
 **Note:** A remote forward listens only on the server's own loopback address until `GatewayPorts yes` is set in its `sshd_config`. This is the usual reason a reverse tunnel "doesn't work".
 
@@ -121,7 +121,7 @@ ssh -D 1080 user@server
 
 With `-L`, one port leads to one place, decided up front. Here SSH runs a SOCKS proxy on `localhost:1080` and the client names the destination for every connection. Point a browser at it and each site you open is fetched from the server. A poor man's VPN, for TCP only.
 
-![Dynamic forwarding](/blog/ssh-dynamic-forwarding.svg)
+![Dynamic forwarding](/blog/ssh-dynamic-forwarding.svg "760x210")
 
 Add `-N` when you want the tunnel without a shell and `-f` to send it to the background. A tunnel you open every day belongs in the config file:
 

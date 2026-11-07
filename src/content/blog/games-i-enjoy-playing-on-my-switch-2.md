@@ -22,7 +22,7 @@ football analysis — which foot a player would rather not use, how a fullback
 behaves in a high press, what a formation gives you and what it takes away. That
 shift made it worth coming back to.
 
-![Still the only sports game worth the storage space](/blog/fc26.jpg)
+![Still the only sports game worth the storage space](/blog/fc26.jpg "800x450")
 
 ## Resident Evil 7 / 8 / 9
 
@@ -34,7 +34,7 @@ delivering trauma, and then starting again with infinite ammo for the Requiem
 someone who grew up with Leon means something that is hard to explain to anyone
 who didn't.
 
-![The Girl. First playthrough, no spoilers.](/blog/requiem.jpg)
+![The Girl. First playthrough, no spoilers.](/blog/requiem.jpg "800x450")
 
 Bundled alongside _Requiem_ came ports of 7 and 8, both brutal in quality.
 

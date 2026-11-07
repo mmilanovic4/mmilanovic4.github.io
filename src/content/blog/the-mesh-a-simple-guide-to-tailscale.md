@@ -11,7 +11,7 @@ Almost every VPN people know about sells privacy. NordVPN, Proton VPN or a self-
 
 There's a second kind of VPN that solves the opposite problem: not hiding where you are, but reaching machines that were never public to begin with. A server at home, a NAS, a laptop sitting on hotel Wi-Fi. Tailscale is the best known example of that kind.
 
-![Tailscale VPN](/blog/tailscale.svg)
+![Tailscale VPN](/blog/tailscale.svg "153x36")
 
 ## Under the hood
 
@@ -21,7 +21,7 @@ Tailscale is the wrapper around that problem, written in Go. You log in with an 
 
 _Directly_ is the word doing the work. A traditional VPN is _hub and spoke_: every client dials the same concentrator and everything flows through it, so two machines in the same room talk to each other by sending packets to another continent and back. A mesh drops the middle — every device holds a connection to every other device, and traffic between two of them goes between those two. When NAT won't cooperate, it detours through a relay, still encrypted end to end.
 
-![Hub and spoke vs mesh](/blog/mesh-vpn.svg)
+![Hub and spoke vs mesh](/blog/mesh-vpn.svg "760x318")
 
 The result is a private network — a **tailnet** — where every device gets a stable address in the `100.64.0.0/10` range and a name that resolves everywhere. Same address at home, on mobile data, on someone else's Wi-Fi.
 
