@@ -9,7 +9,7 @@ const isInternalPage = (href) => /^\/(?!\/)[^.]*$/.test(href ?? "");
 // clip with the same Markdown it uses for an image.
 const isVideo = (src) => /\.(mp4|webm)$/i.test(src ?? "");
 
-const Media = ({ src, alt, className = "w-full" }) =>
+const Media = ({ src, alt, width, height, className = "w-full" }) =>
   isVideo(src) ? (
     <LoopVideo src={src} alt={alt} className={className} />
   ) : (
@@ -18,6 +18,8 @@ const Media = ({ src, alt, className = "w-full" }) =>
     <img
       src={src}
       alt={alt}
+      width={width}
+      height={height}
       className={`rounded ${className}`}
       loading="lazy"
       decoding="async"
@@ -53,11 +55,13 @@ export const mdxComponents = {
     if (images.length > 1 && onlyImages) {
       return (
         <div className="media-wide my-6 grid grid-cols-2 gap-2 md:gap-3">
-          {images.map(({ props: { src, alt } }) => (
+          {images.map(({ props: { src, alt, width, height } }) => (
             <figure key={src}>
               <Media
                 src={src}
                 alt={alt}
+                width={width}
+                height={height}
                 className="aspect-[3/4] w-full object-cover"
               />
               {alt && <Caption>{alt}</Caption>}
@@ -103,13 +107,15 @@ export const mdxComponents = {
       {...props}
     />
   ),
-  img: ({ src, alt }) => (
+  img: ({ src, alt, width, height }) => (
     <div className="media-wide my-6">
       {/* A clip on its own is usually a portrait one from a phone: capped at
           the screen height instead of stretched to the column's width. */}
       <Media
         src={src}
         alt={alt}
+        width={width}
+        height={height}
         className={isVideo(src) ? "mx-auto max-h-[80vh] w-auto" : undefined}
       />
       {alt && <Caption>{alt}</Caption>}
