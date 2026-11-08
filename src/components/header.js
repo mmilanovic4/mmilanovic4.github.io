@@ -30,11 +30,13 @@ export function Header() {
     .join("/")}`;
   const drawer = useRef(null);
 
+  const closing = useRef(false);
+
   // Both ways run the same 200ms slide and backdrop fade, driven by
   // [data-out] (off-screen) rather than by CSS alone: a closed dialog leaves
   // the top layer at once, so the exit has to finish before close() (keeping
   // it there needs CSS `overlay`, which Safari lacks), and the entry starts
-  // from [data-out] right after showModal().
+  // from [data-out] once that has been painted.
   const openDrawer = () => {
     const dialog = drawer.current;
     dialog.dataset.out = "";
@@ -43,23 +45,29 @@ export function Header() {
     // tap. Focusing the dialog itself still announces "Menu, dialog" and the
     // next Tab reaches [ close ].
     dialog.focus();
-    // Reading a style settles it off-screen, so dropping the mark right after
-    // is a change the transition runs from -- without waiting for a frame.
-    getComputedStyle(dialog).translate;
-    delete dialog.dataset.out;
+    // Safari only slides from a position it has painted: dropping the mark
+    // in the same frame, even after a forced style read, made it pop in.
+    // Two frames make sure the off-screen one reached the screen.
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => {
+        if (!closing.current) delete dialog.dataset.out;
+      }),
+    );
   };
 
   const closeDrawer = () => {
     const dialog = drawer.current;
-    if (!dialog.open || "out" in dialog.dataset) return;
+    if (!dialog.open || closing.current) return;
     if (matchMedia("(prefers-reduced-motion: reduce)").matches)
       return dialog.close();
+    closing.current = true;
     dialog.dataset.out = "";
     setTimeout(() => {
       // Closed first, then unmarked: the other way round it would slide
       // back in for a frame.
       dialog.close();
       delete dialog.dataset.out;
+      closing.current = false;
     }, 200);
   };
 
