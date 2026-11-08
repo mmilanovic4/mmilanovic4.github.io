@@ -36,6 +36,12 @@ export default defineConfig([
         },
       ],
       "@next/next/no-img-element": "off",
+      // Children keep their braces: `I{"'"}m` is how an apostrophe gets past
+      // react/no-unescaped-entities.
+      "react/jsx-curly-brace-presence": [
+        "error",
+        { props: "never", children: "ignore" },
+      ],
     },
   },
   prettier,

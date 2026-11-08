@@ -125,7 +125,7 @@ export function Header() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`border-b-2 py-1 text-sm transition-colors ${
+                    className={`border-b-2 py-1 text-sm transition-colors select-none ${
                       isNavItemActive(pathname, item)
                         ? "border-accent text-accent"
                         : "hover:text-accent text-muted border-transparent"
@@ -177,7 +177,7 @@ export function Header() {
                     <Link
                       href={item.href}
                       onClick={closeDrawer}
-                      className={`w-full py-1 text-sm`}
+                      className="w-full py-1 text-sm select-none"
                     >
                       <span
                         className={`border-b-2 ${
