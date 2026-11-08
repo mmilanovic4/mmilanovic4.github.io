@@ -52,7 +52,7 @@ In Night City, a building like that belongs to Arasaka. In Tokyo, it's city hall
 
 Shibuya is the one people come to watch. Every time the lights change, the cars stop in every direction at once and the crossing in front of the station fills from all sides, under screens that never stop playing ads.
 
-_Cyberpunk 2077_ on PC has a setting called **Crowd Density**. Shibuya doesn't have a setting. It's on high all the time.
+_Cyberpunk 2077_ has a setting called **Crowd Density**. Shibuya doesn't have a setting. It's on high all the time.
 
 ![Shibuya](/blog/shibuya-screens.webp "1200x1600")
 ![Screens at dusk](/blog/shibuya-dusk.webp "1200x1600")
