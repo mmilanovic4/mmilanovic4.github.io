@@ -33,8 +33,15 @@ html.dark {
   --color-accent-dark: var(--accent-dark);
 }
 
+/* On the root, not on body: only there does it reach the page's own scroll.
+   The layout marks <html> with data-scroll-behavior so route changes still
+   jump to the top instead of gliding there. */
+html {
+  @apply motion-safe:scroll-smooth;
+}
+
 body {
-  @apply bg-page scroll-smooth text-gray-900;
+  @apply bg-page text-gray-900;
 }
 
 html.dark body {

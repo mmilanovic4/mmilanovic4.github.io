@@ -25,6 +25,7 @@ export default function Projects() {
               <a
                 href={project.href}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-accent inline-flex items-center gap-2 text-sm font-semibold hover:underline md:text-base lg:text-lg"
               >
                 {project.logo && (

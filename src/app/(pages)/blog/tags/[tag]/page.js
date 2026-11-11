@@ -27,7 +27,9 @@ export default async function BlogTag({ params }) {
         <Link
           href="/blog"
           aria-label="All posts"
-          className="text-muted hover:text-accent ml-1 px-1 transition-colors select-none"
+          // Inline, so the vertical padding widens the target without moving
+          // the line: the × stays 8px from the tag, as before.
+          className="text-muted hover:text-accent py-3.5 pr-3.5 pl-2 transition-colors select-none"
         >
           ×
         </Link>

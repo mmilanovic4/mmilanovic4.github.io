@@ -102,7 +102,7 @@ export function Header() {
             <Link href="/">
               <img
                 src="/logo.svg"
-                alt="Logo"
+                alt="Home"
                 className="h-8 w-8 shrink-0 rounded dark:invert"
               />
             </Link>
@@ -165,7 +165,9 @@ export function Header() {
           <div className="flex h-full flex-col px-8 pt-[max(1.5rem,env(safe-area-inset-top))] pb-6">
             <button
               onClick={closeDrawer}
-              className="text-muted hover:text-accent mb-8 cursor-pointer self-end text-xs transition-colors select-none"
+              // Padding the negative margins take back: a 44px target around
+              // 16px of text, sitting exactly where the text alone would.
+              className="text-muted hover:text-accent -mx-3.5 -mt-3.5 mb-4.5 cursor-pointer self-end p-3.5 text-xs transition-colors select-none"
               aria-label="Close menu"
             >
               [ close ]
@@ -200,13 +202,17 @@ export function Header() {
       {/* Mobile bar: a sibling of <header>, not a child, so it sticks for the
           whole page -- sticky only holds within its parent. Its bottom border
           doubles as the reading progress track on a post. From md up the
-          wrappers drop out and the progress line pins to the viewport top. */}
-      <div className="bg-page sticky top-0 z-40 px-6 pt-[env(safe-area-inset-top)] md:contents">
+          wrappers drop out and the progress line pins to the viewport top.
+          The 4px of padding under the border, taken back by the margin so
+          nothing below moves, is a strip of page background: without it an
+          image scrolling under the bar touches the line and reads as its
+          own top edge. */}
+      <div className="bg-page sticky top-0 z-40 -mb-1 px-6 pt-[env(safe-area-inset-top)] pb-1 md:contents">
         <div className="relative border-b border-gray-200 py-4 md:contents dark:border-gray-700">
           <div className="flex items-center justify-between md:hidden">
             <button
               onClick={openDrawer}
-              className="text-muted hover:text-accent cursor-pointer text-xs transition-colors select-none"
+              className="text-muted hover:text-accent -m-3.5 cursor-pointer p-3.5 text-xs transition-colors select-none"
               aria-label="Open menu"
             >
               [ menu ]

@@ -20,7 +20,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html suppressHydrationWarning lang="en" data-scroll-behavior="smooth">
       <head>
         <script
           dangerouslySetInnerHTML={{

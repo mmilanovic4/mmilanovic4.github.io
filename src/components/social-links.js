@@ -55,7 +55,9 @@ export function SocialLinks() {
             href={link.href}
             title={link.title}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-(--icon-border) bg-transparent transition-colors last:ml-auto"
-            {...(link.external ? { target: "_blank" } : {})}
+            {...(link.external
+              ? { target: "_blank", rel: "noopener noreferrer" }
+              : {})}
           >
             <Icon className="size-4" style={{ color: link.color }} />
           </a>

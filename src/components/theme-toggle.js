@@ -19,7 +19,9 @@ export function ThemeToggle() {
 
   return (
     <button
-      className="hover:text-accent text-muted cursor-pointer text-xs whitespace-nowrap transition-colors select-none"
+      // Padding the negative margin takes back: a 44px target around 16px of
+      // text, sitting exactly where the text alone would.
+      className="hover:text-accent text-muted -m-3.5 cursor-pointer p-3.5 text-xs whitespace-nowrap transition-colors select-none"
       onClick={() => setDark((d) => !d)}
       aria-label="Toggle theme"
     >
