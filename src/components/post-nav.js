@@ -15,8 +15,9 @@ function PostNavLink({ label, rel, post }) {
   );
 }
 
-// The older post first, the newer one under it, at every width: one under
-// the other reads like the rest of the site, which is a single column.
+// One under the other at every width, like the rest of the site, which is a
+// single column. The newer post comes first, the way the list on /blog runs:
+// previous-then-next is an order for links sitting side by side.
 export function PostNav({ prev, next }) {
   if (!prev && !next) {
     return null;
@@ -26,8 +27,8 @@ export function PostNav({ prev, next }) {
       aria-label="More posts"
       className="mt-8 grid gap-6 border-t border-gray-200 pt-6 dark:border-gray-700"
     >
-      {prev && <PostNavLink label="previous" rel="prev" post={prev} />}
       {next && <PostNavLink label="next" rel="next" post={next} />}
+      {prev && <PostNavLink label="previous" rel="prev" post={prev} />}
     </nav>
   );
 }
