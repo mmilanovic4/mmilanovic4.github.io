@@ -4,6 +4,7 @@ export * from "./header";
 export * from "./loop-video";
 export * from "./mdx-components";
 export * from "./post-list";
+export * from "./post-nav";
 export * from "./progress-line";
 export * from "./resume-item";
 export * from "./social-links";

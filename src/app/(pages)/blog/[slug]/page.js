@@ -1,6 +1,11 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { Container, TagList, mdxComponents } from "@/components";
-import { getAllPosts, getPost, getReadingTime } from "@/lib/blog";
+import { Container, PostNav, TagList, mdxComponents } from "@/components";
+import {
+  getAdjacentPosts,
+  getAllPosts,
+  getPost,
+  getReadingTime,
+} from "@/lib/blog";
 import { formatDate } from "@/lib/date";
 import { rehypePlugins } from "@/lib/mdx";
 import { BASE_URL, createMetadata } from "@/lib/metadata";
@@ -27,6 +32,7 @@ export default async function BlogPost({ params }) {
   const { slug } = await params;
   const { meta, content } = getPost(slug);
   const readingTime = getReadingTime(content);
+  const { prev, next } = getAdjacentPosts(slug);
   return (
     <Container>
       <span className="text-muted text-xs md:text-sm lg:text-base">
@@ -44,6 +50,10 @@ export default async function BlogPost({ params }) {
           options={{ mdxOptions: { rehypePlugins } }}
         />
       </article>
+      {/* After the article, not inside it: the reading progress line
+          measures <article>, and it should be full at the last line of the
+          post, not at the links under it. */}
+      <PostNav prev={prev} next={next} />
     </Container>
   );
 }
