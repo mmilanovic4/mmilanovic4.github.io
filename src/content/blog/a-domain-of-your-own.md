@@ -54,7 +54,7 @@ so **Enforce HTTPS** in the repo settings stays unavailable. Cloudflare
 serves the certificate instead, but nothing sends `http://` to `https://` —
 the site answers on both.
 
-Turn on **Always Use HTTPS** under **SSL/TLS → Edge Certificates**, then
+Turn on **Always Use HTTPS** under `SSL/TLS > Edge Certificates`, then
 check:
 
 ```bash
@@ -146,8 +146,27 @@ domain forwards to your inbox. Use a different address per service:
 
 Everything lands in the same inbox, but the `To:` field tells you which
 service leaked your address. Explicit rules still beat catch-all, so
-`hello@` keeps working as before. If an address gets sold or leaked, delete
-the rule. It stops existing.
+`hello@` keeps working as before. If an address gets sold or leaked, add a
+rule for it with the **Drop** action. Deleting its rule isn't enough —
+catch-all would pick it up again. Dropped, it stops existing.
+
+### Keep it out of spam
+
+Forwarded mail looks suspicious. Gmail sees a message from someone else's
+domain arriving from Cloudflare's servers. If the sender didn't sign it
+with DKIM, nothing proves it's genuine and some of it lands in spam.
+
+A filter fixes that and sorts everything into one place. In Gmail, go to
+`Settings > Filters and Blocked Addresses > Create a new filter`, put
+`@milos.fyi` in **To** (not From) and pick:
+
+- **Apply the label** — `milos.fyi`
+- **Never send it to Spam**
+- **Skip the Inbox**, if you want the label to work like a folder
+
+With catch-all on, one filter covers every address on the domain. The
+trade-off: real spam sent to the domain lands in the label too. When one
+address starts attracting it, drop that address.
 
 ### What it doesn't do
 
