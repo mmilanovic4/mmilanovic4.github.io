@@ -83,25 +83,3 @@ html.dark body {
     white-space: nowrap;
   }
 }
-
-/* Images break out 40px past each edge of the prose column: they have no upper
-   readable size, the measure does. Code blocks deliberately stay in the column
-   -- the prose line above one usually introduces it, so they have to align. */
-.media-wide {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .media-wide {
-    position: relative;
-    left: 50%;
-    width: min(720px, calc(100vw - 3rem));
-    transform: translateX(-50%);
-  }
-}
-
-@media (min-width: 1024px) {
-  .media-wide {
-    width: min(880px, calc(100vw - 3rem));
-  }
-}

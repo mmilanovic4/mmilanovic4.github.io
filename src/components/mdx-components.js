@@ -74,7 +74,7 @@ export const mdxComponents = {
 
     if (images.length > 1 && onlyImages) {
       return (
-        <div className="media-wide my-6 grid grid-cols-2 gap-2 md:gap-3">
+        <div className="my-6 grid grid-cols-2 gap-2 md:gap-3">
           {images.map(({ props: { src, alt, title } }) => (
             <figure key={src}>
               <Media
@@ -127,7 +127,7 @@ export const mdxComponents = {
     />
   ),
   img: ({ src, alt, title }) => (
-    <div className="media-wide my-6">
+    <div className="my-6">
       {/* A clip on its own is usually a portrait one from a phone: capped at
           the screen height instead of stretched to the column's width. */}
       <Media
