@@ -109,7 +109,7 @@ export const mdxComponents = {
     }
 
     return (
-      <p className="mb-4 text-left leading-loose md:text-justify" {...props}>
+      <p className="mb-4 leading-loose" {...props}>
         {children}
       </p>
     );

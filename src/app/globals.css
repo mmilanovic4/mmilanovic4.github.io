@@ -74,7 +74,7 @@ html.dark body {
 }
 
 /* A hyphen is a break opportunity, so flags like `-L` and `--verbose` were
-   splitting across lines -- worse against justified text. Inline code only:
+   splitting across lines. Inline code only:
    `pre` sets `white-space: pre`, and overriding its child would collapse the
    indentation inside code blocks. Held to md and up, where the column is wide
    enough that the longest inline span still fits on one line. */
