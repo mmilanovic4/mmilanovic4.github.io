@@ -1,5 +1,5 @@
 import { JetBrains_Mono } from "next/font/google";
-import { Footer, Header, ThemeProvider } from "@/components";
+import { Footer, Header, ScrollReset, ThemeProvider } from "@/components";
 import { createMetadata } from "@/lib/metadata";
 
 import "./globals.css";
@@ -35,6 +35,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${font.className} subpixel-antialiased`}>
         <ThemeProvider>
+          <ScrollReset />
           <div className="flex min-h-screen flex-col">
             <div className="mx-auto w-full max-w-full md:w-160 lg:w-200">
               <Header />
