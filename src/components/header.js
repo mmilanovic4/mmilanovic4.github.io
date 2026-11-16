@@ -82,13 +82,14 @@ export function Header() {
       {/* Mobile bar: first on the page and a sibling of <header>, not a
           child, so it sticks for the whole page -- sticky only holds within
           its parent. The profile photo rides in it as an avatar, and on a
-          post the reading progress meter runs along its top edge. From md up
-          the wrappers drop out and the progress line pins to the viewport
-          top. The 4px of padding under the border, taken back by the margin
-          so nothing below moves, is a strip of page background: without it an
-          image scrolling under the bar touches the line and reads as its own
-          top edge. */}
-      <div className="bg-page sticky top-0 z-40 -mb-1 px-6 pt-[env(safe-area-inset-top)] pb-1 md:contents">
+          post the reading progress meter runs along its top edge, in a 4px
+          lane every page keeps: the bar sits at the same height everywhere
+          and the meter never eats into its padding. From md up the wrappers
+          drop out and the progress line pins to the viewport top. The 4px of
+          padding under the border, taken back by the margin so nothing below
+          moves, is a strip of page background: without it an image scrolling
+          under the bar touches the line and reads as its own top edge. */}
+      <div className="bg-page sticky top-0 z-40 -mb-1 px-6 pt-[calc(env(safe-area-inset-top)+0.25rem)] pb-1 md:contents">
         <div className="border-b border-gray-200 py-2.5 md:contents dark:border-gray-700">
           <div className="flex items-center justify-between md:hidden">
             <Link href="/" className="shrink-0" aria-label="Home">

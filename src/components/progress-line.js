@@ -38,7 +38,7 @@ export function ProgressLine() {
   return (
     <div
       ref={line}
-      className="absolute top-[env(safe-area-inset-top)] left-0 z-50 h-1 w-full bg-gray-200 md:fixed md:top-0 md:h-0.5 md:bg-transparent dark:bg-gray-700 md:dark:bg-transparent"
+      className="absolute top-[env(safe-area-inset-top)] left-0 z-50 h-1 w-full md:fixed md:top-0 md:h-0.5"
     >
       <div className="bg-accent h-full" style={{ width: `${progress}%` }} />
     </div>
