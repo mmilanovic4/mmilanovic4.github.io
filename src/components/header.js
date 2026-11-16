@@ -100,17 +100,13 @@ export function Header() {
                 className="h-8 w-8 rounded-full object-cover"
               />
             </Link>
-            {/* 28px apart: each 44px target reaches 14px past its text. */}
-            <div className="flex items-center gap-7">
-              <ThemeToggle />
-              <button
-                onClick={openDrawer}
-                className="text-muted hover:text-accent -m-3.5 cursor-pointer p-3.5 text-xs transition-colors select-none"
-                aria-label="Open menu"
-              >
-                [ menu ]
-              </button>
-            </div>
+            <button
+              onClick={openDrawer}
+              className="text-muted hover:text-accent -m-3.5 cursor-pointer p-3.5 text-xs transition-colors select-none"
+              aria-label="Open menu"
+            >
+              [ menu ]
+            </button>
           </div>
         </div>
         {isPost && <ProgressLine />}
@@ -209,15 +205,21 @@ export function Header() {
           className="top-0 right-0 left-auto h-full max-h-none w-64 translate-x-full bg-white shadow-lg transition-[translate] duration-200 ease-out outline-none backdrop:bg-black/30 backdrop:transition-opacity backdrop:duration-200 backdrop:ease-out open:translate-x-0 data-out:translate-x-full data-out:ease-in data-out:backdrop:opacity-0 data-out:backdrop:ease-in motion-reduce:transition-none motion-reduce:backdrop:transition-none dark:bg-gray-950"
         >
           <div className="flex h-full flex-col px-8 pt-[max(1.5rem,env(safe-area-inset-top))] pb-6">
-            <button
-              onClick={closeDrawer}
-              // Padding the negative margins take back: a 44px target around
-              // 16px of text, sitting exactly where the text alone would.
-              className="text-muted hover:text-accent -mx-3.5 -mt-3.5 mb-4.5 cursor-pointer self-end p-3.5 text-xs transition-colors select-none"
-              aria-label="Close menu"
-            >
-              [ close ]
-            </button>
+            {/* The theme switch lines up with the links, [ close ] keeps the
+                corner. Both take back their 44px targets with negative
+                margins, so the row is as tall as its text. */}
+            <div className="mb-8 flex items-center justify-between">
+              <ThemeToggle />
+              <button
+                onClick={closeDrawer}
+                // Padding the negative margins take back: a 44px target around
+                // 16px of text, sitting exactly where the text alone would.
+                className="text-muted hover:text-accent -m-3.5 cursor-pointer p-3.5 text-xs transition-colors select-none"
+                aria-label="Close menu"
+              >
+                [ close ]
+              </button>
+            </div>
             <nav>
               <ul className="flex flex-col gap-6">
                 {navItems.map((item) => (
