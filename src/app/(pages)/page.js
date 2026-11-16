@@ -21,7 +21,8 @@ export default function Home() {
           .
         </p>
       </div>
-      <div className="mb-8">
+      {/* Back to mb-8 if # contact below returns. */}
+      <div>
         <p className="text-accent mb-3 text-xs"># stack</p>
         <div className="flex flex-wrap gap-2">
           {stack.map((tech) => (
@@ -34,6 +35,7 @@ export default function Home() {
           ))}
         </div>
       </div>
+      {/* Hidden for now, may come back (with mb-8 on # stack above).
       <div>
         <p className="text-accent mb-3 text-xs"># contact</p>
         <p className="text-sm leading-loose md:text-base lg:text-lg">
@@ -47,6 +49,7 @@ export default function Home() {
           and I{"'"}ll get back to you.
         </p>
       </div>
+      */}
     </Container>
   );
 }
