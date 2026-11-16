@@ -9,14 +9,17 @@ export function ProgressLine() {
 
   useEffect(() => {
     // Tracks the post body only: 0% when its first line slides under the
-    // line itself (the sticky bar on mobile, the viewport top on desktop),
-    // 100% when its last line reaches the bottom of the screen. Looked up and
-    // measured on every scroll: the header hydrates before the page streams
-    // in, and media that loads late grows the post.
+    // bottom of the sticky bar on mobile (the meter sits on its top edge, so
+    // the bar is its offsetParent) or under the line itself on desktop (fixed,
+    // so no offsetParent), 100% when its last line reaches the bottom of the
+    // screen. Looked up and measured on every scroll: the header hydrates
+    // before the page streams in, and media that loads late grows the post.
     const onScroll = () => {
       const article = document.querySelector("article");
       if (!article) return setProgress(0);
-      const top = line.current.getBoundingClientRect().bottom;
+      const top = (
+        line.current.offsetParent ?? line.current
+      ).getBoundingClientRect().bottom;
       const { top: start, height } = article.getBoundingClientRect();
       const total = height - (window.innerHeight - top);
       const read = top - start;
@@ -35,7 +38,7 @@ export function ProgressLine() {
   return (
     <div
       ref={line}
-      className="absolute -bottom-px left-0 z-50 h-0.5 w-full md:fixed md:top-0 md:bottom-auto"
+      className="absolute top-[env(safe-area-inset-top)] left-0 z-50 h-1 w-full bg-gray-200 md:fixed md:top-0 md:h-0.5 md:bg-transparent dark:bg-gray-700 md:dark:bg-transparent"
     >
       <div className="bg-accent h-full" style={{ width: `${progress}%` }} />
     </div>

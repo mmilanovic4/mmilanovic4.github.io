@@ -79,25 +79,71 @@ export function Header() {
 
   return (
     <>
+      {/* Mobile bar: first on the page and a sibling of <header>, not a
+          child, so it sticks for the whole page -- sticky only holds within
+          its parent. The profile photo rides in it as an avatar, and on a
+          post the reading progress meter runs along its top edge. From md up
+          the wrappers drop out and the progress line pins to the viewport
+          top. The 4px of padding under the border, taken back by the margin
+          so nothing below moves, is a strip of page background: without it an
+          image scrolling under the bar touches the line and reads as its own
+          top edge. */}
+      <div className="bg-page sticky top-0 z-40 -mb-1 px-6 pt-[env(safe-area-inset-top)] pb-1 md:contents">
+        <div className="border-b border-gray-200 py-2.5 md:contents dark:border-gray-700">
+          <div className="flex items-center justify-between md:hidden">
+            <Link href="/" className="shrink-0" aria-label="Home">
+              <img
+                src="/avatar.webp"
+                alt=""
+                width={128}
+                height={128}
+                className="h-8 w-8 rounded-full object-cover"
+              />
+            </Link>
+            {/* 28px apart: each 44px target reaches 14px past its text. */}
+            <div className="flex items-center gap-7">
+              <ThemeToggle />
+              <button
+                onClick={openDrawer}
+                className="text-muted hover:text-accent -m-3.5 cursor-pointer p-3.5 text-xs transition-colors select-none"
+                aria-label="Open menu"
+              >
+                [ menu ]
+              </button>
+            </div>
+          </div>
+        </div>
+        {isPost && <ProgressLine />}
+      </div>
+
       <header className="w-full">
-        <div className="mt-6 mb-8 px-6 md:px-0">
+        {/* Desktop only: on a phone the photo is the avatar in the bar. The
+            empty source keeps phones from downloading the full photo, which
+            a hidden <img> would still fetch. */}
+        <div className="mt-6 mb-8 hidden md:block">
           <div
             className="relative overflow-hidden rounded"
             style={{ aspectRatio: "4/3" }}
           >
-            <img
-              alt="Profile"
-              className="rounded object-cover"
-              src="/profile-800.webp"
-              srcSet="/profile-480.webp 480w, /profile-800.webp 800w, /profile-1000.webp 1000w"
-              sizes="(min-width: 1024px) 800px, (min-width: 768px) 640px, calc(100vw - 48px)"
-              width={1000}
-              height={750}
-              fetchPriority="high"
-            />
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcSet="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              />
+              <img
+                alt="Profile"
+                className="rounded object-cover"
+                src="/profile-800.webp"
+                srcSet="/profile-800.webp 800w, /profile-1000.webp 1000w"
+                sizes="(min-width: 1024px) 800px, 640px"
+                width={1000}
+                height={750}
+                fetchPriority="high"
+              />
+            </picture>
           </div>
         </div>
-        <div className="px-6 md:px-0">
+        <div className="px-6 pt-6 md:px-0 md:pt-0">
           <div className="flex items-center gap-3">
             <Link href="/">
               <img
@@ -198,30 +244,6 @@ export function Header() {
           </div>
         </dialog>
       </header>
-
-      {/* Mobile bar: a sibling of <header>, not a child, so it sticks for the
-          whole page -- sticky only holds within its parent. Its bottom border
-          doubles as the reading progress track on a post. From md up the
-          wrappers drop out and the progress line pins to the viewport top.
-          The 4px of padding under the border, taken back by the margin so
-          nothing below moves, is a strip of page background: without it an
-          image scrolling under the bar touches the line and reads as its
-          own top edge. */}
-      <div className="bg-page sticky top-0 z-40 -mb-1 px-6 pt-[env(safe-area-inset-top)] pb-1 md:contents">
-        <div className="relative border-b border-gray-200 py-4 md:contents dark:border-gray-700">
-          <div className="flex items-center justify-between md:hidden">
-            <button
-              onClick={openDrawer}
-              className="text-muted hover:text-accent -m-3.5 cursor-pointer p-3.5 text-xs transition-colors select-none"
-              aria-label="Open menu"
-            >
-              [ menu ]
-            </button>
-            <ThemeToggle />
-          </div>
-          {isPost && <ProgressLine />}
-        </div>
-      </div>
     </>
   );
 }
