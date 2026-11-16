@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Container } from "@/components";
 import { stack } from "@/content";
 
@@ -9,19 +8,9 @@ export default function Home() {
         <p className="text-accent mb-3 text-xs"># about</p>
         <p className="text-sm leading-loose md:text-base lg:text-lg">
           Hey, I{"'"}m Miloš — a full-stack web developer based in{" "}
-          <span className="text-accent">Belgrade, Serbia</span>. I build web
-          apps with a focus on clean code and good UX. You can read my thoughts
-          on the web and beyond on{" "}
-          <Link
-            href="/blog"
-            className="text-accent underline underline-offset-[3px] hover:opacity-80"
-          >
-            my blog
-          </Link>
-          .
+          <span className="text-accent">Belgrade, Serbia</span>.
         </p>
       </div>
-      {/* Back to mb-8 if # contact below returns. */}
       <div>
         <p className="text-accent mb-3 text-xs"># stack</p>
         <div className="flex flex-wrap gap-2">
@@ -35,21 +24,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-      {/* Hidden for now, may come back (with mb-8 on # stack above).
-      <div>
-        <p className="text-accent mb-3 text-xs"># contact</p>
-        <p className="text-sm leading-loose md:text-base lg:text-lg">
-          Drop me a message at{" "}
-          <a
-            href="mailto:hello@milos.fyi"
-            className="text-accent underline underline-offset-[3px] hover:opacity-80"
-          >
-            hello@milos.fyi
-          </a>{" "}
-          and I{"'"}ll get back to you.
-        </p>
-      </div>
-      */}
     </Container>
   );
 }
