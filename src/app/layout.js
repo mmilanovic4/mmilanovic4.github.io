@@ -35,7 +35,6 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${font.className} subpixel-antialiased`}>
         <ThemeProvider>
-          <ScrollReset />
           <div className="flex min-h-screen flex-col">
             <div className="mx-auto w-full max-w-full md:w-160 lg:w-200">
               <Header />
@@ -45,6 +44,9 @@ export default function RootLayout({ children }) {
             </div>
             <Footer />
           </div>
+          {/* Last on purpose: layout effects run in tree order, so its
+              scroll to the top lands after Next.js has made its own. */}
+          <ScrollReset />
         </ThemeProvider>
       </body>
     </html>
