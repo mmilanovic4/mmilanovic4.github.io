@@ -80,12 +80,11 @@ and a round pointer shows up that taps wherever you click.
 The catch is that AssistiveTouch lives in
 `Settings > Accessibility > Touch` and leaving it on means a floating
 button on the screen the rest of the time. So I opened Shortcuts and
-described what I wanted in a sentence — a shortcut that turns
-AssistiveTouch on. It built one. I duplicated it, flipped on to off and
-named them Mouse On and Mouse Off. They live in a home screen widget next
-to the same pair for Low Power, Bluetooth and Wi-Fi.
+described what I wanted in a sentence — a shortcut that toggles
+AssistiveTouch. It built one. It lives in a home screen widget next to the
+same kind of toggle for Low Power, Bluetooth and Wi-Fi.
 
-![Shortcuts widget on my iPhone](/blog/shortcuts-widget.webp "1206x1030")
+![Shortcuts widget on my iPhone](/blog/shortcuts-widget.webp "1206x1120")
 
 Termius doesn't need a mouse. Everything around it is a different story and
 it's the first time a pointer on a phone has felt like a feature instead of
