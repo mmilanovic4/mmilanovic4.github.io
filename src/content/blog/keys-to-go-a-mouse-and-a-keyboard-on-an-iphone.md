@@ -71,6 +71,19 @@ settings for the thing you're trying to set up. That's where the layout
 lives, one per input language. Mine didn't match what was printed on the
 keys until I set every language to **U.S.**
 
+## Tab outside a text field
+
+Out of the box the keyboard only types. Tab does nothing outside a text
+field — it won't move to the next button and it won't put the cursor in a
+search field I haven't tapped first.
+
+That's what **Full Keyboard Access** is for, in
+`Settings > Accessibility > Keyboards & Typing > Full Keyboard Access`.
+With it on, a highlight shows which item on the screen has focus. Tab and
+Shift-Tab move it forward and back, Space presses whatever it's on and
+Tab-H brings up a list of every command. The commands can be changed and
+so can the color and size of the highlight.
+
 ## A mouse on an iPhone
 
 I didn't expect this part to work at all. The iPhone supports a mouse
