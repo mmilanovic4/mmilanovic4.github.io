@@ -81,8 +81,8 @@ That's what **Full Keyboard Access** is for, in
 `Settings > Accessibility > Keyboards & Typing > Full Keyboard Access`.
 With it on, a highlight shows which item on the screen has focus. Tab and
 Shift-Tab move it forward and back, Space presses whatever it's on and
-Tab-H brings up a list of every command. The commands can be changed and
-so can the color and size of the highlight.
+Tab-H brings up a list of every command. The commands can be changed and so
+can the color and size of the highlight.
 
 ## A mouse on an iPhone
 
@@ -97,7 +97,7 @@ described what I wanted in a sentence — a shortcut that toggles
 AssistiveTouch. It built one. It lives in a home screen widget next to the
 same kind of toggle for Low Power, Bluetooth and Wi-Fi.
 
-![Shortcuts widget on my iPhone](/blog/shortcuts-ios.webp "1206x1120")
+![Shortcuts widget on my iPhone](/blog/shortcuts-widget-ios.webp "1206x1120")
 
 Termius doesn't need a mouse. Everything around it is a different story and
 it's the first time a pointer on a phone has felt like a feature instead of
