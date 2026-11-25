@@ -1,5 +1,5 @@
 import { JetBrains_Mono } from "next/font/google";
-import { Footer, Header, ScrollReset, ThemeProvider } from "@/components";
+import { Footer, Header, ThemeProvider } from "@/components";
 import { createMetadata } from "@/lib/metadata";
 
 import "./globals.css";
@@ -44,8 +44,6 @@ export default function RootLayout({ children }) {
             </div>
             <Footer />
           </div>
-          {/* Last, so its layout effect runs after the scroll Next.js makes. */}
-          <ScrollReset />
         </ThemeProvider>
       </body>
     </html>

@@ -7,7 +7,6 @@ export * from "./post-list";
 export * from "./post-nav";
 export * from "./progress-line";
 export * from "./resume-item";
-export * from "./scroll-reset";
 export * from "./social-links";
 export * from "./tag-list";
 export * from "./theme-provider";
