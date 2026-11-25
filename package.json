@@ -13,10 +13,10 @@
     "analyze": "next experimental-analyze"
   },
   "dependencies": {
-    "@icons-pack/react-simple-icons": "^13.15.1",
+    "@icons-pack/react-simple-icons": "^13.16.0",
     "feed": "^6.0.0",
     "gray-matter": "^4.0.3",
-    "next": "^16.4.5",
+    "next": "^16.4.6",
     "next-mdx-remote": "^6.0.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
@@ -25,14 +25,14 @@
     "shiki": "^4.6.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.3.4",
+    "@tailwindcss/postcss": "^4.3.5",
     "babel-plugin-react-compiler": "1.0.0",
-    "eslint": "^9",
-    "eslint-config-next": "^16.4.5",
+    "eslint": "^10.15.0",
+    "eslint-config-next": "^16.4.6",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.5",
-    "prettier": "^3.9.10",
+    "prettier": "^3.10.1",
     "prettier-plugin-tailwindcss": "^0.8.1",
-    "tailwindcss": "^4.3.4"
+    "tailwindcss": "^4.3.5"
   }
 }
