@@ -20,7 +20,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html suppressHydrationWarning lang="en" data-scroll-behavior="smooth">
+    <html suppressHydrationWarning lang="en">
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -44,8 +44,7 @@ export default function RootLayout({ children }) {
             </div>
             <Footer />
           </div>
-          {/* Last on purpose: layout effects run in tree order, so its
-              scroll to the top lands after Next.js has made its own. */}
+          {/* Last, so its layout effect runs after the scroll Next.js makes. */}
           <ScrollReset />
         </ThemeProvider>
       </body>
