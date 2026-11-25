@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container, PostList } from "@/components";
 import { getAllTags, getPostsByTag } from "@/lib/blog";
 import { BASE_URL, createMetadata } from "@/lib/metadata";
@@ -23,7 +24,7 @@ export default async function BlogTag({ params }) {
     <Container>
       <p className="text-accent mb-6 text-xs">
         # {tag}
-        <a
+        <Link
           href="/blog"
           aria-label="All posts"
           // Inline, so the vertical padding widens the target without moving
@@ -31,7 +32,7 @@ export default async function BlogTag({ params }) {
           className="text-muted hover:text-accent py-3.5 pr-3.5 pl-2 transition-colors select-none"
         >
           ×
-        </a>
+        </Link>
       </p>
       <PostList posts={getPostsByTag(tag)} />
     </Container>
