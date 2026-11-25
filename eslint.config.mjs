@@ -11,6 +11,8 @@ export default defineConfig([
       },
     },
     rules: {
+      // Internal links intentionally use native document navigation.
+      "@next/next/no-html-link-for-pages": "off",
       "no-undef": "error",
       "no-unused-vars": "error",
       "react-hooks/exhaustive-deps": "off",

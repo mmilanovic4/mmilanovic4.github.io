@@ -1,16 +1,14 @@
-import Link from "next/link";
-
 function PostNavLink({ label, rel, post }) {
   return (
     <div>
       <p className="text-accent mb-3 text-xs"># {label}</p>
-      <Link
+      <a
         href={`/blog/${post.slug}`}
         rel={rel}
         className="text-accent text-sm hover:underline md:text-base lg:text-lg"
       >
         {post.title}
-      </Link>
+      </a>
     </div>
   );
 }

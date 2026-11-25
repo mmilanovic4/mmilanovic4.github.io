@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
 import { useRef } from "react";
 import { ProgressLine, SocialLinks, ThemeToggle } from "@/components";
@@ -92,7 +91,7 @@ export function Header() {
       <div className="bg-page sticky top-0 z-40 -mb-1 px-6 pt-[calc(env(safe-area-inset-top)+0.25rem)] pb-1 md:contents">
         <div className="border-b border-gray-200 py-2.5 md:contents dark:border-gray-700">
           <div className="flex items-center justify-between md:hidden">
-            <Link href="/" className="shrink-0" aria-label="Home">
+            <a href="/" className="shrink-0" aria-label="Home">
               <img
                 src="/avatar.webp"
                 alt=""
@@ -100,7 +99,7 @@ export function Header() {
                 height={128}
                 className="h-8 w-8 rounded-full object-cover"
               />
-            </Link>
+            </a>
             <button
               onClick={openDrawer}
               className="text-muted hover:text-accent -m-3.5 cursor-pointer p-3.5 text-xs transition-colors select-none"
@@ -142,13 +141,13 @@ export function Header() {
         </div>
         <div className="px-6 pt-6 md:px-0 md:pt-0">
           <div className="flex items-center gap-3">
-            <Link href="/">
+            <a href="/">
               <img
                 src="/logo.svg"
                 alt="Home"
                 className="h-8 w-8 shrink-0 rounded dark:invert"
               />
-            </Link>
+            </a>
             <div>
               <Name className="text-lg leading-tight font-bold">{AUTHOR}</Name>
               <p className="text-muted mt-0.5 text-sm leading-tight">
@@ -166,7 +165,7 @@ export function Header() {
             <ul className="flex gap-6">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <Link
+                  <a
                     href={item.href}
                     className={`border-b-2 py-1 text-sm transition-colors select-none ${
                       isNavItemActive(pathname, item)
@@ -175,7 +174,7 @@ export function Header() {
                     }`}
                   >
                     {item.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
               <li className="ml-auto">
@@ -225,9 +224,9 @@ export function Header() {
               <ul className="flex flex-col gap-6">
                 {navItems.map((item) => (
                   <li key={item.href} className="flex w-full">
-                    <Link
+                    <a
                       href={item.href}
-                      onClick={closeDrawer}
+                      onClick={() => drawer.current.close()}
                       className="w-full py-1 text-sm select-none"
                     >
                       <span
@@ -239,7 +238,7 @@ export function Header() {
                       >
                         {item.name}
                       </span>
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>

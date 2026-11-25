@@ -1,9 +1,4 @@
-import Link from "next/link";
 import { LoopVideo } from "./loop-video";
-
-// Root-relative and without a file extension: another page on this site,
-// not an asset like /rss.xml and not a protocol-relative //host URL.
-const isInternalPage = (href) => /^\/(?!\/)[^.]*$/.test(href ?? "");
 
 // `![Caption](/blog/clip.mp4)` plays a silent loop, so a post can hold a short
 // clip with the same Markdown it uses for an image.
@@ -33,8 +28,7 @@ const Media = ({ src, alt, width, height, maxHeight, className = "w-full" }) =>
       className={className}
     />
   ) : (
-    // Lazy, so React leaves these out of the RSC preload hints: otherwise
-    // every prefetched post link preloads that post's images.
+    // Load article images as they approach the viewport.
     <img
       src={src}
       alt={alt}
@@ -53,12 +47,7 @@ const Caption = ({ children }) => (
 );
 
 export const mdxComponents = {
-  a: ({ href, ...props }) =>
-    isInternalPage(href) ? (
-      <Link href={href} {...props} />
-    ) : (
-      <a href={href} {...props} />
-    ),
+  a: (props) => <a {...props} />,
   p: ({ children, ...props }) => {
     const childArray = Array.isArray(children) ? children : [children];
     const hasImage = childArray.some(

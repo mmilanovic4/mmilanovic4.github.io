@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { TagList } from "@/components";
 import { formatDate } from "@/lib/date";
 
@@ -13,12 +12,12 @@ export function PostList({ posts }) {
           <span className="text-muted text-xs md:text-sm lg:text-base">
             {formatDate(post.date)} · {post.readingTime} min read
           </span>
-          <Link
+          <a
             href={`/blog/${post.slug}`}
             className="text-accent text-sm hover:underline md:text-base lg:text-lg"
           >
             {post.title}
-          </Link>
+          </a>
           {post.description && (
             <p className="text-muted text-xs md:text-sm lg:text-base">
               {post.description}
