@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CursorDemo } from "./cursor-demo";
 import { LoopVideo } from "./loop-video";
 
 // Root-relative and without a file extension: another page on this site,
@@ -53,6 +54,8 @@ const Caption = ({ children }) => (
 );
 
 export const mdxComponents = {
+  // Components a post can use as `<Name />` on a line of its own.
+  CursorDemo,
   a: ({ href, ...props }) =>
     isInternalPage(href) ? (
       <Link href={href} {...props} />
@@ -81,7 +84,7 @@ export const mdxComponents = {
                 src={src}
                 alt={alt}
                 {...sizeOf(src, title)}
-                className="aspect-[3/4] w-full object-cover"
+                className="aspect-3/4 w-full object-cover"
               />
               {alt && <Caption>{alt}</Caption>}
             </figure>

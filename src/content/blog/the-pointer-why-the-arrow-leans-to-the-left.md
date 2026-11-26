@@ -131,6 +131,8 @@ the safer pick. `all-scroll` is for panning in any direction.
 **Zooming.** `zoom-in` and `zoom-out`, the magnifying glass with a plus or
 a minus. The image you can click to enlarge is the obvious use.
 
+<CursorDemo />
+
 Past the keywords, a cursor can be any image:
 
 ```css
