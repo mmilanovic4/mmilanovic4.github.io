@@ -1,5 +1,5 @@
 ---
-title: "Yarn: A tale of two versions"
+title: "Yarn: a tale of two versions"
 date: "2026-06-03"
 description: "Yarn v1 has been in maintenance mode since 2020. Yet it remains the most widely deployed version. Here's why."
 tags: ["tools", "web"]
